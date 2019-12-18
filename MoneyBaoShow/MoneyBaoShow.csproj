@@ -246,6 +246,7 @@
     <Content Include="layui\lay\modules\upload.js" />
     <Content Include="layui\lay\modules\util.js" />
     <Content Include="Login.html" />
+    <Content Include="CSS\m2-login.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
