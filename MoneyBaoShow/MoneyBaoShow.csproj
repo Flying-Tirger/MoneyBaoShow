@@ -67,10 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Account.html" />
     <Content Include="CSS\m2-commonNew.css" />
     <Content Include="CSS\m2-main.css" />
     <Content Include="CSS\newPage.css" />
-    <Content Include="Imgs\1b4c510fd9f9d72a0cd7f0f3da2a2834359bbba9.gif" />
     <Content Include="Imgs\ad\2015113014080319.png" />
     <Content Include="Imgs\ad\20151130140805550.png" />
     <Content Include="Imgs\ad\20151130140806276.png" />
@@ -136,9 +136,12 @@
     <Content Include="Imgs\ad\m2-sloganHS.png" />
     <Content Include="Imgs\ad\QQ图片20191212104941.png" />
     <Content Include="Imgs\ad\securityten.png" />
-    <Content Include="Imgs\c1cd65c14be1df5b.jpg" />
+    <Content Include="Imgs\ad\home-register-VerifyCode.png" />
     <Content Include="Index.html" />
     <Content Include="JS\jquery-3.3.1.js" />
+    <Content Include="JS\jquery.knob.js" />
+    <Content Include="JS\jquery.min.js" />
+    <Content Include="JS\jquery.SuperSlide.js" />
     <Content Include="JS\jquery.unobtrusive-ajax.js" />
     <Content Include="layui\css\layui.css" />
     <Content Include="layui\css\layui.mobile.css" />
@@ -246,7 +249,6 @@
     <Content Include="layui\lay\modules\upload.js" />
     <Content Include="layui\lay\modules\util.js" />
     <Content Include="Login.html" />
-    <Content Include="CSS\m2-login.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -258,6 +260,13 @@
     <Content Include="layui\font\iconfont.woff" />
     <Content Include="layui\font\iconfont.woff2" />
     <None Include="packages.config" />
+    <Content Include="statics\home2\images\foot.png.tmp!" />
+    <Content Include="statics\home2\images\myicon.png.tmp!" />
+    <Content Include="statics\home2\images\zgzicon.png.tmp!" />
+    <Content Include="statics\home2\js\HMZCity.json" />
+    <Content Include="statics\home\images\home.png.tmp!" />
+    <Content Include="statics\newcommon\images\m2-commonCharge.png.tmp!" />
+    <Content Include="statics\newcommon\images\m2-commonChargebtn.png.tmp!" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
