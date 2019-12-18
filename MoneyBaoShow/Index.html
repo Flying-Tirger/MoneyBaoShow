@@ -117,7 +117,7 @@
                                     <div class="mo2-indLogreg-step1">
                                         <i class="mo2-indLogicon-code"></i><input class="mo2-indIptcod-step1" id="vcode" type="text" placeholder="验证码">
                                     </div>
-                                    <img class="mo2-indRegcode" src="home-register-VerifyCode.png" onClick="document.getElementById('reverifyCode').src='home-register-VerifyCode.png?time='+Math.random();void(0);" id="reverifyCode" alt="点击刷新验证码">
+                                    <img class="mo2-indRegcode" src="home-register-VerifyCode.png" onClick="document.getElementById('reverifyCode').src='Imgs/ad/home-register-VerifyCode.png?time='+Math.random();void(0);" id="reverifyCode" alt="点击刷新验证码">
                                     <span class="mo2-indReg-refresh">看不清？换一张</span>
                                     <b class="mo2-indLogwar"><em class="mo2-indlogWar-arr"></em><u></u></b>
                                 </div>
@@ -188,7 +188,7 @@
                         </li>
                         <li style="background:#4B89DC;">
                             <div class="m-width">
-                                <a href="zhuanti_show.html#/market-RiskAppraisal-index" target="_blank"><img src="Imgs/ad/20160816173110355.png" title="风险评测" alt="风险评测" /></a>
+                                <a href="#" target="_blank"><img src="Imgs/ad/20160816173110355.png" title="风险评测" alt="风险评测" /></a>
                             </div>
                         </li>
                         <li style="background:#DC3C3E;">
@@ -198,12 +198,12 @@
                         </li>
                         <li style="background:#8603ED;">
                             <div class="m-width">
-                                <a href="usercenter-invitefriends.html" target="_blank"><img src="Imgs/ad/2016080820183390.png" title="爱钱帮邀请好友一起赚" alt="爱钱帮邀请好友一起赚" /></a>
+                                <a href="#" target="_blank"><img src="Imgs/ad/2016080820183390.png" title="爱钱帮邀请好友一起赚" alt="爱钱帮邀请好友一起赚" /></a>
                             </div>
                         </li>
                         <li style="background:#8293FF;">
                             <div class="m-width">
-                                <a href="company_finance.html" target="_blank"><img src="Imgs/ad/20160810194657369.png" title="企业理财" alt="企业理财" /></a>
+                                <a href="#" target="_blank"><img src="Imgs/ad/20160810194657369.png" title="企业理财" alt="企业理财" /></a>
                             </div>
                         </li>
                         <li style="background:#EC711E;">
@@ -436,50 +436,7 @@
 </body>
 </html>
 <script>
-
-    layui.use('element', function () {
-        var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
-
-        //监听导航点击
-        element.on('nav(demo)', function (elem) {
-            //console.log(elem)
-            layer.msg(elem.text());
-        });
-    });
-
- /*   function jz()
-    {     
-        $.ajax({
-            url: "https://localhost:44344/api/default/get?PageIndex=1&PageSize=5",
-            success: function (d)
-            {
-               console.log(d)
-            }
-        })
-    }*/
-
-    
-    var swiper = new Swiper('.swiper-container', {
-      spaceBetween: 30,
-      centeredSlides: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-  
-
-       
-
-        //流动条
+   //流动条
     function marquee(height, speed, delay) {
         var scrollT;
         var pause = false;
@@ -506,17 +463,15 @@
         }
         setTimeout(start, delay);
     }
+       //调用流动条
         marquee(42, 30, 3000);
-
-
-</script>
-
-<script>
-
-     window.onresize = function () {
+     //设置轮播图的宽
+    window.onresize = function ()
+    {
                         var oM2Ul = document.getElementById('m2-ul');
                         oM2Ul.style.width = document.documentElement.clientWidth + 'px';
-                    }
+    }
+      
 
     $(document).ready(function () {
         $('.m2-banner-box').mouseenter(function () {
@@ -541,14 +496,10 @@
             autoPage: true,
             trigger: "mouseover"
         });
-    });</script>
+    });
 
-
-
-<script type="text/javascript">
-    $(function () {
-       
-
+    $(function ()
+    {
         // 注册登录tab切换
         $('.mo2-indLogtab ul li').click(function () {
             if ($(this).hasClass('mo2-logTab-unsel')) {
@@ -568,5 +519,4 @@
             $('.mo2-indLogbox').show();
         });
     });
-  
 </script>

@@ -135,6 +135,7 @@
     <Content Include="Imgs\ad\m2-sloganHS.png" />
     <Content Include="Imgs\ad\QQ图片20191212104941.png" />
     <Content Include="Imgs\ad\securityten.png" />
+    <Content Include="Imgs\ad\home-register-VerifyCode.png" />
     <Content Include="Index.html" />
     <Content Include="JS\jquery-3.3.1.js" />
     <Content Include="JS\jquery.knob.js" />
