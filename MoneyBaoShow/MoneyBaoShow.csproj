@@ -67,9 +67,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="conversion.html" />
     <Content Include="CSS\m2-commonNew.css" />
     <Content Include="CSS\m2-main.css" />
     <Content Include="CSS\newPage.css" />
+    <Content Include="CSS\member_mall.css" />
     <Content Include="Imgs\ad\2015113014080319.png" />
     <Content Include="Imgs\ad\20151130140805550.png" />
     <Content Include="Imgs\ad\20151130140806276.png" />
@@ -133,8 +135,30 @@
     <Content Include="Imgs\ad\m2-indexIcon.png" />
     <Content Include="Imgs\ad\m2-newcommonIcon.png" />
     <Content Include="Imgs\ad\m2-sloganHS.png" />
+    <Content Include="Imgs\ad\member_mall1.jpg" />
+    <Content Include="Imgs\ad\member_mall2.png" />
     <Content Include="Imgs\ad\QQ图片20191212104941.png" />
     <Content Include="Imgs\ad\securityten.png" />
+    <Content Include="Imgs\membermall\20160805032957562.png" />
+    <Content Include="Imgs\membermall\20160805033052639.png" />
+    <Content Include="Imgs\membermall\20160805102220960.png" />
+    <Content Include="Imgs\membermall\20160805103107515.png" />
+    <Content Include="Imgs\membermall\20160817143607359.png" />
+    <Content Include="Imgs\membermall\20160817143650682.png" />
+    <Content Include="Imgs\membermall\20160817143909176.png" />
+    <Content Include="Imgs\membermall\20160817144058684.png" />
+    <Content Include="Imgs\membermall\20160824141534940.png" />
+    <Content Include="Imgs\membermall\20160824141652673.png" />
+    <Content Include="Imgs\membermall\20160824141721351.png" />
+    <Content Include="Imgs\membermall\20160824141745286.png" />
+    <Content Include="Imgs\member_mall\296912.jpg" />
+    <Content Include="Imgs\member_mall\311232.jpg" />
+    <Content Include="Imgs\member_mall\member_mall1.jpg" />
+    <Content Include="Imgs\member_mall\member_mall12.png" />
+    <Content Include="Imgs\member_mall\member_mall16.png" />
+    <Content Include="Imgs\member_mall\member_mall2.png" />
+    <Content Include="Imgs\member_mall\member_mall6.png" />
+    <Content Include="Imgs\member_mall\member_mall8.png" />
     <Content Include="Index.html" />
     <Content Include="JS\jquery-3.3.1.js" />
     <Content Include="JS\jquery.unobtrusive-ajax.js" />
@@ -243,6 +267,7 @@
     <Content Include="layui\lay\modules\tree.js" />
     <Content Include="layui\lay\modules\upload.js" />
     <Content Include="layui\lay\modules\util.js" />
+    <Content Include="ShopInfo.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
