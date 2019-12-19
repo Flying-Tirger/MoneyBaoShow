@@ -432,9 +432,8 @@
     <Content Include="My97DatePicker\开发包\skin\whyGreen\datepicker.css" />
     <Content Include="My97DatePicker\开发包\skin\whyGreen\img.gif" />
     <Content Include="recharge.html" />
-    <Content Include="RetrievePassWrod.html" />
     <Content Include="ShopInfo.html" />
-    <Content Include="Show.html" />
+    <Content Include="ShowYSY.html" />
     <Content Include="Show2.html" />
     <Content Include="Show3.html" />
     <Content Include="statics\common\js\common.js" />
@@ -901,7 +900,6 @@
     <Content Include="layui\font\iconfont.ttf" />
     <Content Include="layui\font\iconfont.woff" />
     <Content Include="layui\font\iconfont.woff2" />
-    <None Include="packages.config" />
     <Content Include="statics\common\images\iconB.png.tmp!" />
     <Content Include="statics\common\images\iconGa.png.tmp!" />
     <Content Include="statics\company_finance\images\company_finance\company_finance7.jpg.tmp!" />
