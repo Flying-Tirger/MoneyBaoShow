@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+</head>
+<body>
+
+
+    <div style="width:2800px;height:2800px;">
+        <div style="float:left">
+            <div style="float:left ;width:1800px;height: 1800px;margin-left: 14px;margin-top: 40px;background-image:url(Imgs/User/null-5618c09503b10b72.jpg); background-repeat:no-repeat;background-size:100% 100%">
+            </div>
+
+
+        </div>
+        <div style="float:left; width: 800px;height: 800px;margin-top: 40%;margin-left: -47%;background-color:#ffffff">
+
+            <input id="Submit1" type="submit" value="验证码获取" style="border-radius: 14px; float:right;margin-top: 27%;background-color: #ffd800;"/>
+
+            <div style="width:74%;height:74%;margin: 94px;">
+                <div style="    width: 600px;height: 100px;">
+                    <p style="float:left;margin-left: 20px;">
+                        &nbsp;<span> <h1>会员注册</h1></span>&nbsp;
+
+                        </span>
+                        <span style="margin-left: 356px;">已有爱钱豹的账号吗?<a href="Login.html" target="_blank">登录</a></span>
+                    </p>
+
+                </div>
+
+                <div style="border-top:1px solid #808080;background-color:#ffffff">
+                    <div style="margin: 82px ;margin-top: 9px;font-size: 25px;">
+                        <span style="font-size:40px">
+                            <img src="Imgs/User/3.png" style=" width: 8%;" />邮箱号
+                        </span>
+                        <p style=" margin-top: -49px; margin-left: 20%;"><input type="text" id="Test111" placeholder="请输入常用手机号" style="margin-left: 38%;width: 82%;height: 44px;"></p>
+                    </div>
+
+                    <div style="margin: 82px;font-size: 25px;">
+                        <span style="font-size:40px"><img src="Imgs/User/2.png" style="width: 8%;" /> 密码</span>
+                        <p style="width: 30px;height: 30px;margin-left: 50%;margin-top: -51px;"><input type="password" maxlength="15" placeholder="6-15位常用英文字母或数字" style="width: 282px;height: 41px"></p>
+                    </div>
+
+                    <div style=" margin-left: 7px;">
+                        <span style="margin: 82px;font-size: 43px;">
+                            <span style="font-size:44px;margin-left: -8px;"><img src="Imgs/User/2.png" style="width: 6%;" />确认密码</span>
+                            <p style="width: 30px;height: 30px;margin-left: 46%;margin-top: -67px;">
+
+                                <input type="password" maxlength="15" placeholder="请再次输入" style="width: 282px;height: 41px;margin-left: 60%;    margin-top: -46px;">
+                            </p>
+                            </p>
+                    </div>
+
+
+                    <div class="m2-pwdFrom-item" style="    margin-left: 75px; margin-top: -44px;">
+
+                        <p style="font-size: 35px;margin-left: 51px;margin-top: 38px;">
+                            验证码
+                        </p>
+                        <p style="margin-left: 215px; margin-top: -69px;"><input style="width: 122px;height: 26px;" id="CAPTCHA" type="text" /> </p>
+                    </div>
+                    <p style="margin-left: 49%;margin-top: 57px;"><input id="Button1" type="button" value="注册" style="border-radius: 14px; width: 72%;height: 50px;color:#ff6a00;background-color:#ffd800" /></p>
+                   
+                    }
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+        </div>
+    </div>
+
+
+</body>
+</html>
+<script>
+    function TestGetCode() {
+        var s =$("#Test111").val();
+        alert(s)
+        alert(document.getElementById("Test111").value)
+
+        $.ajax({
+            url: "https://localhost:44353/api/EncryPetd/GetTestGetCode?JiShou=" + $("#Test111").val(),
+            type: "get",
+            success: function (d) {
+                alert(d)
+                var aa = d;
+                alert(aa);
+            }
+        })
+        }
+</script>
