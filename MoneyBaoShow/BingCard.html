@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="JS/jquery-3.3.1.js"></script>
+    <link href="CSS/BindCardCss.css" rel="stylesheet" />
+</head>
+<body style="background-image: url('Imgs/Yemian/e7d4cac126941b5a-396dcc73e3007ef8-3e1b25ec34e514d214510c4a674ed0b0.jpg');">
+        <div class="m2-regist-main" >
+            <div class="m2-regist-center">
+                <div class="m2-regist-left">
+                    <div class="m2-regist-inputarea m2-regist-sucess" style="margin-left:200px;">
+                        <h4><b>开通存管账户</b></h4>
+                        <table border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                                <tr>
+                                    <td><i class="m2-regist-usericon"></i>真实姓名</td>
+                                    <td class="m2-regist-tdInput"><input class="m2-regist-username" id="realname" type="text" placeholder="真实姓名（必填）" onblur="VerIf()" value=""><span class="m2-regist-errMsg m2-openbank-card" id="R_Name"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="m2-regist-idnumber"></i>身份证号</td>
+                                    <td class="m2-regist-tdInput"><input class="m2-regist-username" id="idcard" type="text" placeholder="身份证号（必填）" onblur="VerIf()" value=""><span id="I_idcard" class="m2-regist-errMsg m2-openbank-card"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="m2-regist-cardnumber"></i>手机号</td>
+                                    <td class="m2-regist-tdInput">
+                                        <span class="m2-reg-telSpan" style=""><span>13737301354</span><a href="#?phone=1" target="_blank">修改</a></span>
+                                        <span class="m2-regist-errMsg " style="color:#aaa;top:45px;">您的手机号需与开卡时手机号一致</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><i class="m2-regist-cardnumber"></i>借记卡</td>
+                                    <td class="m2-regist-tdInput"><input class="m2-regist-username" id="Card" style="ime-mode:Disabled" onkeydown="onlyNum();" type="text"  placeholder="借记卡卡号（必填）" value=""><span class="m2-regist-errMsgcard"><span id="C_Card"></span></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="m2-trust-btn">
+                            <input id="service" type="checkbox" checked="checked">我同意<b>《徽商银行网络交易资金账户服务三方协议》</b>
+                        </div>
+                        <div class="m2-regist-btn m2-regist-quit">
+                            <a class="openbank openAble" id="openbank" style="cursor: default; background-color: rgb(204, 204, 204);">立即开通</a><a class="m2-regist-look" href="touzi_licai_chanpin.html" target="_blank">我先看看</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<script>
+   function VerIf()
+     {
+       var realname = $("#realname").val();
+          var Card = $("#Card").val();
+       var idcard = $("#idcard").val();
+        if (realname == null || realname=="")
+        {
+            $("#R_Name").html("真实姓名不能为空");
+            $("#R_Name").show();
+          
+        }
+        else
+        {
+             $("#R_Name").hide();
+        }
+        
+        if (idcard == null || idcard=="")
+        {
+            $("#I_idcard").html("身份证号不能为空");
+            $("#I_idcard").show();
+          
+        }
+        else
+        {
+            $("#I_idcard").hide();
+         }
+    
+        if (Card == null || Card=="")
+        {
+            $("#C_Card").html("借记卡号不能为空");
+            $("#C_Card").show();
+            return;
+        }
+        else
+        {
+            $("#C_Card").hide();
+        }
+    }
+</script>

@@ -18,7 +18,7 @@
 .mainNew-log ul li, .mainNewTips b, .mainNewtab ul li.mainNew-light, .mainNewli span h3, .mainNewquest ul li.mainNewnow{color:#fff;}
 /*--start----------------------------------------------------------------------------------*/
 #mainNewbody, #mainNewhead, #mainNewcont,#mainNewfoot{
-	width锛�100%锛�
+	width:100%;
 	overflow: hidden;
 	font-family: Microsoft YaHei, arial, sans-serif;
 }
@@ -39,7 +39,6 @@
 	padding-right:30px;
 	position: relative;
 	color:#48484A;
-	@-moz-document url-prefix(){.bb{}}display: inline;
 }
 .mainNew-pho{float: left;}
 .mainNew-pho h4 i{
@@ -126,7 +125,6 @@
 	width:163px;
 	height:13px;
 	display:block;
-	outline:none;blr:expression(this.onFocus=this.blur());
 }
 .mainNewgui ul.mainNewnavbar{padding:35px 0 0 430px;}
 .mainNewnavbar li.mainNew-fir{
@@ -1235,7 +1233,7 @@ p.progresstxt b{color: #BA3635;}
 	margin-left:10px;
 }
 .mainNewcopy{
-	padding-left:20px;
+	padding-left:30px;
 	color:#a2a2a2;
 	border-left:1px dotted #898989;
 }
@@ -1491,7 +1489,7 @@ p.progresstxt b{color: #BA3635;}
 }
 
 .weixinTop-hover p,.weiboTop-hover p{
-	color: 717171;
+	color: #717171;
 	padding-top: 3px;
 	text-align: center;
 	width: 140px;
@@ -1686,7 +1684,7 @@ p.progresstxt b{color: #BA3635;}
 	text-indent: 25px;
 	font-size: 15px;
 	color:#FFA200;
-	font-family锛�'SimSun';
+
 }
 
 .currentUser span{

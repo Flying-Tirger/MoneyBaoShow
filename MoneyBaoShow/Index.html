@@ -5,10 +5,13 @@
     <title></title>
     <link rel="stylesheet" href="statics/newcommon/css/m2-commonNew.css">
     <link rel="stylesheet" href="statics/home2/css/m2-main.css">
-    <link href="CSS/newPage.css" rel="stylesheet" />
+    <link href="statics/home/css/newPage.css" rel="stylesheet" />
+    <script src="JS/jquery-3.3.1.js"></script>
     <script type="text/javascript" src="statics/home/js/jquery.min.js"></script>
     <script type="text/javascript" src="statics/home2/js/jquery.knob.js"></script>
     <script type="text/javascript" src="statics/home2/js/jquery.SuperSlide.js"></script>
+    <link href="layui/css/layui.css" rel="stylesheet" />
+    <script src="JS/jquery.cookie.js"></script>
 </head>
 <body>
     <div id="IndexBody">
@@ -55,7 +58,7 @@
             <div class="m2-commonNav-box">
                 <div class="m2-commonLogo">
                     <a class="m2-comImg-logo" href="index.html">
-                        <img title="爱钱帮投资理财平台logo" alt="金钱豹" src="Imgs/ad/QQ图片20191212104941.png" style="padding-bottom:10px;">
+                        <img title="金钱豹投资理财平台logo" alt="金钱豹" src="Imgs/ad/QQ图片20191212104941.png" style="padding-bottom:10px;">
 
                     </a>
                     <a class="m2-conImg-slogan" href="">
@@ -73,112 +76,54 @@
                 </div>
             </div>
         </div>
-        <div style="height:354px; width:100%; background-color:black">
+        <div style="height:352px; width:100%; background-color:black">
             <div class="m2-banner-box">
-                <div class="m2-indexLogincon">
-                    <!-- 登录box start -->
-                    <div class="mo2-indexLoginbox">
-                        <!-- 已登录start -->
-                        <div class="mo2-indLoged" style="display: none">
-                            <div class="mo2-indLoged-tit"><span>你好！<span style="color:#f34940;"></span>，欢迎来到爱钱帮</span></div>
-                            <div class="mo2-indLog-userHead">
-                                <a href="usercenter.html"><img src="statics/home2/images/user-head.png" title="欢迎来到爱钱帮投资理财平台" alt=""></a>
-                            </div>
-                            <div class="mo2-indLogedmain">
-                                <p class="mo2-indLoged-sma">今日赚取</p>
-                                <p class="mo2-indLoged-big">&yen;<span>0.00</span></p>
-                            </div>
-                            <div class="mo2-indLog-btn" style="margin-top:18px;">
-                                <a href="usercenter.html">我的账户<i></i></a>
-                            </div>
-                        </div>
-                        <!-- 已登录end -->
-                        <!-- 登录注册start -->
-                        <div class="mo2-indLogreg">
-                            <div class="mo2-indLogtab">
-                                <ul>
-                                    <li class="mo2-logTab-unsel mo2-indTab-reg">
-                                        <span>注册</span><b></b>
-                                    </li>
-                                    <li class="mo2-logTab-sel mo2-indTab-log">
-                                        <span>登录</span><b></b>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- 注册start -->
-                            <div class="mo2-indRegbox" style="display:none;">
-                                <div class="mo2-indLogitem" style="margin-bottom:6px;">
-                                    <i class="mo2-indLogicon-tel"></i><input class="mo2-indIpt-all" id="regTel" maxlength="11" type="text" placeholder="输入手机号码"><b class="mo2-indLogwar"><em class="mo2-indlogWar-arr"></em><u></u></b>
-                                </div>
-                                <div class="mo2-indLogitem" style="margin-bottom:6px;">
-                                    <i class="mo2-indLogicon-psw"></i><input class="mo2-indIpt-all m2-ind-banPsw" id="pass" onkeyup="isNumber()" type="password" placeholder="6-20位数字与字母组合的密码"><b class="mo2-indLogwar"><em class="mo2-indlogWar-arr"></em><u></u></b>
-                                </div>
-                                <div class="mo2-indLogitem-step1">
-                                    <div class="mo2-indLogreg-step1">
-                                        <i class="mo2-indLogicon-code"></i><input class="mo2-indIptcod-step1" id="vcode" type="text" placeholder="验证码">
-                                    </div>
-                                    <img class="mo2-indRegcode" src="home-register-VerifyCode.png" onClick="document.getElementById('reverifyCode').src='Imgs/ad/home-register-VerifyCode.png?time='+Math.random();void(0);" id="reverifyCode" alt="点击刷新验证码">
-                                    <span class="mo2-indReg-refresh">看不清？换一张</span>
-                                    <b class="mo2-indLogwar"><em class="mo2-indlogWar-arr"></em><u></u></b>
-                                </div>
-                                <div class="mo2-indReg-btn" id="verifyregcode" onclick="verifycode();" style="margin-top:8px;">
-                                    <a class="mo2-indRegbtn-able" href="#">立即注册</a>
-                                </div>
-                                <div class="mo2-indRegagree">
-                                    <i class="mo2-indReg-sel"></i><span>我已阅读并同意</span><b>《爱钱帮注册服务协议》</b>
-                                </div>
-                            </div>
-                            <!-- 注册end -->
-                            <!-- 注册step2 start -->
-                            <div class="mo2-indRegbox2" style="display:none;">
-                                <div class="mo2-indReg2-con">
-                                    <ul>
-                                        <li><i class="mo2-indRegicon-step1"></i><span>为了确保您手机可用，请填写您收到的手机动态码。</span></li>
-                                        <li><i class="mo2-indRegicon-step2"></i><span>如收不到短信验证码，可点击下面的获取语音验证码。</span></li>
-                                    </ul>
-                                </div>
-                                <div class="mo2-indLogitem">
-                                    <i class="mo2-indLogicon-code"></i><input class="mo2-indIpt-half" id="code" type="text" placeholder="验证码">
-                                    <span class="mo2-indRegtim mo2-regTin-able"><u>60秒后</u><span>获取手机验证码</span></span>
-                                    <b class="mo2-indLogwar" style="width:200px;"><em class="mo2-indlogWar-arr"></em><u>错误提示信息</u></b>
-                                </div>
-                                <div class="mo2-indRegvoice">
-                                    <span class="mo2-indRegvoi-btn mo2-indRegvoi-able"><i></i>获取语音验证码</span>
-                                </div>
-                                <div class="mo2-indReg-btn" onclick="registeraaa();" id="verifyregphone" style="margin-top:8px;">
-                                    <a class="mo2-indRegbtn-able" href="#">立即注册</a>
-                                </div>
-                            </div>
-                            <!-- 注册step2 end -->
-                            <!-- 登录start -->
-                            <div class="mo2-indLogbox">
-                                <div class="mo2-indLogitem mo2-indLogitem-use" style="margin-bottom:9px;">
-                                    <i class="mo2-indLogicon-use"></i><input class="mo2-indIpt-all" type="text" id="user_name" placeholder="用户名/手机号">
-                                    <b class="mo2-indLogwar" id="w_usernameMain"><em class="mo2-indlogWar-arr"></em><u id="r_usernameMain"></u></b>
-                                </div>
-                                <div class="mo2-indLogitem mo2-indLogitem-psw" style="margin-bottom:9px;">
-                                    <i class="mo2-indLogicon-psw"></i><input class="mo2-indIpt-all m2-ind-banPsw" maxlength="20" id="pass_word" type="password"  placeholder="输入登录密码">
-                                    <b class="mo2-indLogwar" id="w_passwordMain"><em class="mo2-indlogWar-arr"></em><u id="r_passwordMain"></u></b>
-                                </div>
-                                <div class="mo2-indLog-code" style="display:none;margin-bottom:8px;">
-                                    <div class="mo2-indLogcod-lef">
-                                        <i class="mo2-indLogicon-psw"></i>
-                                        <input type="text" id="vcode" placeholder="验证码">
-                                    </div>
-                                    <div class="mo2-indLogcod-rig"><img src="Index-VerifyCode.png" onClick="document.getElementById('reverifyCode').src='Index-VerifyCode.png?time='+Math.random();void(0);" alt="点击刷新验证码"></div>
-                                </div>
-                                <div class="mo2-indLog-forget"><a href="forget.html">忘记密码?</a></div>
-                                <div class="mo2-indReg-btn" style="margin-top: 20px;">
-                                    <a class="mo2-indRegbtn-able" onclick="login();">登录</a>
-                                </div>
-                            </div>
-                            <!-- 登录end -->
-                        </div>
-                        <!-- 登录注册end -->
+
+
+                <div style="position: absolute;z-index: 5;background-color: #fff;width: 288px;height:330px;top: 12px;right: 180px;border-radius: 8px;box-shadow:  0px 0px 8px #ccc;">
+
+                    <div>
+                        <p style="padding-top:20px;"> <span style="padding-left:150px;"> <a style="border-bottom:1px solid"> 没有账号 立即注册</a></span> </p>
                     </div>
 
-                    <!-- 登录box end -->
+                    <div style="width:290px;height:50px;margin-top:10px;margin-bottom:10px;">
+                        <input type="text" name="username" style="width:270px;margin-right:10px;margin-left:10px;" id="UserName" lay-verify="required" placeholder="用户名" class="layui-input" onblur="UserPwdAndUserName()">
+
+
+                        <b id="UserName123" style="display: inline; float:right ;position: absolute;display: none;width: 150px;height: 30px;line-height: 30px;text-align: center;border-radius: 4px;left: 260px;top: 50px;font-weight: normal;font-size: 14px;color: #fff;background-color: #F34B43;"><em style="display: block;position: absolute;width: 0px;height: 0px;border-style: solid;border-width: 6px;left: -11px;top: 9px;border-color: transparent #F34B43 transparent transparent;"></em><u id="U_Name"></u></b>
+                    </div>
+                    <div style="width:290px;height:50px; margin-top:10px;margin-bottom:10px">
+                        <input type="password" name="password" style="width:270px;margin-right:10px;margin-left:10px;" id="UserPwd" lay-verify="required" placeholder="密码" class="layui-input" onblur="UserPwdAndUserName()">
+
+
+                        <b  id="w_passwordMain" style="display: inline; float:right ;position: absolute;display: none;width: 150px;height: 30px;line-height: 30px;text-align: center;border-radius: 4px;left: 260px;top: 100px;font-weight: normal;font-size: 14px;color: #fff;background-color: #F34B43;">
+                        <em style="display: block;position: absolute;width: 0px;height: 0px;border-style: solid;border-width: 6px;left: -11px;top: 9px;border-color: transparent #F34B43 transparent transparent;" ></em><u id="r_passwordMain"></u></b>
+
+                    </div>
+                    <div style="width:290px;height:50px; margin-top:10px;margin-bottom:10px;">
+                        <div style="float:left;">
+                            <canvas id="canvas" width="100" height="35" onclick="dj()"
+                                    style="border: 1px solid #ccc; margin-left:10px;"></canvas>
+                        </div>
+                        <div style="float:right">
+                            <input id="ycyzm" type="hidden" />
+                            <input type="text" name="vercode" style="width:135px;margin-left:10px; margin-right:10px;" id="VerifCode" lay-verify="required" placeholder="图形验证码" class="layui-input">
+                        </div>
+
+                    </div>
+                    <div style="width:290px;height:30px; margin-top:10px;margin-bottom:10px;">
+                        <div style="float:left;margin-left:10px;">
+                            <input id="JZPwd" type="checkbox" />
+                            <span>记住密码</span>
+                        </div>
+                        <div style="float:right">
+                            <a href="forget.html" class="layadmin-user-jump-change layadmin-link" style="margin-top: 7px;margin-left:100px;">忘记密码？</a>
+                        </div>
+                    </div>
+                    <button class="layui-btn layui-btn-fluid" lay-submit="" style="width:200px;margin-left:45px;" lay-filter="LAY-user-login-submit" onclick="UserLogin()">登 入</button>
                 </div>
+
+
                 <div class="m2-bd">
                     <ul id="m2-ul">
                         <li style="background:#249FEA;">
@@ -198,7 +143,7 @@
                         </li>
                         <li style="background:#8603ED;">
                             <div class="m-width">
-                                <a href="#" target="_blank"><img src="Imgs/ad/2016080820183390.png" title="爱钱帮邀请好友一起赚" alt="爱钱帮邀请好友一起赚" /></a>
+                                <a href="#" target="_blank"><img src="Imgs/ad/2016080820183390.png" title="金钱豹邀请好友一起赚" alt="金钱豹邀请好友一起赚" /></a>
                             </div>
                         </li>
                         <li style="background:#8293FF;">
@@ -208,7 +153,7 @@
                         </li>
                         <li style="background:#EC711E;">
                             <div class="m-width">
-                                <a href="#" target="_blank"><img src="Imgs/ad/20160808200346417.png" title="爱钱帮荣膺中国互联网金融协会首批会员" alt="爱钱帮荣膺中国互联网金融协会首批会员" /></a>
+                                <a href="#" target="_blank"><img src="Imgs/ad/20160808200346417.png" title="金钱豹荣膺中国互联网金融协会首批会员" alt="金钱豹荣膺中国互联网金融协会首批会员" /></a>
                             </div>
                         </li>
                         <li style="background:#0685CE;">
@@ -223,7 +168,7 @@
                         </li>
                     </ul>
                 </div>
-               
+
                 <!-- 自动调整轮转图片的显示大小（宽度） -->
                 <div class="m2-banner-btn">
                     <a style="display:none;" class="m2-prev" href="javascript:void(0);"></a>
@@ -334,12 +279,12 @@
             <ul>
                 <li>
                     <a href="/home-aboutus-coorprate?id=58" target="_blank">
-                        <img alt="" src=" Imgs/ad/20160512110603864.png">
+                        <img alt="" src="Imgs/ad/20160512110603864.png">
                     </a>
                 </li>
                 <li>
                     <a href="http://www.hsbank.com.cn/" target="_blank">
-                        <img alt="" src=" Imgs/ad/20160512111038163.png">
+                        <img alt="" src="Imgs/ad/20160512111038163.png">
                     </a>
                 </li>
                 <li>
@@ -354,17 +299,17 @@
                 </li>
                 <li>
                     <a href="/home-aboutus-coorprate?id=59" target="_blank">
-                        <img alt="" src=" Imgs/ad/20160512111157415.png">
+                        <img alt="" src="Imgs/ad/20160512111157415.png">
                     </a>
                 </li>
                 <li>
                     <a href="/home-aboutus-coorprate?id=72" target="_blank">
-                        <img alt="" src=" Imgs/ad/2016051211121652.png">
+                        <img alt="" src="Imgs/ad/2016051211121652.png">
                     </a>
                 </li>
                 <li>
                     <a href="https://www.alipay.com/" target="_blank">
-                        <img alt="" src=" Imgs/ad/20160512111336923.png">
+                        <img alt="" src="Imgs/ad/20160512111336923.png">
                     </a>
                 </li>
                 <li>
@@ -374,27 +319,27 @@
                 </li>
                 <li>
                     <a href="https://www.aliyun.com/" target="_blank">
-                        <img alt="" src=" Imgs/ad/20160512111411694.png">
+                        <img alt="" src="Imgs/ad/20160512111411694.png">
                     </a>
                 </li>
                 <li>
                     <a href="/home-aboutus-coorprate?id=76" target="_blank">
-                        <img alt="" src=" Imgs/ad/20160512111439851.png">
+                        <img alt="" src="Imgs/ad/20160512111439851.png">
                     </a>
                 </li>
                 <li>
                     <a href="/home-aboutus-coorprate?id=61" target="_blank">
-                        <img alt="" src=" Imgs/ad/20160512111459408.png">
+                        <img alt="" src="Imgs/ad/20160512111459408.png">
                     </a>
                 </li>
                 <li>
                     <a href="http://www.cecr.com.cn/bencandy.php?fid=79&amp;id=858" target="_blank">
-                        <img alt="" src=" Imgs/ad/20160616194004859.png">
+                        <img alt="" src="Imgs/ad/20160616194004859.png">
                     </a>
                 </li>
             </ul>
         </div>
-        <div id="mainNewfoot" style="margin-top:50px; height:150px;">
+        <div id="mainNewfoot" style="margin-top:50px; height:220px;">
             <div class="mainNewfocus" style="width:740px;">
                 <div class="mainNewblog">
                     <ul>
@@ -402,7 +347,7 @@
                         <li class="joinWx"><span></span><p>官方微信</p></li>
                     </ul>
                 </div>
-                <div class="mainNewcopy">
+                <div class="mainNewcopy" style="width:400px;">
                     <div class="mainNewserve">
                         <h3>客服电话:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:12px;">投资有风险，请谨慎投资</span></h3>
                         <h3>4006-777-518&nbsp;&nbsp;&nbsp;http://www.iqianbang.com</h3>
@@ -435,88 +380,4 @@
     </div>
 </body>
 </html>
-<script>
-   //流动条
-    function marquee(height, speed, delay) {
-        var scrollT;
-        var pause = false;
-        var ScrollBox = document.getElementById("upRoll1");
-        if (document.getElementById("holder1").offsetHeight <= height) return;
-        var _tmp = ScrollBox.innerHTML.replace('holder1', 'holder')
-        ScrollBox.innerHTML += _tmp;
-        ScrollBox.onmouseover = function () { pause = true }
-        ScrollBox.onmouseout = function () { pause = false }
-        ScrollBox.scrollTop = 0;
-        function start() {
-            scrollT = setInterval(scrolling, speed);
-            if (!pause) ScrollBox.scrollTop += 2;
-        }
-        function scrolling() {
-            if (ScrollBox.scrollTop % height != 0) {
-                ScrollBox.scrollTop += 2;
-                if (ScrollBox.scrollTop >= ScrollBox.scrollHeight / 2) ScrollBox.scrollTop = 0;
-            }
-            else {
-                clearInterval(scrollT);
-                setTimeout(start, delay);
-            }
-        }
-        setTimeout(start, delay);
-    }
-       //调用流动条
-        marquee(42, 30, 3000);
-     //设置轮播图的宽
-    window.onresize = function ()
-    {
-                        var oM2Ul = document.getElementById('m2-ul');
-                        oM2Ul.style.width = document.documentElement.clientWidth + 'px';
-    }
-      
-
-    $(document).ready(function () {
-        $('.m2-banner-box').mouseenter(function () {
-            $('.m2-prev,.m2-next').fadeIn(200);
-        });
-        $('.m2-banner-box').mouseleave(function () {
-            $('.m2-prev,.m2-next').fadeOut(200);
-        })
-        //焦点图轮播
-        $(".prev,.next").hover(function () {
-            $(this).stop(true, false).fadeTo("show", 0.9);
-        }, function () {
-            $(this).stop(true, false).fadeTo("show", 0.4);
-        });
-        $(".m2-banner-box").slide({
-            titCell: ".m2-hd ul",
-            mainCell: ".m2-bd ul",
-            effect: "fold",
-            interTime: 3500,
-            delayTime: 500,
-            autoPlay: true,
-            autoPage: true,
-            trigger: "mouseover"
-        });
-    });
-
-    $(function ()
-    {
-        // 注册登录tab切换
-        $('.mo2-indLogtab ul li').click(function () {
-            if ($(this).hasClass('mo2-logTab-unsel')) {
-                $(this).addClass('mo2-logTab-sel').removeClass('mo2-logTab-unsel');
-                $(this).siblings('.mo2-logTab-sel').addClass('mo2-logTab-unsel').removeClass('mo2-logTab-sel');
-            }
-        });
-        // 注册登录显示隐藏
-        $('.mo2-indTab-reg').click(function () {
-            $('.mo2-indRegbox').show();
-            $('.mo2-indRegbox2').hide();
-            $('.mo2-indLogbox').hide();
-        });
-        $('.mo2-indTab-log').click(function () {
-            $('.mo2-indRegbox').hide();
-            $('.mo2-indRegbox2').hide();
-            $('.mo2-indLogbox').show();
-        });
-    });
-</script>
+<script src="JS/YeMian/IndexJs.js"></script>
