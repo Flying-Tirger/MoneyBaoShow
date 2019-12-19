@@ -137,6 +137,10 @@
     <Content Include="Imgs\ad\QQ图片20191212104941.png" />
     <Content Include="Imgs\ad\securityten.png" />
     <Content Include="Imgs\ad\home-register-VerifyCode.png" />
+    <Content Include="Imgs\User\1.png" />
+    <Content Include="Imgs\User\2.png" />
+    <Content Include="Imgs\User\3.png" />
+    <Content Include="Imgs\User\null-5618c09503b10b72.jpg" />
     <Content Include="Index.html" />
     <Content Include="JS\jquery-3.3.1.js" />
     <Content Include="JS\jquery.knob.js" />
@@ -249,6 +253,7 @@
     <Content Include="layui\lay\modules\upload.js" />
     <Content Include="layui\lay\modules\util.js" />
     <Content Include="Login.html" />
+    <Content Include="RetrievePassWrod.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
