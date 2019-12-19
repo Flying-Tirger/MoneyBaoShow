@@ -67,8 +67,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Account.html" />
     <Content Include="BingCard.html" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\MoneyBaoShow.dll" />
+    <Content Include="bin\MoneyBaoShow.pdb" />
     <Content Include="CSS\BindCardCss.css" />
+    <Content Include="CSS\chosen.css" />
+    <Content Include="CSS\css.css" />
+    <Content Include="CSS\ie-css3.htc" />
+    <Content Include="CSS\Intro.css" />
+    <Content Include="CSS\jquery-ui.css" />
+    <Content Include="CSS\jquery.mCustomScrollbar.css" />
+    <Content Include="CSS\m2-commonNew.css" />
+    <Content Include="CSS\m2-login.css" />
+    <Content Include="CSS\m2-main.css" />
+    <Content Include="CSS\newPage.css" />
+    <Content Include="CSS\public.css" />
+    <Content Include="CSS\StyleSheet1.css" />
+    <Content Include="FinancingShow.html" />
+    <Content Include="Imgs\1b4c510fd9f9d72a0cd7f0f3da2a2834359bbba9.gif" />
     <Content Include="Imgs\ad\2015113014080319.png" />
     <Content Include="Imgs\ad\20151130140805550.png" />
     <Content Include="Imgs\ad\20151130140806276.png" />
@@ -138,8 +157,85 @@
     <Content Include="Imgs\ad\QQ图片20191212104941.png" />
     <Content Include="Imgs\ad\securityten.png" />
     <Content Include="Imgs\ad\home-register-VerifyCode.png" />
+    <Content Include="Imgs\c1cd65c14be1df5b.jpg" />
+    <Content Include="Imgs\images\100.png" />
+    <Content Include="Imgs\images\40.png" />
+    <Content Include="Imgs\images\50.png" />
+    <Content Include="Imgs\images\75.png" />
+    <Content Include="Imgs\images\ad.jpg" />
+    <Content Include="Imgs\images\ad.png" />
+    <Content Include="Imgs\images\add.jpg" />
+    <Content Include="Imgs\images\agt.png" />
+    <Content Include="Imgs\images\bank1.jpg" />
+    <Content Include="Imgs\images\bank2.jpg" />
+    <Content Include="Imgs\images\bank3.jpg" />
+    <Content Include="Imgs\images\bank4.jpg" />
+    <Content Include="Imgs\images\bank5.jpg" />
+    <Content Include="Imgs\images\bank6.jpg" />
+    <Content Include="Imgs\images\blk.png" />
+    <Content Include="Imgs\images\bluec.png" />
+    <Content Include="Imgs\images\bt_bt.jpg" />
+    <Content Include="Imgs\images\data.png" />
+    <Content Include="Imgs\images\f6o.png" />
+    <Content Include="Imgs\images\hand.png" />
+    <Content Include="Imgs\images\ico-all.png" />
+    <Content Include="Imgs\images\ico-data.png" />
+    <Content Include="Imgs\images\icon.png" />
+    <Content Include="Imgs\images\img1.jpg" />
+    <Content Include="Imgs\images\img2.jpg" />
+    <Content Include="Imgs\images\img3.jpg" />
+    <Content Include="Imgs\images\img4.jpg" />
+    <Content Include="Imgs\images\img5.jpg" />
+    <Content Include="Imgs\images\img6.jpg" />
+    <Content Include="Imgs\images\list.png" />
+    <Content Include="Imgs\images\lj.png" />
+    <Content Include="Imgs\images\logo.png" />
+    <Content Include="Imgs\images\notice.png" />
+    <Content Include="Imgs\images\process.jpg" />
+    <Content Include="Imgs\images\processbar.jpg" />
+    <Content Include="Imgs\images\progressbar_mid.png" />
+    <Content Include="Imgs\images\reboxbg.png" />
+    <Content Include="Imgs\images\sidenav-bg.jpg" />
+    <Content Include="Imgs\images\sidenav-title.jpg" />
+    <Content Include="Imgs\images\step.png" />
+    <Content Include="Imgs\images\time_ico.gif" />
+    <Content Include="Imgs\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Imgs\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Imgs\images\ui-icons_222222_256x240.png" />
+    <Content Include="Imgs\images\ui-icons_454545_256x240.png" />
+    <Content Include="Imgs\images\yuan.gif" />
+    <Content Include="Imgs\upload\01.jpg" />
+    <Content Include="Imgs\upload\02.jpg" />
+    <Content Include="Imgs\upload\03.jpg" />
+    <Content Include="Imgs\upload\img10.jpg" />
+    <Content Include="Imgs\upload\img11.jpg" />
+    <Content Include="Imgs\upload\img12.jpg" />
+    <Content Include="Imgs\upload\img13.jpg" />
+    <Content Include="Imgs\upload\img4.jpg" />
+    <Content Include="Imgs\upload\img5.jpg" />
+    <Content Include="Imgs\upload\img6.jpg" />
+    <Content Include="Imgs\upload\img7.jpg" />
+    <Content Include="Imgs\upload\img8.jpg" />
+    <Content Include="Imgs\upload\img9.jpg" />
+    <Content Include="Imgs\upload\logo_03.jpg" />
+    <Content Include="Imgs\upload\logo_06.jpg" />
+    <Content Include="Imgs\upload\logo_08.jpg" />
+    <Content Include="Imgs\upload\logo_11.jpg" />
+    <Content Include="Imgs\upload\logo_14.jpg" />
+    <Content Include="Imgs\upload\logo_17.jpg" />
+    <Content Include="Imgs\upload\logo_19.jpg" />
+    <Content Include="Imgs\upload\logo_22.jpg" />
+    <Content Include="Imgs\upload\logo_25.jpg" />
+    <Content Include="Imgs\upload\logo_28.jpg" />
+    <Content Include="Imgs\upload\logo_31.jpg" />
+    <Content Include="Imgs\upload\logo_33.jpg" />
+    <Content Include="Imgs\User\1.png" />
+    <Content Include="Imgs\User\2.png" />
+    <Content Include="Imgs\User\3.png" />
+    <Content Include="Imgs\User\null-5618c09503b10b72.jpg" />
     <Content Include="Imgs\Yemian\e7d4cac126941b5a-396dcc73e3007ef8-3e1b25ec34e514d214510c4a674ed0b0.jpg" />
     <Content Include="Index.html" />
+    <Content Include="Investment.html" />
     <Content Include="JS\YeMian\IndexJs.js" />
     <Content Include="JS\jquery-3.3.1.js" />
     <Content Include="JS\jquery.cookie.js" />
@@ -250,6 +346,44 @@
     <Content Include="layui\lay\modules\tree.js" />
     <Content Include="layui\lay\modules\upload.js" />
     <Content Include="layui\lay\modules\util.js" />
+    <Content Include="Login.html" />
+    <Content Include="materials.html" />
+    <Content Include="My97DatePicker\calendar.js" />
+    <Content Include="My97DatePicker\config.js" />
+    <Content Include="My97DatePicker\lang\en.js" />
+    <Content Include="My97DatePicker\lang\zh-cn.js" />
+    <Content Include="My97DatePicker\lang\zh-tw.js" />
+    <Content Include="My97DatePicker\My97DatePicker.htm" />
+    <Content Include="My97DatePicker\skin\blueFresh\datepicker.css" />
+    <Content Include="My97DatePicker\skin\blueFresh\img.gif" />
+    <Content Include="My97DatePicker\skin\BuMen.gif" />
+    <Content Include="My97DatePicker\skin\crm.GIF" />
+    <Content Include="My97DatePicker\skin\datePicker.gif" />
+    <Content Include="My97DatePicker\skin\default1\datepicker.css" />
+    <Content Include="My97DatePicker\skin\default1\img.gif" />
+    <Content Include="My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="My97DatePicker\skin\default\img.gif" />
+    <Content Include="My97DatePicker\skin\salary.gif" />
+    <Content Include="My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="My97DatePicker\WdatePicker.js" />
+    <Content Include="My97DatePicker\开发包\lang\en.js" />
+    <Content Include="My97DatePicker\开发包\lang\zh-cn.js" />
+    <Content Include="My97DatePicker\开发包\lang\zh-tw.js" />
+    <Content Include="My97DatePicker\开发包\readme.txt" />
+    <Content Include="My97DatePicker\开发包\skin\datePicker.gif" />
+    <Content Include="My97DatePicker\开发包\skin\default\datepicker.css" />
+    <Content Include="My97DatePicker\开发包\skin\default\img.gif" />
+    <Content Include="My97DatePicker\开发包\skin\WdatePicker.css" />
+    <Content Include="My97DatePicker\开发包\skin\whyGreen\bg.jpg" />
+    <Content Include="My97DatePicker\开发包\skin\whyGreen\datepicker.css" />
+    <Content Include="My97DatePicker\开发包\skin\whyGreen\img.gif" />
+    <Content Include="obj\Debug\MoneyBaoShow.csproj.FileListAbsolute.txt" />
+    <Content Include="recharge.html" />
+    <Content Include="RetrievePassWrod.html" />
+    <Content Include="Show.html" />
     <Content Include="statics\common\js\common.js" />
     <Content Include="statics\common\js\jquery.js" />
     <Content Include="statics\common\tipBox\colorbox-master\css\colorbox.css" />
@@ -714,6 +848,7 @@
     <Content Include="layui\font\iconfont.ttf" />
     <Content Include="layui\font\iconfont.woff" />
     <Content Include="layui\font\iconfont.woff2" />
+    <Content Include="bin\MoneyBaoShow.dll.config" />
     <None Include="packages.config" />
     <Content Include="statics\common\images\iconB.png.tmp!" />
     <Content Include="statics\common\images\iconGa.png.tmp!" />
@@ -732,7 +867,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
