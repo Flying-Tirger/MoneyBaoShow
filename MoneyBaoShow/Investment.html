@@ -14,6 +14,7 @@
     <link rel="shortcut icon" href="#" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no" />
     <meta name="format-detection" content="telephone=no,email=no" />
+    <script src="My97DatePicker/WdatePicker.js"></script>
 </head>
 <body>
     <div id="IndexBody">
@@ -83,7 +84,7 @@
                 <ul class="layui-nav layui-nav-tree" lay-filter="test" style="left:450px">
                     <!-- 侧边导航: <ul class="layui-nav layui-nav-tree layui-nav-side"> -->
                     <li class="layui-nav-item layui-nav-itemed">
-                        <a href="Account;">我的账户</a>
+                        <a href="javascript:;">我的账户</a>
                     </li>
                     <li class="layui-nav-item">
                         <a href="Show.html">成长值中心</a>
@@ -94,68 +95,53 @@
                     <li class="layui-nav-item"><a href="">银行卡管理</a></li>
                     <li class="layui-nav-item"><a href="">我的钱包</a></li>
                 </ul>
-                <div class="m2-wel-con" style="background-color:white;width:800px;height:350px;margin-left:700px;margin-top:-313px;float:left">
-                    <p class="m2-wel-hello" id="greeting" style="background-color:white;margin:0 10px;width: 730px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" title="上午好，iqb13737301354，投资，是为了更好的自己！"><i class="m2-hello-aft"></i>上午好，xxx，投资，是为了更好的自己！</p>
-                    <div>
-                        <div class="m2-wel-lef" style="width:500px;height:250px;background-color:white">
-                            <div class="left" style="width:250px;">
-
-                                <img src="Imgs/ad/vip.png" alt="金钱豹" style="margin:20px" />
-                                <button style="width:100px;height:40px;margin:14px" onclick="QianDao">签到</button>
-                                <p>您已连续签到<span id="day">1</span>天，</p>
-                                <p><span id="today">明天</span>再签到可获得<span id="growth">2</span>个成长值</p>
-                            </div>
-                            <div class="right" style="width:250px;float: right;margin-right: 81px;margin-top: -165px;">
-                                <div class="m2-userMsg-iconLv">
-                                    <a href="usercenter-growth-index.html" class="m2-iconLevel-normal"><i></i><span>帮主</span></a>
-                                </div>
-
-                                <div>成长值：<span id="mydetail_num" data="4000">1</span><a href="/usercenter-growth-index#mao" style="color:#69b1d7;float:right;">如何加速？</a></div>
-                                <div id="desc" style="margin:10px 0;font-size:12px;">距离 <span id="vipname">铁帮主</span> 还需要 <span id="integral">3999</span> 成长值</div>	  
-                                <div class="layui-progress layui-progress-big" lay-showPercent="yes">
-                                    <div class="layui-progress-bar layui-bg-green" lay-percent="50%" style="width:50px"></div>
-                                </div>
-                                <ul style="margin:16px 0 10px 0;">
-                                    <li class="m2-userMsg-icon" style="margin-left:-8px;"><a href="#" id="verify_id" class="m2-iconUser-fal" title="实名认证"></a></li>
-                                    <li class="m2-userMsg-icon"><a href="#?phone=1" id="verify_phone" class="m2-iconPho-tur" title="手机认证"></a></li>
-                                    <li class="m2-userMsg-icon"><a href="#?email=1" id="verify_email" class="m2-iconEmail-fal" title="邮箱认证"></a></li>
-                                </ul>
-                                <div class="m2-wel-level" style="margin-left:0;">
-                                    <p>安全等级：<span class="m2-level-low" id="safe_level" style="color:#1adb9e;">低</span><a href="#" id="safe_level_url" style="color:#0996cc;">[提升]</a></p>
-                                </div>
-                            </div>
-                        </div>
+                <div class="m2-userCentermanage-con" style="background-color:antiquewhite;width:800px;height:350px;margin-left:700px;margin-top:-313px;float:left">
+                    <div class="m2-manage-search-head" style="background-color:burlywood">
+                        <h2>
+                            <i>
+                                <img src="Imgs/ad/ZM{JYXMLRQQ2H4XXT9{G[QU.png" />
+                            </i>
+                            投资记录
+                        </h2>
                     </div>
-                    <div class="m2-wel-rig" style="width:300px;height:266px;background-color:white;float:right;margin-top:-266px;margin-left:4px">
-                        <div class="m2-wel-profitCon" style="background-color:white;width:290px;height:72px;float:left;margin-top:86px;margin-left:10px">
-                            <div class="m2-wel-profit" style="background-color:white;width:145px;height:72px">
-                                <p style="font-size:10px">
-                                    累计收益（元）
-                                </p>
-                                <span style="font:700;color:chocolate;font-size:30px">0.00</span>
-                            </div>
-                            <div class="m2-wel-profit" style="background-color:white;width:145px;height:72px;float:right;margin-top:-72px">
-                                <p style="font-size:10px">
-                                    今日赚取（元）
-                                </p>
-                                <span style="font:700;color:chocolate;font-size:30px">0.00</span>
-                            </div>
-                        </div>
-                        <div class="m2-wel-profitLink">
-                            <a class="m2-profit-cha" href="" style="margin-left:54px;margin-right:57px;float:right;margin-top:26px;background-color:aqua">徽商充值</a>
-                            <a class="m2-profit-cha" href="home-register-openbankid.html" style="margin-left:54px;margin-right:29px;float:right;margin-top:26px;background-color:aqua">徽商提现</a>
-                        </div>
-
+                    <div class="m2-manage-search-selector" style="background-color:aquamarine;width:800px;height:318px">
+                        <ul class="m2-manageSearchsel-time m2-manageSearchsel-time1" style="width:800px;height:30px;background-color:cadetblue;float:left;margin-top:30px">
+                            <li style="font-size:20px">时间范围：</li>
+                            <li><span class="m2-manSealink-sel" style="font-size:15px;float:left;margin-left:105px;margin-top:-21px">全部</span></li>
+                            <li><span class="m2-manSealink-sel" style="font-size:15px;float:left;margin-left:140px;margin-top:-21px">最近7天</span></li>
+                            <li><span class="m2-manSealink-sel" style="font-size:15px;float:left;margin-left:215px;margin-top:-21px">一个月</span></li>
+                            <li><span class="m2-manSealink-sel" style="font-size:15px;float:left;margin-left:285px;margin-top:-21px">三个月</span></li>
+                            <li><span class="m2-manSealink-sel" style="font-size:15px;float:left;margin-left:360px;margin-top:-21px">从<input id="Text1" type="text" onclick="WdatePicker()" /></span></li>
+                            <li><span class="m2-manSealink-sel" style="font-size:15px;float:left;margin-left:553px;margin-top:-23px">到<input id="Text1" type="text" onclick="WdatePicker()" /></span></li>
+                        </ul>
+                        <ul class="m2-manageSearchsel-time m2-manageSearchsel-time2" style="width:800px;height:30px;background-color:cadetblue;float:left;margin-top:15px">
+                            <li style="font-size:20px">回款状态：</li>
+                            <li><span class="m2-manSealink-sel" style="font-size:15px;float:left;margin-left:105px;margin-top:-21px">全部</span></li>
+                            <li><span class="m2-manSealink-sel" style="font-size:15px;float:left;margin-left:140px;margin-top:-21px">还款中</span></li>
+                            <li><span class="m2-manSealink-sel" style="font-size:15px;float:left;margin-left:215px;margin-top:-21px">已结清</span></li>
+                            <li><span class="m2-manSealink-sel" style="font-size:15px;float:left;margin-left:285px;margin-top:-21px">已转让</span></li>
+                        </ul>
+                        <ul class="m2-manageSearchsel-time m2-manageSearchsel-time3" style="width:800px;height:30px;background-color:cadetblue;float:left;margin-top:15px">
+                            <li style="font-size:20px">投资方式：</li>
+                            <li><span class="m2-manSealink-sel" style="font-size:15px;float:left;margin-left:105px;margin-top:-21px">全部</span></li>
+                            <li><span class="m2-manSealink-sel" style="font-size:15px;float:left;margin-left:140px;margin-top:-21px">自动投标</span></li>
+                            <li><span class="m2-manSealink-sel" style="font-size:15px;float:left;margin-left:215px;margin-top:-21px">手动投标</span></li>
+                        </ul>
+                        <table class="m2-userInvest-table">
+                            <tbody>
+                                <tr class="m2-userInevst-head">
+                                    <th style="width:140px;">项目名称</th>
+                                    <th style="width:120px;">投资金额</th>
+                                    <th style="width:60px;">收益率</th>
+                                    <th style="width:120px;">计息日</th>
+                                    <th style="width:120px;">还款日</th>
+                                    <th style="width:168px;"></th>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
                     </div>
-                </div>
-                <div class="m2-userInd-num" style="background-color:white;width:800px;height:84px;float:right;margin-right:500px;margin-top:-84px">
-                    <div class="border" style="margin-top:67px">
-
-                        温馨提示：因数据处理存在延迟，项目还款时数值会存在异常波动，还款后2小时银行完成对账后显示为正常值。
-
-                    </div>
-
-                </div>
+                </div>    
             </div>
 
         </div>
