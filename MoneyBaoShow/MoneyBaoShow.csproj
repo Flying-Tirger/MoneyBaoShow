@@ -135,7 +135,17 @@
     <Content Include="Imgs\ad\m2-sloganHS.png" />
     <Content Include="Imgs\ad\QQ图片20191212104941.png" />
     <Content Include="Imgs\ad\securityten.png" />
+    <Content Include="Imgs\Invest\30511b5689087b3c3bd3841654f9f6c8.png" />
+    <Content Include="Imgs\Invest\4ca29e38a6f35b502da37520c03f087e.png" />
+    <Content Include="Imgs\Invest\52f968caabb3ef875b1f048f906759dd.png" />
+    <Content Include="Imgs\Invest\69886a756856b12f5cbb1b51feb856c6.png" />
+    <Content Include="Imgs\Invest\9a6176dfafe676b6a32069dfb2831a9f.png" />
+    <Content Include="Imgs\Invest\c6ea731e52141e5115cc98f40a066088.png" />
+    <Content Include="Imgs\Invest\d636efad65b03a1b0e786006b5279dc4.png" />
+    <Content Include="Imgs\Invest\d8ce66ab37c0219f242b6a3b4689fa29.png" />
+    <Content Include="Imgs\Invest\f7e68e14ce4edea1380a7239a7037c9c.png" />
     <Content Include="Index.html" />
+    <Content Include="Invest.html" />
     <Content Include="JS\jquery-3.3.1.js" />
     <Content Include="JS\jquery.unobtrusive-ajax.js" />
     <Content Include="layui\css\layui.css" />
