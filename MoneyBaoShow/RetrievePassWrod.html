@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="Shortcut  Icon" href="statics/home/images/minilogo.png">
+    <link rel="stylesheet" href="statics/newcommon/css/m2-commonNew.css?20160520">
+    <link rel="stylesheet" href="statics/home2/css/m2-main.css?20160520">
+    <link rel="stylesheet" href="statics/newcommon/css/m2-common.css?20160520">
+    <script type="text/javascript" src="statics/home/js/jquery.min.js"></script>
+    <script type="text/javascript" src="statics/newcommon/js/common.js?20160520"></script>
+    <script src="JS/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" href="statics/home2/css/m2-login.css">
+
+    <script type="text/javascript" src="statics/common/js/common.js"></script>
+
+</head>
+<body>
+    <div class="m2-mainbody">
+        <div class="m2-pwd-con">
+            <a href="index.html" class="m2-pwdLink-index"></a>
+            <div class="m2-pwdBg1-con" style="padding-top: 217px;">
+                <div class="m2-pwdBg1;" style="background-image:url(Imgs/ad/20160808201422911.png); background-repeat:no-repeat;background-size:100% 100%; width: 3060px;height:  1941px; margin-top: -247px;">
+                    <p>
+                        <img src="Imgs/ad/QQ图片20191212104941.png" style="  width: 171px;height: 121px;margin-left: 426px" />
+                        <h1 style="margin-left: 613px;margin-top: -137px;font-size: 92px;">金钱豹，你来做富人</h1>
+                    </p>
+                    <p class="m2-pwdBg1-list"></p>
+                    <p class="m2-pwdBg1-link"></p>
+                </div>
+
+
+
+
+                <div  style=" margin-top: -431px;width:100%">
+                    <h1></h1>
+                    <div style="WIDTH: 29%;float:left;  HEIGHT: 500px;">
+
+                        <div style="float:left; background-color: #ffffff;width: 142%;height: 577px;margin-top: -1080px;margin-left: 525px;    border-radius: 15px;">
+                            <div>
+                                <drjiv style="float:left ;width:22%;height: 321px;margin-left: 14px;margin-top: 40px;">
+
+                                </drjiv>
+                            </div>
+
+                            <div style="float:right;margin-right: 74px; width:44%;height: 500px;    margin-top: -27px;">
+                                <div style="margin-top: 73px; margin-left: 1px;height: 313px;">
+
+                                    <div style="margin-left:80px;">
+                                        <h1 style=" margin-left: -212px;margin-top: 3%;font-size: 66px">找回密码</h1>
+                                    </div>
+                
+                                    <div style="width:379px;height:101px;  margin-left:-81px;font-size: 21px;">
+                                        <label style="margin-left:-81px;font-size: 21px;">*验证成功后，密码为初始密码111111</label>
+                                        <p style="width: 240px;height:50px;margin-top: 47px;"></p>
+                                    </div>
+                                    <div>
+
+
+                                        <div class="Model" style="float: left;margin-left: -188px;margin-top: -58px;">
+
+                                            
+                                            <div style="width:600px;height: 20px;">
+                                               
+                                                <div class="m2-pwdFrom-item" margin-left: -278px;>
+
+                                                    
+                                                </div>
+                                            </div>
+
+                                            <div style="width:600px;height: 84px;">
+                                                <p>
+
+                                                    <img src="Imgs/User/3.png" style="width: 50px;height: 41px;margin-top: 6px;margin-left: -8px;">
+                                                </p>
+                                                <div class="m2-pwdFrom-item" margin-left: -278px;>
+
+                                                    <p style="font-size: 35px;margin-left: 44px;margin-top: -68px;">
+                                                        邮箱
+                                                    </p>
+                                                    <p style="margin-left: 183px; margin-top: -69px;">
+                                                    <input style="width: 230px;height: 29px;" id="Test111" type="text" />
+                                                    <input id="Submit1" type="submit" style="margin-left: 10px;" value="获取验证码" onclick="TestGetCode()" /> </p>
+                                                </div>
+
+                                                <div class="m2-pwdFrom-item" margin-left: -278px;>
+                                                 
+                                                    <p style="font-size: 35px;margin-left: 44px;margin-top: 38px;">
+                                                        验证码
+                                                    </p>
+                                                    <p style="margin-left: 183px; margin-top: -69px;"><input style="width: 230px;height: 26px;" id="CAPTCHA" type="text" /> </p>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div style="margin: 181px;margin-top: 38px;">
+
+                                                <p><input id="Button1" type="button" value="找回密码" onclick="RetrievePassword()" style="border-radius: 35px;width: 151px;height: 48px;background-color: #f59451; margin-top: 50px;" /></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="float:right;width:30%;height:500PX; margin-left: 40px">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</body>
+</html>
+<script>
+
+    function TestGetCode() {
+        var s =$("#Test111").val();
+        alert(s)
+        alert(document.getElementById("Test111").value)
+
+        $.ajax({
+            url: "https://localhost:44353/api/EncryPetd/GetTestGetCode?JiShou=" + $("#Test111").val(),
+            type: "get",
+            success: function (d) {
+                alert(d)
+                var aa = d;
+                alert(aa);
+            }
+        })
+        }
+    function RetrievePassword() {
+        var pwd = 111111;
+        if ($("#CAPTCHA").val() != null || $("#CAPTCHA").val() != "" || $("#CAPTCHA").val() == aa) {
+            alert("正确!");
+            $.ajax({
+            url: "https://localhost:44353/api/UserInfo/GetEmilaVerify",
+            data: { UserEmail:$("Test111").val(),distinguish:0, variable: pwd},
+            type: "get",
+            success: function (d) {
+                if (d > 0) {
+                    alert('密码已为您找回，密码为'+pwd);
+                }
+            }
+            })
+        } else {
+            return alert("你输入的账号有错误,请输入正确的邮 箱!");
+        }
+       
+    }
+</script>

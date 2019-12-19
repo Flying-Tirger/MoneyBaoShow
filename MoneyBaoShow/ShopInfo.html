@@ -1,0 +1,485 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>会员商城</title>
+    <link href="CSS/member_mall.css" rel="stylesheet" />
+    <link href="layui/css/layui.css" rel="stylesheet" />
+    <script src="layui/layui.js"></script>
+    <link href="CSS/m2-main.css" rel="stylesheet" />
+    <link href="CSS/m2-commonNew.css" rel="stylesheet" />
+    <link href="CSS/newPage.css" rel="stylesheet" />
+    <script src="JS/jquery-3.3.1.js"></script>
+    <script src="JS/jquery.unobtrusive-ajax.js"></script>
+    <link rel="shortcut icon" href="#" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no,email=no" />
+</head>
+<body>
+    <div id="IndexBody">
+        <div class="m2-commonTop-con">
+            <div class="m2-commonTop">
+                <div class="m2-commonTop-left">
+                    <div class="m2-commonTop-tel"><i></i>4006&nbsp;-&nbsp;777&nbsp;-&nbsp;518</div>
+                    <div class="m2-commonTop-service" style="padding-left:0;">
+                        <span style="float:left;">客服：</span>
+                        <div style="float:left;display:inline-block;width:92px;height:22px;padding:6px 0 13px 0;"></div>
+                    </div>
+                    <div class="m2-commonEwm">
+                        <span class="m2-commonEwm-tit">关注我们：</span>
+                        <div class="m2-commonEwmwx">
+                            <i class="m2-commonEwmicon"></i>
+                            <div class="m2-commonEwmhid">
+                                <em class="m2-commonEwmhid-arr"></em>
+                                <em class="m2-commonEwmhid-arrBg"></em>
+                                <b></b>
+                                <span>扫一扫<br>关注爱钱豹订阅号</span>
+                            </div>
+                        </div>
+                        <div class="m2-commonEwmwb">
+                            <i class="m2-commonEwmicon" onclick='window.open("http://weibo.com/iqianbang")'></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="m2-commonTop-right">
+                    <div class="m2-commonTop-link">
+                        <ul>
+                            <li class="m2-commonTop-btn"><a href="register.html" target="_blank">注册</a></li>
+                            <li class="m2-commonTop-btn"><a style="border-right:none;" href="login.html#login_callback=/index" target="_blank">登录</a></li>
+                        </ul>
+                    </div>
+                    <div class="m2-commonTop-app" style="cursor:pointer;" onclick='window.open("appdownload.html")'>
+                        <a class="m2-commonTop-and" href=""></a>
+                        <a class="m2-commonTop-ios" href=""></a>
+                        <span>app下载入口</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m2-commonNav-con">
+            <div class="m2-commonNav-box">
+                <div class="m2-commonLogo">
+                    <a class="m2-comImg-logo" href="index.html">
+                        <img title="爱钱帮投资理财平台logo" alt="金钱豹" src="Imgs/ad/QQ图片20191212104941.png" style="padding-bottom:10px;">
+
+                    </a>
+                    <a class="m2-conImg-slogan" href="">
+                        <img title="徽商银行投资理财托管" alt="" src="/Imgs/ad/m2-sloganHS.png">
+                    </a>
+                </div>
+                <div class="m2-commonNav">
+                    <ul class="m2-commonNavul-fir" data_page="onepage">
+                        <li class="m2-commonNav-fir" ><a id="onepage" href="index.html">首页</a></li>
+                        <li class="m2-commonNav-fir"><a id="twopage" href="touzi_licai_chanpin.html">我要投资</a></li>
+                        <li class="m2-commonNav-fir"><a id="sevenpage" href="membermall.html">我要融资</a></li>
+                        <li class="m2-commonNav-fir"style="border-bottom-color: rgb(255, 102, 102); border-bottom-width: 2px; border-bottom-style: solid;"><a id="threepage" href="usercenter.html">会员商城</a></li>
+                        <li class="m2-commonNav-fir"><a id="fourpage" href="anquanlicai_baozhang.html">我的账户</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="member_mall_top">
+            <div class="member_top_layout">
+                <div class="member_top_layout_content">
+                    <p class="name">我的钱帮币</p>
+                    <input type="hidden" id="signStatus" name="signStatus" value="1">
+                    <input type="hidden" id="lottery_times" name="lottery_times" value="1" />
+                    <div class="money">
+                        <span id="myCoin">22</span>
+                        <img src="Imgs/member_mall/member_mall2.png">
+                    </div>
+                    <button class="qiandao" id="qiandao">签到抽大奖</button>
+                    <p>每日一抽&emsp;惊喜不断</p>
+                    <a href="conversion.html"><p class="bottom">兑换记录>></p></a>
+                </div>
+            </div>
+        </div>
+        <div id="member_mall_content">
+            <!-- 精品推荐样式 -->
+            <div class="solid firstsolid"></div><div class="circle"></div>
+            <span class="mytitle">赚取钱帮币</span>
+            <div class="circle"></div><div class="solid firstsolid"></div>
+            <div class="solid secondsolid" style="margin-left:38px;"></div><div class="circle"></div>
+            <span class="mytitle">精品推荐</span>
+            <div class="circle"></div><div class="solid secondsolid"></div>
+            <div class="recommend">小爱推荐</div>
+            <div style="margin-left:-30px;width:1030px;">
+                <div class="container" style="vertical-align: top;margin-right:-4px;">
+                    <h6>
+                        <a href="chanpin.html#-zNVKfzsUZ!aw8Tc7+A.html" target="_blank" title="【新手标】爱车贷-现代ix35-XAA136">【新手标】爱车贷-现代i…</a>
+                    </h6>
+                    <p></p>
+                    <div class="animate"><div class="content_animate" style="width:36.54%"></div></div>
+                    <p class="number_animate">
+                        <a href="###" title="项目总额：7.36万">7.36万</a>/
+                        <a href="###" title="项目余额：46,700.00元">46,700.00</a>元
+                    </p>
+                    <div class="scale_year">
+                        <p class="number_scale">
+                            8%+1%
+                        </p>
+                        <p style="margin-left:-2px;" class="jiaxishow">
+                            活动加息1%
+                        </p>
+                        <p>预期年化收益率</p>
+                    </div>
+                    <div class="scale_year" style="float:right;">
+                        <p class="number_scale">
+                            32天
+                        </p>
+                        <p>项目期限</p>
+                    </div>
+
+                    <button class="money_btn" onclick='window.location.href="chanpin.html#-zNVKfzsUZ!aw8Tc7+A.html"'>立即赚取</button>
+                </div>
+
+                <div class="container goods_detailed_news" data="58">
+                    <div class="pic_contain">
+                        <!--     			<img src="statics/home2/images/member_mall/member_mall3.png"> -->
+                        <img src="Imgs/membermall/20160824141652673.png">
+                    </div>
+                    <p class="pic_name">3元红包</p>
+                    <div class="pic_introduce">
+                        <span>原价：</span>
+                        <div class="before_price">
+                            <span>200</span><img src="Imgs/member_mall/member_mall6.png">
+                            <div class="heng_solid"></div>
+                        </div>
+                    </div>
+                    <div class="pic_introduce">
+                        <span class='vip_name'>帮主尊享价：</span>
+                        <span class="after_price">200</span><img src="Imgs/member_mall/member_mall2.png">
+                    </div>
+                    <div class="pic_introduce">
+                        <span>库存：</span>
+                        <span>125（件）</span>
+                        <button style="width:60px;height:30px;border-radius:15px;">兑换</button>
+                    </div>
+                </div><div class="container goods_detailed_news" data="69">
+                    <div class="pic_contain">
+                        <!--     			<img src="statics/home2/images/member_mall/member_mall3.png"> -->
+                        <img src="Imgs/membermall/20160805102220960.png">
+                    </div>
+                    <p class="pic_name">飞科智能剃须刀</p>
+                    <div class="pic_introduce">
+                        <span>原价：</span>
+                        <div class="before_price">
+                            <span>10000</span><img src="Imgs/member_mall/member_mall6.png">
+                            <div class="heng_solid"></div>
+                        </div>
+                    </div>
+                    <div class="pic_introduce">
+                        <span class='vip_name'>帮主尊享价：</span>
+                        <span class="after_price">10000</span><img src="Imgs/member_mall/member_mall2.png">
+                    </div>
+                    <div class="pic_introduce">
+                        <span>库存：</span>
+                        <span>10（件）</span>
+                        <button style="width:60px;height:30px;border-radius:15px;">兑换</button>
+                    </div>
+                </div><div class="container goods_detailed_news" data="68">
+                    <div class="pic_contain">
+                        <!--     			<img src="statics/home2/images/member_mall/member_mall3.png"> -->
+                        <img src="Imgs/membermall/20160805033052639.png">
+                    </div>
+                    <p class="pic_name">暴风魔镜</p>
+                    <div class="pic_introduce">
+                        <span>原价：</span>
+                        <div class="before_price">
+                            <span>13300</span><img src="Imgs/member_mall/member_mall6.png">
+                            <div class="heng_solid"></div>
+                        </div>
+                    </div>
+                    <div class="pic_introduce">
+                        <span class='vip_name'>帮主尊享价：</span>
+                        <span class="after_price">13300</span><img src="Imgs/member_mall/member_mall2.png">
+                    </div>
+                    <div class="pic_introduce">
+                        <span>库存：</span>
+                        <span>15（件）</span>
+                        <button style="width:60px;height:30px;border-radius:15px;">兑换</button>
+                    </div>
+                </div>
+            </div>
+            <!-- 理财神器样式 -->
+            <div style="clear:both;"></div>
+            <div class="solid thirdsolid"></div><div class="circle"></div>
+            <span class="mytitle">理财神器</span>
+            <div class="circle"></div><div class="solid thirdsolid"></div>
+            <div style="height:20px;"></div>
+            <div style="margin-left:-30px;width:1030px;">
+                <div class="container goods_detailed_news" data="60">
+                    <div class="pic_contain">
+                        <img src="Imgs/membermall/20160824141721351.png">
+                    </div>
+                    <p class="pic_name">50元红包</p>
+                    <div class="pic_introduce">
+                        <span>原价：</span>
+                        <div class="before_price">
+                            <span>3300</span><img src="Imgs/member_mall/member_mall6.png">
+                            <div class="heng_solid"></div>
+                        </div>
+                    </div>
+                    <div class="pic_introduce">
+                        <span class='vip_name'>帮主尊享价：</span>
+                        <span class="after_price">3300</span><img src="Imgs/member_mall/member_mall2.png">
+                    </div>
+                    <div class="pic_introduce">
+                        <span>库存：</span>
+                        <span>91（件）</span>
+                        <button style="width:60px;height:30px;border-radius:15px;">兑换</button>
+                    </div>
+                </div><div class="container goods_detailed_news" data="59">
+                    <div class="pic_contain">
+                        <img src="Imgs/membermall/20160824141534940.png">
+                    </div>
+                    <p class="pic_name">15元红包</p>
+                    <div class="pic_introduce">
+                        <span>原价：</span>
+                        <div class="before_price">
+                            <span>1000</span><img src="Imgs/member_mall/member_mall6.png">
+                            <div class="heng_solid"></div>
+                        </div>
+                    </div>
+                    <div class="pic_introduce">
+                        <span class='vip_name'>帮主尊享价：</span>
+                        <span class="after_price">1000</span><img src="Imgs/member_mall/member_mall2.png">
+                    </div>
+                    <div class="pic_introduce">
+                        <span>库存：</span>
+                        <span>70（件）</span>
+                        <button style="width:60px;height:30px;border-radius:15px;">兑换</button>
+                    </div>
+                </div><div class="container goods_detailed_news" data="58">
+                    <div class="pic_contain">
+                        <img src="Imgs/membermall/20160824141652673.png">
+                    </div>
+                    <p class="pic_name">3元红包</p>
+                    <div class="pic_introduce">
+                        <span>原价：</span>
+                        <div class="before_price">
+                            <span>200</span><img src="Imgs/member_mall/member_mall6.png">
+                            <div class="heng_solid"></div>
+                        </div>
+                    </div>
+                    <div class="pic_introduce">
+                        <span class='vip_name'>帮主尊享价：</span>
+                        <span class="after_price">200</span><img src="Imgs/member_mall/member_mall2.png">
+                    </div>
+                    <div class="pic_introduce">
+                        <span>库存：</span>
+                        <span>125（件）</span>
+                        <button style="width:60px;height:30px;border-radius:15px;">兑换</button>
+                    </div>
+                </div><div class="container goods_detailed_news" data="61">
+                    <div class="pic_contain">
+                        <img src="Imgs/membermall/20160824141745286.png">
+                    </div>
+                    <p class="pic_name">75元红包</p>
+                    <div class="pic_introduce">
+                        <span>原价：</span>
+                        <div class="before_price">
+                            <span>5000</span><img src="Imgs/member_mall/member_mall6.png">
+                            <div class="heng_solid"></div>
+                        </div>
+                    </div>
+                    <div class="pic_introduce">
+                        <span class='vip_name'>帮主尊享价：</span>
+                        <span class="after_price">5000</span><img src="Imgs/member_mall/member_mall2.png">
+                    </div>
+                    <div class="pic_introduce">
+                        <span>库存：</span>
+                        <span>90（件）</span>
+                        <button style="width:60px;height:30px;border-radius:15px;">兑换</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 潮流尖货样式 -->
+            <div style="clear:both;"></div>
+            <div class="solid thirdsolid fourthsolid"></div><div class="circle" style="background-color:#62b7f7;"></div>
+            <span class="mytitle" style="color:#62b7f7;">潮流尖货</span>
+            <div class="circle" style="background-color:#62b7f7;"></div><div class="solid thirdsolid fourthsolid"></div>
+            <div style="height:20px;"></div>
+            <div style="margin-left:-30px;width:1030px;">
+                <div class="container goods_detailed_news" data="69">
+                    <div class="pic_contain">
+                        <img src="Imgs/membermall/20160805102220960.png">
+                    </div>
+                    <p class="pic_name">飞科智能剃须刀</p>
+                    <div class="pic_introduce">
+                        <span>原价：</span>
+                        <div class="before_price">
+                            <span>10000</span><img src="Imgs/member_mall/member_mall6.png">
+                            <div class="heng_solid"></div>
+                        </div>
+                    </div>
+                    <div class="pic_introduce">
+                        <span class='vip_name'>帮主尊享价：</span>
+                        <span class="after_price">10000</span><img src="Imgs/member_mall/member_mall2.png">
+                    </div>
+                    <div class="pic_introduce">
+                        <span>库存：</span>
+                        <span>10（件）</span>
+                        <button style="width:60px;height:30px;border-radius:15px;">兑换</button>
+                    </div>
+                </div><div class="container goods_detailed_news" data="67">
+                    <div class="pic_contain">
+                        <img src="Imgs/membermall/20160805032957562.png">
+                    </div>
+                    <p class="pic_name">PICOOC智能体脂秤</p>
+                    <div class="pic_introduce">
+                        <span>原价：</span>
+                        <div class="before_price">
+                            <span>6600</span><img src="Imgs/member_mall/member_mall6.png">
+                            <div class="heng_solid"></div>
+                        </div>
+                    </div>
+                    <div class="pic_introduce">
+                        <span class='vip_name'>帮主尊享价：</span>
+                        <span class="after_price">6600</span><img src="Imgs/member_mall/member_mall2.png">
+                    </div>
+                    <div class="pic_introduce">
+                        <span>库存：</span>
+                        <span>8（件）</span>
+                        <button style="width:60px;height:30px;border-radius:15px;">兑换</button>
+                    </div>
+                </div><div class="container goods_detailed_news" data="68">
+                    <div class="pic_contain">
+                        <img src="Imgs/membermall/20160805033052639.png">
+                    </div>
+                    <p class="pic_name">暴风魔镜</p>
+                    <div class="pic_introduce">
+                        <span>原价：</span>
+                        <div class="before_price">
+                            <span>13300</span><img src="Imgs/member_mall/member_mall6.png">
+                            <div class="heng_solid"></div>
+                        </div>
+                    </div>
+                    <div class="pic_introduce">
+                        <span class='vip_name'>帮主尊享价：</span>
+                        <span class="after_price">13300</span><img src="Imgs/member_mall/member_mall2.png">
+                    </div>
+                    <div class="pic_introduce">
+                        <span>库存：</span>
+                        <span>15（件）</span>
+                        <button style="width:60px;height:30px;border-radius:15px;">兑换</button>
+                    </div>
+                </div><div class="container goods_detailed_news" data="72">
+                    <div class="pic_contain">
+                        <img src="Imgs/membermall/20160817143650682.png">
+                    </div>
+                    <p class="pic_name">50元京东购物卡</p>
+                    <div class="pic_introduce">
+                        <span>原价：</span>
+                        <div class="before_price">
+                            <span>3300</span><img src="Imgs/member_mall/member_mall6.png">
+                            <div class="heng_solid"></div>
+                        </div>
+                    </div>
+                    <div class="pic_introduce">
+                        <span class='vip_name'>帮主尊享价：</span>
+                        <span class="after_price">3300</span><img src="Imgs/member_mall/member_mall2.png">
+                    </div>
+                    <div class="pic_introduce">
+                        <span>库存：</span>
+                        <span>7（件）</span>
+                        <button style="width:60px;height:30px;border-radius:15px;">兑换</button>
+                    </div>
+                </div><div class="container goods_detailed_news" data="71">
+                    <div class="pic_contain">
+                        <img src="Imgs/membermall/20160817143607359.png">
+                    </div>
+                    <p class="pic_name">极米智能投影仪</p>
+                    <div class="pic_introduce">
+                        <span>原价：</span>
+                        <div class="before_price">
+                            <span>179900</span><img src="Imgs/member_mall/member_mall6.png">
+                            <div class="heng_solid"></div>
+                        </div>
+                    </div>
+                    <div class="pic_introduce">
+                        <span class='vip_name'>帮主尊享价：</span>
+                        <span class="after_price">179900</span><img src="Imgs/member_mall/member_mall2.png">
+                    </div>
+                    <div class="pic_introduce">
+                        <span>库存：</span>
+                        <span>5（件）</span>
+                        <button style="width:60px;height:30px;border-radius:15px;">兑换</button>
+                    </div>
+                </div><div class="container goods_detailed_news" data="73">
+                    <div class="pic_contain">
+                        <img src="Imgs/membermall/20160817143909176.png">
+                    </div>
+                    <p class="pic_name">九号单轮平衡自行车</p>
+                    <div class="pic_introduce">
+                        <span>原价：</span>
+                        <div class="before_price">
+                            <span>153300</span><img src="Imgs/member_mall/member_mall6.png">
+                            <div class="heng_solid"></div>
+                        </div>
+                    </div>
+                    <div class="pic_introduce">
+                        <span class='vip_name'>帮主尊享价：</span>
+                        <span class="after_price">153300</span><img src="Imgs/member_mall/member_mall2.png">
+                    </div>
+                    <div class="pic_introduce">
+                        <span>库存：</span>
+                        <span>10（件）</span>
+                        <button style="width:60px;height:30px;border-radius:15px;">兑换</button>
+                    </div>
+                </div><div class="container goods_detailed_news" data="70">
+                    <div class="pic_contain">
+                        <img src="Imgs/membermall/20160805103107515.png">
+                    </div>
+                    <p class="pic_name">华为荣耀网络机顶盒</p>
+                    <div class="pic_introduce">
+                        <span>原价：</span>
+                        <div class="before_price">
+                            <span>20000</span><img src="Imgs/member_mall/member_mall6.png">
+                            <div class="heng_solid"></div>
+                        </div>
+                    </div>
+                    <div class="pic_introduce">
+                        <span class='vip_name'>帮主尊享价：</span>
+                        <span class="after_price">20000</span><img src="Imgs/member_mall/member_mall2.png">
+                    </div>
+                    <div class="pic_introduce">
+                        <span>库存：</span>
+                        <span>10（件）</span>
+                        <button style="width:60px;height:30px;border-radius:15px;">兑换</button>
+                    </div>
+                </div><div class="container goods_detailed_news" data="74">
+                    <div class="pic_contain">
+                        <img src="Imgs/membermall/20160817144058684.png">
+                    </div>
+                    <p class="pic_name">小米手环2</p>
+                    <div class="pic_introduce">
+                        <span>原价：</span>
+                        <div class="before_price">
+                            <span>11300</span><img src="Imgs/member_mall/member_mall6.png">
+                            <div class="heng_solid"></div>
+                        </div>
+                    </div>
+                    <div class="pic_introduce">
+                        <span class='vip_name'>帮主尊享价：</span>
+                        <span class="after_price">11300</span><img src="Imgs/member_mall/member_mall2.png">
+                    </div>
+                    <div class="pic_introduce">
+                        <span>库存：</span>
+                        <span>10（件）</span>
+                        <button style="width:60px;height:30px;border-radius:15px;">兑换</button>
+                    </div>
+                </div>
+            </div>
+            <div style="height:20px;clear:both;"></div>
+        </div>
+
+        <!-- 整体的遮罩 -->
+        <div id="member_mall_mask"></div>
+
+
+    </div>
+    </body>
+</html>
