@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="CSS/css.css" rel="stylesheet" />
+    <link href="CSS/chosen.css" rel="stylesheet" />
+    <link href="CSS/jquery-ui.css" rel="stylesheet" />
+    <link href="CSS/Intro.css" rel="stylesheet" />
+    <link href="CSS/m2-commonNew.css" rel="stylesheet" />
+    <script src="JS/jquery-3.3.1.js"></script>
+
+</head>
+<body>
+    <div class="m2-commonTop-con">
+        <div class="m2-commonTop">
+            <div class="m2-commonTop-left">
+                <div class="m2-commonTop-tel"><i></i>4006&nbsp;-&nbsp;777&nbsp;-&nbsp;518</div>
+                <div class="m2-commonTop-service" style="padding-left:0;">
+                    <span style="float:left;">客服：</span>
+                    <div style="float:left;display:inline-block;width:92px;height:22px;padding:6px 0 13px 0;"></div>
+                </div>
+                <div class="m2-commonEwm">
+                    <span class="m2-commonEwm-tit">关注我们：</span>
+                    <div class="m2-commonEwmwx">
+                        <i class="m2-commonEwmicon"></i>
+                        <div class="m2-commonEwmhid">
+                            <em class="m2-commonEwmhid-arr"></em>
+                            <em class="m2-commonEwmhid-arrBg"></em>
+                            <b></b>
+                            <span>扫一扫<br>关注爱钱豹订阅号</span>
+                        </div>
+                    </div>
+                    <div class="m2-commonEwmwb">
+                        <i class="m2-commonEwmicon" onclick='window.open("http://weibo.com/iqianbang")'></i>
+                    </div>
+                </div>
+            </div>
+            <div class="m2-commonTop-right">
+                <div class="m2-commonTop-link">
+
+                </div>
+                <div class="m2-commonTop-app" style="cursor:pointer;" onclick='window.open("appdownload.html")'>
+                    <a class="m2-commonTop-and" href=""></a>
+                    <a class="m2-commonTop-ios" href=""></a>
+                    <span>app下载入口</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="m2-commonNav-con">
+        <div class="m2-commonNav-box">
+            <div class="m2-commonLogo">
+                <a class="m2-comImg-logo" href="index.html">
+                    <img title="爱钱帮投资理财平台logo" alt="金钱豹" src="Imgs/ad/QQ图片20191212104941.png" style="padding-bottom:10px;">
+
+                </a>
+                <a class="m2-conImg-slogan" href="">
+                    <img title="徽商银行投资理财托管" alt="" src="/Imgs/ad/m2-sloganHS.png">
+                </a>
+            </div>
+            <div class="m2-commonNav">
+                <ul class="m2-commonNavul-fir" data_page="onepage">
+                    <li class="m2-commonNav-fir"><a id="onepage" href="index.html">首页</a></li>
+                    <li class="m2-commonNav-fir"><a id="twopage" href="touzi_licai_chanpin.html">我要投资</a></li>
+                    <li class="m2-commonNav-fir" style="border-bottom-color: rgb(255, 102, 102); border-bottom-width: 2px; border-bottom-style: solid;"><a id="sevenpage" href="membermall.html">我要融资</a></li>
+                    <li class="m2-commonNav-fir"><a id="threepage" href="usercenter.html">会员商城</a></li>
+                    <li class="m2-commonNav-fir"><a id="fourpage" href="anquanlicai_baozhang.html">我的账户</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--main-->
+    <div class="wrap mt10" style="background-color:darksalmon">
+        <div class="layui-btn-checked">
+            <p style="font-size:18px;"><a href="index.html">首页</a>><a href="FinancingShow.html">申请融资</a>><a href="materials.html">融资材料</a></p>
+        </div>
+        <div class="tc">
+            <p style="font-size:16px;">整体流程:&nbsp;&nbsp;提交材料>提交申请>申请通过>融资上架</p>
+        </div>
+        <div class="clearfix">
+            <!--img-->
+            <div class="img loans-img bdr fl">
+                <div class="lj indent">ico</div>
+                <img src="Imgs/ad/QQ图片20191212104941.png">
+            </div>
+            <div class="formbox bdr fr">
+                <table class="productForm">
+                    <tr>
+                        <th>身份证正面</th>
+                        <td>
+                            <div class="citySelect">
+                                        <input type="file" name="IdentityFornt" />
+                            </div>
+                            <div class="tishi"><span id="cityError" class="prompt_2 hidden"></span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>身份证反面</th>
+                        <td>
+                                <input type="file" name="IdentityReal" />
+                            <div class="tishi"><span id="realNameError" class="prompt_2 hidden"></span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>抵押物</th>
+                        <td>
+                            <label class="touzi01">
+                                <input type="text" id="Guarantee" name="Guarantee" class="input_all input_1" maxlength="11"  onkeydown="DiGuara()" />
+                            </label>
+                            <div class="tishi"><span id="mobileError" class="prompt_2 hidden"></span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>抵押物证明</th>
+                        <td class="hight">
+                            <input type="file" name="GuaranteeInfo" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>联系手机号</th>
+                        <td class="hight">
+                            <input type="text" id="mobile" name="LinkManNumber" class="input_all input_1" maxlength="11" placeholder="请输入手机号" />
+                            <span id="mobileError"></span>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th></th>
+                        <td><input type="button" id="save" value="立即申请" class="btn btnSize_6 btn_orange" /></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="detailsBox mt20 clearfix">
+            <div class="item first">
+                <div class="title">申请资格</div>
+                <ul class=" mt10 cicle">
+                    <li>年龄23周岁-60周岁的中国大陆公民（港、澳、台除外）</li>
+                    <li>企业或商户经营时间满1年及以上</li>
+                    <li>企业或商户月均流水须3万以上</li>
+                </ul>
+            </div>
+            <div class="item">
+                <div class="title">额度期限</div>
+                <ul class=" mt10 cicle">
+                    <li>借款额度：3万-30万元</li>
+                    <li>借款期限：12、18、24个月</li>
+                    <li>还款方式：等额本息，每月还款</li>
+                </ul>
+            </div>
+            <div class="item bd0">
+                <div class="title">所需材料</div>
+                <ul class=" mt10 cicle">
+                    <li>申请人二代身份证</li>
+                    <li>企业/商户经营场所证明材料</li>
+                    <li>近6个月对公或对私银行流水或POS交易流水</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function DiGuara() {
+        var Guarantee = $("#Guarantee").val();
+        if (Guarantee == "") {
+            $("#mobileError").val("请输入抵押物!");
+            return;
+        }
+    }
+    //手机号
+    $("#mobile").blur(function () {
+        var mobile = $(this).val();
+        if (validateFunction.isEmpty(mobile)) {
+            $("#mobileError").removeClass("hidden").addClass("error_2").html("<i></i>手机号不能为空");
+            errorCount++;
+        } else {
+            if (!validateFunction.isMobile(mobile)) {
+                $("#mobileError").removeClass("hidden").addClass("error_2").html("<i></i>请输入11位手机号码");
+                errorCount++;
+            } else {
+                $("#mobileError").addClass("hidden").removeClass("error_2").html("");
+            }
+        }
+    });
+</script>
