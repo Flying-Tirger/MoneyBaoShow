@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>兑换记录</title>
+    <link href="CSS/member_mall.css" rel="stylesheet" />
+    <link href="layui/css/layui.css" rel="stylesheet" />
+    <script src="layui/layui.js"></script>
+    <link href="CSS/m2-main.css" rel="stylesheet" />
+    <link href="CSS/m2-commonNew.css" rel="stylesheet" />
+    <link href="CSS/newPage.css" rel="stylesheet" />
+    <script src="JS/jquery-3.3.1.js"></script>
+    <script src="JS/jquery.unobtrusive-ajax.js"></script>
+    <link rel="shortcut icon" href="#" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no,email=no" />
+    <style>
+        .biaoti {
+            font-family: "Microsoft Himalaya";
+            font-size: 26px;
+            border-bottom: 1px dashed #CCCCCC;
+            color: #255e95;
+        }
+
+        .btgn {
+            font-family: "Microsoft YaHei UI";
+            font-size: 16px;
+            color: #255e95;
+            background-color: #e9faff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body background="Imgs/member_mall/296912.jpg"
+      style=" background-repeat:no-repeat ;
+background-size:100% 100%;
+background-attachment: fixed;">
+    <div class="m2-commonTop-con">
+        <div class="m2-commonTop">
+            <div class="m2-commonTop-left">
+                <div class="m2-commonTop-tel"><i></i>4006&nbsp;-&nbsp;777&nbsp;-&nbsp;518</div>
+                <div class="m2-commonTop-service" style="padding-left:0;">
+                    <span style="float:left;">客服：</span>
+                    <div style="float:left;display:inline-block;width:92px;height:22px;padding:6px 0 13px 0;"></div>
+                </div>
+                <div class="m2-commonEwm">
+                    <span class="m2-commonEwm-tit">关注我们：</span>
+                    <div class="m2-commonEwmwx">
+                        <i class="m2-commonEwmicon"></i>
+                        <div class="m2-commonEwmhid">
+                            <em class="m2-commonEwmhid-arr"></em>
+                            <em class="m2-commonEwmhid-arrBg"></em>
+                            <b></b>
+                            <span>扫一扫<br>关注爱钱豹订阅号</span>
+                        </div>
+                    </div>
+                    <div class="m2-commonEwmwb">
+                        <i class="m2-commonEwmicon" onclick='window.open("http://weibo.com/iqianbang")'></i>
+                    </div>
+                </div>
+            </div>
+            <div class="m2-commonTop-right">
+                <div class="m2-commonTop-link">
+                    <ul>
+                        <li class="m2-commonTop-btn"><a href="register.html" target="_blank">注册</a></li>
+                        <li class="m2-commonTop-btn"><a style="border-right:none;" href="login.html#login_callback=/index" target="_blank">登录</a></li>
+                    </ul>
+                </div>
+                <div class="m2-commonTop-app" style="cursor:pointer;" onclick='window.open("appdownload.html")'>
+                    <a class="m2-commonTop-and" href=""></a>
+                    <a class="m2-commonTop-ios" href=""></a>
+                    <span>app下载入口</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="m2-commonNav-con">
+        <div class="m2-commonNav-box">
+            <div class="m2-commonLogo">
+                <a class="m2-comImg-logo" href="index.html">
+                    <img title="爱钱帮投资理财平台logo" alt="金钱豹" src="Imgs/ad/QQ图片20191212104941.png" style="padding-bottom:10px;">
+
+                </a>
+                <a class="m2-conImg-slogan" href="">
+                    <img title="徽商银行投资理财托管" alt="" src="/Imgs/ad/m2-sloganHS.png">
+                </a>
+            </div>
+            <div class="m2-commonNav">
+                <ul class="m2-commonNavul-fir" data_page="onepage">
+                    <li class="m2-commonNav-fir"><a id="onepage" href="index.html">首页</a></li>
+                    <li class="m2-commonNav-fir"><a id="twopage" href="touzi_licai_chanpin.html">我要投资</a></li>
+                    <li class="m2-commonNav-fir"><a id="sevenpage" href="membermall.html">我要融资</a></li>
+                    <li class="m2-commonNav-fir" style="border-bottom-color: rgb(255, 102, 102); border-bottom-width: 2px; border-bottom-style: solid;"><a id="threepage" href="ShopInfo.html">会员商城</a></li>
+                    <li class="m2-commonNav-fir"><a id="fourpage" href="anquanlicai_baozhang.html">我的账户</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <table width="80%" border="0" height="120px" style="background-color:white;margin-left:180px;margin-top:50px">
+        <tr>
+            <td align="center" class="biaoti" height="60">兑换记录表</td>
+        </tr>
+        <tr>
+            <td align="right" height="25"></td>
+        </tr>
+    </table>
+    <form id="form1" style="margin-left:887px">
+        <input name="key" type="text" value="" class="text" placeholder="最早日期"style="width:200px;height:36px" />&nbsp;
+        <label style="color:white">---</label>
+        <input name="key" type="text" value="" class="text" placeholder="最晚日期"style="width:200px;height:36px" />&nbsp;
+        <input name="indexSearch" type="submit" value="搜 索" class="sousuo" style="width:80px;height:36px"/>
+    </form>
+    <div id="sel" style="">
+        <div>
+            <table width="80%" height="35px" border="1" cellspacing="1" cellpadding="4" style="background-color:white;margin-left:180px">
+                <tr style="width:240px;height:80px">
+                    <th>兑换编号</th>
+                    <th>兑换物品</th>
+                    <th>兑换个数</th>
+                    <th>消费积分</th>
+                    <th>兑换日期</th>
+                </tr>
+                <tr style="width:240px;height:55px;text-align:center">
+                    <td>lala</td>
+                    <td>lala</td>
+                    <td>lala</td>
+                    <td>lala</td>
+                    <td>lala</td>
+                </tr>
+
+            </table>
+        </div>
+
+    </div>
+
+</body>
+</html>
+<script>
+    window.onload = (function () {
+        $.ajax({
+            url: "https://localhost:44353/api/shopinfo",
+            type: "get",
+            success: function (d) {
+                var sel = '<table width="60%" border="1" cellspacing="1" cellpadding="4" style="background-color:white;margin-left:320px">'
+                $(d).each(function () {
+                    sel += '<tr>' +
+                        '<td>' + this.ConventRecordId + '</td>' +
+                        '<td>' + this.ShopInfoId + '</td>' +
+                        '<td>' + this.UserEmail + '</td>' +
+                        '<td>' + this.ConventCount + '</td>' +
+                        '<td>' + this.ConsumeIntegral + '</td>' +
+                        '</tr>'
+                })
+                sel += '</table>';
+                $("#sel").append(sel);
+            }
+        })
+    })
+</script>
