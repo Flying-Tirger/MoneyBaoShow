@@ -254,7 +254,6 @@
     <Content Include="layui\lay\modules\util.js" />
     <Content Include="layui\m2-login.css" />
     <Content Include="Login.html" />
-    <Content Include="register.html" />
     <Content Include="RetrievePassWrod.html" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -266,7 +265,33 @@
     <Content Include="layui\font\iconfont.ttf" />
     <Content Include="layui\font\iconfont.woff" />
     <Content Include="layui\font\iconfont.woff2" />
+    <Content Include="bin\MoneyBaoShow.dll.config" />
+    <Content Include="bin\roslyn\csc.exe.config" />
+    <Content Include="bin\roslyn\csc.rsp" />
+    <Content Include="bin\roslyn\csi.exe.config" />
+    <Content Include="bin\roslyn\csi.rsp" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.Managed.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\vbc.exe.config" />
+    <Content Include="bin\roslyn\vbc.rsp" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="obj\Debug\build.force" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\MoneyBaoShow.csproj.CopyComplete" />
+    <Content Include="obj\Debug\MoneyBaoShow.csprojAssemblyReference.cache" />
+    <Content Include="obj\Release\MoneyBaoShow.csprojAssemblyReference.cache" />
     <None Include="packages.config" />
+    <Content Include="statics\common\images\iconB.png.tmp!" />
+    <Content Include="statics\common\images\iconGa.png.tmp!" />
+    <Content Include="statics\company_finance\images\company_finance\company_finance7.jpg.tmp!" />
+    <Content Include="statics\home2\images\foot.png.tmp!" />
+    <Content Include="statics\home2\images\myicon.png.tmp!" />
+    <Content Include="statics\home2\images\zgzicon.png.tmp!" />
+    <Content Include="statics\home2\js\HMZCity.json" />
+    <Content Include="statics\home\images\home.png.tmp!" />
+    <Content Include="statics\newcommon\images\m2-commonCharge.png.tmp!" />
+    <Content Include="statics\newcommon\images\m2-commonChargebtn.png.tmp!" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -274,7 +299,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

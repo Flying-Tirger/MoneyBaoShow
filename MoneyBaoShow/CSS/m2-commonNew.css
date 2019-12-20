@@ -1,4 +1,4 @@
-
+﻿
 @charset "utf-8";
 
 /* common */
@@ -50,7 +50,7 @@ img{ border:0; vertical-align:middle }
 	height: 22px;
 	left: 3px;
 	top: 8px;
-	background: url(../images/m2-newcommonIcon.png) no-repeat 0px 0px;
+	background: url(../Imgs/ad/m2-newcommonIcon.png) no-repeat 0px 0px;
 }
 .m2-commonTop-service{
 	display: inline-block;
@@ -70,7 +70,7 @@ img{ border:0; vertical-align:middle }
 	height: 13px;
 	left: 1px;
 	top:14px;
-	background: url(../images/m2-newcommonIcon.png) no-repeat -22px 0px;
+	background: url(../Imgs/ad/m2-newcommonIcon.png) no-repeat -22px 0px;
 }
 .m2-commonTop-service a{color: #fff;}
 .m2-commonEwm{
@@ -109,10 +109,10 @@ img{ border:0; vertical-align:middle }
 	margin: 11px 5px 9px 10px;
 	cursor: pointer;
 }
-.m2-commonEwmwx .m2-commonEwmicon{background: url(../images/m2-newcommonIcon.png) no-repeat -89px 0px;}
-.m2-commonEwmwx:hover .m2-commonEwmicon{background: url(../images/m2-newcommonIcon.png) no-repeat -109px 0px;}
-.m2-commonEwmwb .m2-commonEwmicon{background: url(../images/m2-newcommonIcon.png) no-repeat -129px 0px;}
-.m2-commonEwmwb:hover .m2-commonEwmicon{background: url(../images/m2-newcommonIcon.png) no-repeat -149px 0px;}
+.m2-commonEwmwx .m2-commonEwmicon{background: url(../Imgs/ad/m2-newcommonIcon.png) no-repeat -89px 0px;}
+.m2-commonEwmwx:hover .m2-commonEwmicon{background: url(../Imgs/ad/m2-newcommonIcon.png) no-repeat -109px 0px;}
+.m2-commonEwmwb .m2-commonEwmicon{background: url(../Imgs/ad/m2-newcommonIcon.png) no-repeat -129px 0px;}
+.m2-commonEwmwb:hover .m2-commonEwmicon{background: url(../Imgs/ad/m2-newcommonIcon.png) no-repeat -149px 0px;}
 .m2-commonEwmhid{
 	display: none;
 	position: absolute;
@@ -132,8 +132,8 @@ img{ border:0; vertical-align:middle }
 	top: 2px;
 	left: 0px;
 }
-.m2-commonEwmwx .m2-commonEwmhid b{background: url(../images/m2-newcommonIcon.png) no-repeat -169px 0px;}
-.m2-commonEwmwb .m2-commonEwmhid b{background: url(../images/m2-newcommonIcon.png) no-repeat -169px -74px;}
+.m2-commonEwmwx .m2-commonEwmhid b{background: url(../Imgs/ad/m2-newcommonIcon.png) no-repeat -169px 0px;}
+.m2-commonEwmwb .m2-commonEwmhid b{background: url(../Imgs/ad/m2-newcommonIcon.png) no-repeat -169px -74px;}
 .m2-commonEwmhid span{
 	display: inline-block;
 	height: 40px;
@@ -191,7 +191,7 @@ img{ border:0; vertical-align:middle }
 	width: 15px;
 	height: 18px;
 	margin: 2px 9px 3px 0;
-	background: url(../images/m2-newcommonIcon.png) no-repeat -34px 0px;
+	background: url(../Imgs/ad/m2-newcommonIcon.png) no-repeat -34px 0px;
 }
 .m2-commonTop-ios{
 	display: inline-block;
@@ -199,7 +199,7 @@ img{ border:0; vertical-align:middle }
 	width: 15px;
 	height: 18px;
 	margin: 2px 9px 3px 0;
-	background: url(../images/m2-newcommonIcon.png) no-repeat -49px 0px;	
+	background: url(../Imgs/ad/m2-newcommonIcon.png) no-repeat -49px 0px;	
 }
 .m2-commonTop-link{
 	float: left;
@@ -322,7 +322,7 @@ img{ border:0; vertical-align:middle }
 	width: 20px;
 	height: 20px;
 	margin: 11px 5px 9px 15px;
-	background: url(../images/m2-newcommonIcon.png) no-repeat -89px 0px;
+	background: url(../Imgs/ad/m2-newcommonIcon.png) no-repeat -89px 0px;
 }
 .m2-commonTop-wb i{
 	display: block;
@@ -330,10 +330,10 @@ img{ border:0; vertical-align:middle }
 	width: 20px;
 	height: 20px;
 	margin: 11px 15px 9px 5px;
-	background: url(../images/m2-newcommonIcon.png) no-repeat -129px 0px;
+	background: url(../Imgs/ad/m2-newcommonIcon.png) no-repeat -129px 0px;
 }
-.m2-commonTop-wx:hover i{background: url(../images/m2-newcommonIcon.png) no-repeat -109px 0px;}
-.m2-commonTop-wb:hover i{background: url(../images/m2-newcommonIcon.png) no-repeat -149px 0px;}
+.m2-commonTop-wx:hover i{background: url(../Imgs/ad/m2-newcommonIcon.png) no-repeat -109px 0px;}
+.m2-commonTop-wb:hover i{background: url(../Imgs/ad/m2-newcommonIcon.png) no-repeat -149px 0px;}
 .m2-commonTop-ewm span{
 	display: none;
 	position: absolute;
@@ -352,14 +352,14 @@ img{ border:0; vertical-align:middle }
 	display: block;
 	width: 123px;
 	height: 123px;
-	background: url(../images/iconGa.png) no-repeat 0 -123px;
+	background: url(../Imgs/ad/iconGa.png) no-repeat 0 -123px;
 	margin-bottom: 2px;
 }
 .m2-commonTop-wb span u{
 	display: block;
 	width: 123px;
 	height: 123px;
-	background: url(../images/iconGa.png) no-repeat 0 0;
+	background: url(../Imgs/ad/iconGa.png) no-repeat 0 0;
 	margin-bottom: 2px;
 }
 .m2-commonTop-ewm span b{
@@ -412,8 +412,8 @@ img{ border:0; vertical-align:middle }
 	float: left;
 	position: relative;
 	width: 310px;
-	height: 50px;
-	padding: 20px 0 0 20px;
+	height: 80px;
+	padding: 0px 0 0 5px;
 }
 .m2-commonLogo a.m2-comImg-logo{
 	display: inline-block;
@@ -423,17 +423,17 @@ img{ border:0; vertical-align:middle }
 .m2-commonLogo a.m2-conImg-slogan{
 	display: inline-block;
 	width: 145px;
-	height: 50px;
+	height: 80px;
 }
 .m2-commonLogo a.m2-comImg-logo img{
 	display: inline-block;
 	width: 153px;
-	height: 50px;
+	height: 80px;
 }
 .m2-commonLogo a.m2-conImg-slogan img{
 	display: inline-block;
 	width: 160px;
-	height: 50px;
+	height: 80px;
 }
 .m2-commonLogo-beta{
 	display: block;
@@ -442,7 +442,7 @@ img{ border:0; vertical-align:middle }
 	height: 24px;
 	top: 4px;
 	left: 185px;
-	background: url(../images/beta.png);
+	background: url(../Imgs/ad/beta.png);
 }
 .m2-commonNav{
 	float: right;
@@ -453,6 +453,7 @@ img{ border:0; vertical-align:middle }
 	width: 556px;
 	height: 55px;
 	zoom: 1;
+    padding-left:90px;
 }
 .m2-commonNavul-fir:after{display:block;clear:both;visibility:hidden;height:0;content:'-';}
 .m2-commonNav-fir{
@@ -537,28 +538,28 @@ img{ border:0; vertical-align:middle }
 	height: 34px;
 	top: 4px;
 	left: 4px;
-	background: url(../images/m2-newcommonIcon.png) no-repeat -130px -24px;
+	background: url(../Imgs/ad/m2-newcommonIcon.png) no-repeat -130px -24px;
 }
 .m2-comRigli-tel .m2-comRigli-icon{
 	width: 24px;
 	height: 24px;
 	top: 10px;
 	left: 10px;
-	background: url(../images/m2-newcommonIcon.png) no-repeat 0px -24px;
+	background: url(../Imgs/ad/m2-newcommonIcon.png) no-repeat 0px -24px;
 }
 .m2-comRigli-qq .m2-comRigli-icon{
 	width: 24px;
 	height: 24px;
 	top: 8px;
 	left: 9px;
-	background: url(../images/m2-newcommonIcon.png) no-repeat -24px -24px;
+	background: url(../Imgs/ad/m2-newcommonIcon.png) no-repeat -24px -24px;
 }
 .m2-comRigli-sug .m2-comRigli-icon{
 	width: 24px;
 	height: 24px;
 	top: 13px;
 	left: 13px;
-	background: url(../images/m2-newcommonIcon.png) no-repeat -48px -24px;
+	background: url(../Imgs/ad/m2-newcommonIcon.png) no-repeat -48px -24px;
 }
 .m2-comRigli-top{
 	visibility: hidden;
@@ -568,7 +569,7 @@ img{ border:0; vertical-align:middle }
 	height: 24px;
 	top: 8px;
 	left: 8px;
-	background: url(../images/m2-newcommonIcon.png) no-repeat -72px -24px;
+	background: url(../Imgs/ad/m2-newcommonIcon.png) no-repeat -72px -24px;
 }
 .m2-comRighide{
 	position: absolute;
@@ -585,7 +586,7 @@ img{ border:0; vertical-align:middle }
 	display: block;
 	width: 127px;
 	height: 120px;
-	background: url(../images/m2-newcommonIcon.png) no-repeat 0px -48px;
+	background: url(../Imgs/ad/m2-newcommonIcon.png) no-repeat 0px -48px;
 }
 .m2-comRigli-ewm:hover .m2-comRighide-ewm{
 	display: block;
@@ -678,7 +679,7 @@ img{ border:0; vertical-align:middle }
 	height: 16px;
 	top: 34px;
 	right: -7px;
-	background: url(../images/m2-newcommonIcon.png) no-repeat -96px -24px;
+	background: url(../Imgs/ad/m2-newcommonIcon.png) no-repeat -96px -24px;
 }
 .m2-comRighide-telSpace{
 	position: absolute;
@@ -729,7 +730,7 @@ img{ border:0; vertical-align:middle }
 	margin-left: -244px;
 	z-index: 61;
 	padding:70px 0 0 0px;
-	background: url(../images/m2-commonCharge.png) no-repeat;
+	background: url(../Imgs/ad/m2-commonCharge.png) no-repeat;
 }
 .m2-comCha-psg{
 	width: 340px;
@@ -754,7 +755,7 @@ img{ border:0; vertical-align:middle }
 	color: #fff;
 	cursor: pointer;
 	border-radius: 7px;
-	background: url(../images/m2-commonChargebtn.png) no-repeat;	
+	background: url(../Imgs/ad/m2-commonChargebtn.png) no-repeat;	
 }
 .m2-comCha-confirm:hover,.m2-comCha-confirm:active{
 	background:none;
@@ -767,7 +768,7 @@ img{ border:0; vertical-align:middle }
 	height: 26px;
 	top: 8px;
 	left: 8px;
-	background:url(../images/question.png) no-repeat;
+	background:url(../Imgs/ad/question.png) no-repeat;
 	background-size:100% 100%;
 }
 .m2-commonNav .selected {color: #fff; background-color: #F34B43;} 
@@ -793,7 +794,7 @@ img{ border:0; vertical-align:middle }
 #fixbar .fixbox_bar .common .summiddle ul li {display: inline-block;height: 76px;width: 130px;background-color: #515151;text-align: center;font-size: 14px;margin-left: -2px;padding-top: 10px;}
 #fixbar .fixbox_bar .common .summiddle ul li p {color: #ff6666;line-height: 40px;font-weight: normal;font-size: 24px;}
 #fixbar .fixbox_bar .common .red_pack {background-color: white;margin: 20px;padding-top: 6px;position: relative;}
-#fixbar .fixbox_bar .common .red_pack .left {background-image: url(../../newcommon/images/hongbao.png);width: 98px;height: 64px;text-align: center;color: white;margin: 20px;font-size: 12px;line-height: 33px;padding-top: 6px;}
+#fixbar .fixbox_bar .common .red_pack .left {background-image: url(../../newcommon/Imgs/ad/hongbao.png);width: 98px;height: 64px;text-align: center;color: white;margin: 20px;font-size: 12px;line-height: 33px;padding-top: 6px;}
 #fixbar .fixbox_bar .common .red_pack .right {padding: 0 10px;position: absolute;top: 26px;right: 0;border-left: 1px dashed #ebebeb;color: #ff3333;font-size: 16px;line-height: 24px;width: 110px;}
 #fixbar .fixbox_bar .common .red_pack .right .spright {color: #666666;}
 #fixbar .fixbox_bar .common .red_pack .bottom {background-color: #f0f0f0;text-align: center;color: #9f9f9f;line-height: 30px;border-top: 1px dashed #d7d7d7;}
@@ -807,6 +808,6 @@ img{ border:0; vertical-align:middle }
 #fixbar .fixbox_bar #fixnavbar_four .website_news .bottom .right {float: right;padding-right: 16px;}
 
 /*
-background: url(../images/m2-newcommonIcon.png) no-repeat 0px 0px;
+background: url(../Imgs/ad/m2-newcommonIcon.png) no-repeat 0px 0px;
 :after{display:block;clear:both;visibility:hidden;height:0;content:'-';}
 */
