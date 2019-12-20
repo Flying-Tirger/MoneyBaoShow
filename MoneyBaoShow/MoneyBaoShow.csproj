@@ -419,6 +419,7 @@
     <Content Include="obj\Debug\MoneyBaoShow.pdb" />
     <Content Include="recharge.html" />
     <Content Include="RetrievePassWrod.html" />
+    <Content Include="Show.html" />
     <Content Include="Showysy.html" />
     <Content Include="statics\common\js\common.js" />
     <Content Include="statics\common\js\jquery.js" />
