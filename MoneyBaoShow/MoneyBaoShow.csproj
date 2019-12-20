@@ -252,6 +252,7 @@
     <Content Include="layui\lay\modules\tree.js" />
     <Content Include="layui\lay\modules\upload.js" />
     <Content Include="layui\lay\modules\util.js" />
+    <Content Include="layui\m2-login.css" />
     <Content Include="Login.html" />
     <Content Include="register.html" />
     <Content Include="RetrievePassWrod.html" />

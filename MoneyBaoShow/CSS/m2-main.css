@@ -4409,10 +4409,23 @@ i.m2-indexOntopIcon-ing{
 .mo2-indexStep ul{
 	zoom: 1;
 }
-.mo2-indSteite1:hover .mo2-indSteicon1{background: url(../images/indSteicon1.gif) no-repeat left top;}
-.mo2-indSteite2:hover .mo2-indSteicon2{background: url(../images/indSteicon2.gif) no-repeat left top;}
-.mo2-indSteite3:hover .mo2-indSteicon3{background: url(../images/indSteicon3.gif) no-repeat left top;}
-.mo2-indSteite4:hover .mo2-indSteicon4{background: url(../images/indSteicon4.gif) no-repeat left top;}
+/*界面的图片地址*/
+.mo2-indSteite1:hover .mo2-indSteicon1 {
+    background-image: url('../Imgs/ad/indSteicon1.gif');
+    no-repeat： left top;
+}
+.mo2-indSteite2:hover .mo2-indSteicon2 {
+    background-image: url('../Imgs/ad/indSteicon2.gif');
+    no-repeat: left top;
+}
+.mo2-indSteite3:hover .mo2-indSteicon3 {
+    background-image: url('../Imgs/ad/indSteicon3.gif');
+    no-repeat： left top;
+}
+.mo2-indSteite4:hover .mo2-indSteicon4 {
+    background-image: url('../Imgs/ad/indSteicon4.gif');
+    no-repeat： left top;
+}
 .mo2-indexStep ul:after{display:block;clear:both;visibility:hidden;height:0;content:'-';}
 .mo2-indSteite{
 	width: 274px;
