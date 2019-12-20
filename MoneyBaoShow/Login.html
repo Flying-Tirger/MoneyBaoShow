@@ -16,7 +16,6 @@
     <meta name="format-detection" content="telephone=no,email=no">
     <link href="CSS/m2-login.css" rel="stylesheet">
     <link href="layui/m2-login.css" rel="stylesheet">
-
     
 
 </head>
@@ -44,7 +43,7 @@
                             </div>
                         </div>
                         <div class="m2-commonEwmwb">
-                            <i class="m2-commonEwmicon" onclick="window.open(http://weibo.com/iqianbang&quot;)"></i>
+                            <i class="m2-commonEwmicon")"></i>
                         </div>
                     </div>
                 </div>
@@ -160,108 +159,7 @@
     </div>
 
 
-    <script>
-        layui.use('element', function () {
-            var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
-
-            //监听导航点击
-            element.on('nav(demo)', function (elem) {
-                //console.log(elem)
-                layer.msg(elem.text());
-            });
-        });
-
-        /*   function jz()
-           {
-               $.ajax({
-                   url: "https://localhost:44344/api/default/get?PageIndex=1&PageSize=5",
-                   success: function (d)
-                   {
-                      console.log(d)
-                   }
-               })
-           }*/
-
-        function marquee(height, speed, delay) {
-            var scrollT;
-            var pause = false;
-            var ScrollBox = document.getElementById("upRoll1");
-            if (document.getElementById("holder1").offsetHeight <= height) return;
-            var _tmp = ScrollBox.innerHTML.replace('holder1', 'holder')
-            ScrollBox.innerHTML += _tmp;
-            ScrollBox.onmouseover = function () { pause = true }
-            ScrollBox.onmouseout = function () { pause = false }
-            ScrollBox.scrollTop = 0;
-            function start() {
-                scrollT = setInterval(scrolling, speed);
-                if (!pause) ScrollBox.scrollTop += 2;
-            }
-            function scrolling() {
-                if (ScrollBox.scrollTop % height != 0) {
-                    ScrollBox.scrollTop += 2;
-                    if (ScrollBox.scrollTop >= ScrollBox.scrollHeight / 2) ScrollBox.scrollTop = 0;
-                }
-                else {
-                    clearInterval(scrollT);
-                    setTimeout(start, delay);
-                }
-            }
-            setTimeout(start, delay);
-        }
-        marquee(42, 30, 3000);
-    </script>
 </body>
 </html>
 
 
-
-<script>
-    layui.use('element', function () {
-        var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
-
-        //监听导航点击
-        element.on('nav(demo)', function (elem) {
-            //console.log(elem)
-            layer.msg(elem.text());
-        });
-    });
-
-    /*   function jz()
-       {
-           $.ajax({
-               url: "https://localhost:44344/api/default/get?PageIndex=1&PageSize=5",
-               success: function (d)
-               {
-                  console.log(d)
-               }
-           })
-       }*/
-
-    function marquee(height, speed, delay) {
-        var scrollT;
-        var pause = false;
-        var ScrollBox = document.getElementById("upRoll1");
-        if (document.getElementById("holder1").offsetHeight <= height) return;
-        var _tmp = ScrollBox.innerHTML.replace('holder1', 'holder')
-        ScrollBox.innerHTML += _tmp;
-        ScrollBox.onmouseover = function () { pause = true }
-        ScrollBox.onmouseout = function () { pause = false }
-        ScrollBox.scrollTop = 0;
-        function start() {
-            scrollT = setInterval(scrolling, speed);
-            if (!pause) ScrollBox.scrollTop += 2;
-        }
-        function scrolling() {
-            if (ScrollBox.scrollTop % height != 0) {
-                ScrollBox.scrollTop += 2;
-                if (ScrollBox.scrollTop >= ScrollBox.scrollHeight / 2) ScrollBox.scrollTop = 0;
-            }
-            else {
-                clearInterval(scrollT);
-                setTimeout(start, delay);
-            }
-        }
-        setTimeout(start, delay);
-    }
-    marquee(42, 30, 3000);
-</script>
