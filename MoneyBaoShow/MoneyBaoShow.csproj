@@ -118,6 +118,7 @@
     <Content Include="CSS\public.css" />
     <Content Include="CSS\StyleSheet1.css" />
     <Content Include="FinancingShow.html" />
+    <Content Include="Imgs\1b4c510fd9f9d72a0cd7f0f3da2a2834359bbba9.gif" />
     <Content Include="Imgs\ad\1.png" />
     <Content Include="Imgs\ad\2.png" />
     <Content Include="Imgs\ad\2015113014080319.png" />
@@ -189,6 +190,7 @@
     <Content Include="Imgs\ad\QQ图片20191212104941.png" />
     <Content Include="Imgs\ad\securityten.png" />
     <Content Include="Imgs\ad\home-register-VerifyCode.png" />
+    <Content Include="Imgs\c1cd65c14be1df5b.jpg" />
     <Content Include="Imgs\images\100.png" />
     <Content Include="Imgs\images\40.png" />
     <Content Include="Imgs\images\50.png" />
@@ -397,7 +399,6 @@
     <Content Include="layui\lay\modules\tree.js" />
     <Content Include="layui\lay\modules\upload.js" />
     <Content Include="layui\lay\modules\util.js" />
-    <Content Include="Login.html" />
     <Content Include="materials.html" />
     <Content Include="My97DatePicker\calendar.js" />
     <Content Include="My97DatePicker\config.js" />
