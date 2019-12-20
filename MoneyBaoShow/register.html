@@ -6,7 +6,7 @@
     <link href="CSS/m2-main.css" rel="stylesheet">
     <link href="CSS/m2-commonNew.css" rel="stylesheet">
     <link href="CSS/newPage.css" rel="stylesheet">
-
+    <script src="JS/jquery-3.3.1.js"></script>
     <!--<link rel="Shortcut  Icon" href="Imgs/ad/QQ图片20191212104941.png">
     <link rel="stylesheet" href="Imgs/User/m2-commonNew.css" rel="stylesheet" />
     <link rel="stylesheet" href="Imgs/User/m2-main.css" rel="stylesheet" />
@@ -14,7 +14,7 @@
     <script type="text/javascript" src="Imgs/User/jquery.min.js"></script>
     <script type="text/javascript" src="Imgs/User/common.js"></script>-->
 
-
+    <script src="JS/jquery.unobtrusive-ajax.js"></script>
 
 </head>
 <body style="background-image:url(Imgs/User/null-5618c09503b10b72.jpg);background-size: cover;background-position: center center;">
@@ -105,7 +105,7 @@
     margin-left: 52px;">
                                         密保问题1<span>
                                             <select id="Select1" style="width: 200px;height: 28px;">
-                                                <option></option>
+                                                <option value="1">你的猫咪叫做</option>
                                             </select>
                                         </span>
 
@@ -113,14 +113,14 @@
                                     <p style="font-size: 23px;margin-top: 8px;    width: 520px;
     margin-left: 51px;">
                                         密保问题1<span>
-                                            <input id="Text1" type="text" style="    width: 195px; height: 35px;">
+                                            <input id="T1" type="text" style="    width: 195px; height: 35px;">
                                         </span>
                                     </p>
                                     <p style="font-size: 23px;margin-top: 8px;    width: 520px;
     margin-left: 52px;">
                                         密保问题2<span>
-                                            <select id="Select1" style="width: 200px;height: 28px; ">
-                                                <option></option>
+                                            <select id="Select2" style="width: 200px;height: 28px; ">
+                                                <option value="1">你的猫咪叫做</option>
                                             </select>
                                         </span>
 
@@ -128,14 +128,14 @@
                                     <p style="font-size: 23px;margin-top: 8px;    width: 520px;
     margin-left: 51px;">
                                         密保问题2<span>
-                                            <input id="Text1" type="text" style="    width: 195px; height: 35px;">
+                                            <input id="T2" type="text" style="    width: 195px; height: 35px;">
                                         </span>
                                     </p>
                                     <p style="font-size: 23px;margin-top: 8px;    width: 520px;
     margin-left: 52px;">
                                         密保问题3<span>
-                                            <select id="Select1" style="width: 200px;height: 28px;">
-                                                <option></option>
+                                            <select id="Select3" style="width: 200px;height: 28px;">
+                                                <option value="1">你的猫咪叫做</option>
                                             </select>
                                         </span>
 
@@ -143,33 +143,33 @@
                                     <p style="font-size: 23px;margin-top: 8px;    width: 520px;
     margin-left: 51px;">
                                         密保问题3<span>
-                                            <input id="Text1" type="text" style="    width: 195px; height: 35px;">
+                                            <input id="T3" type="text" style="    width: 195px; height: 35px;">
                                         </span>
                                     </p>
                                     <p style="font-size: 23px;margin-top: 8px;"><span></span></p>
                                     <p style="font-size: 25px;margin-left: 51px;">
-                                        手机号<input id="Text1" type="text" style="
+                                        手机号<input id="phone" type="text" style="
     width: 195px;
     height: 35px;
     margin-left: 37px;
 ">
                                     </p>
                                     <p style="font-size: 23px;margin-top: 8px;margin-left: 50px;">
-                                        支付密码<input id="Text1" type="text" style="
+                                        支付密码<input id="phonepwd" type="text" style="
     width: 195px;
     height: 35px;
     margin-left: 20px;
 ">
                                     </p>
                                     <p style="font-size: 23px;margin-top: 8px;margin-left: 50px;">
-                                        身份证<input id="Text1" type="text" style="
+                                        身份证<input id="Userz" type="text" style="
     width: 195px;
     height: 35px;
     margin-left: 41px;
 ">
                                     </p>
                                     <p style="font-size: 23px;margin-top: 8px;margin-left: 50px;">
-                                        银行卡<input id="Text1" type="text" style="
+                                        银行卡<input id="Usery" type="text" style="
     width: 195px;
     height: 35px;
     margin-left: 41px;
@@ -180,58 +180,101 @@
                             <div style="float: right;width: 328px;height: 251px;margin: 13px;margin-top: -273px;background-color: #ffffff;">
                                 <div style="margin: 50px;margin-left: -1px;height: 205px;margin-top: 37px;">
                                     <p style="font-size: 23px;margin-top: -8px;">
-                                        <input id="Text1" type="text" style="width: 210px;height: 42px;float: left;"><input id="Submit1" type="submit" value="发送邮箱验证码" style="float: left; margin-top: -34px;border-radius: 35px; margin-left: 227px;">
+                                        <input id="textName" type="text" style="width: 210px;height: 42px;float: left;">
+                                        <input id="Submit1" type="submit" value="发送邮箱验证码" style="float: left; margin-top: -34px;border-radius: 35px; margin-left: 227px;">
                                     </p>
                                     <p style="font-size: 23px;margin-top: 8px;">
-                                        <input id="Text1" type="password" style="width: 210px;height: 40px;margin-top: 8px;">
+                                        <input id="Text2" type="password" style="width: 210px;height: 40px;margin-top: 8px;">
                                     </p>
                                     <p style="font-size: 23px;margin-top: 8px;">
-                                        <input id="Text1" type="password" style="width: 210px;height: 40px;margin-top: 1px;">
+                                        <input id="Text3" type="password" style="width: 210px;height: 40px;margin-top: 1px;">
                                     </p>
                                     <p style="font-size: 23px;margin-top: 10px;">
-                                        <input id="Text1" type="text" style="width: 210px;height: 40px;margin-top: 0px;">
+                                        <input id="Text4" type="text" style="width: 210px;height: 40px;margin-top: 0px;">
                                     </p>
-                                    <!--<p style="font-size: 23px;margin-top: 8px;"> </p>
-                                    <p style="font-size: 23px;margin-top: 8px;"><input id="Text1" type="text" /></p>
-                                    <p style="font-size: 23px;margin-top: 8px;"><input id="Text1" type="text" /></p>
-                                    <p style="font-size: 23px;margin-top: 8px;"><input id="Text1" type="text" /></p>
-                                    <p style="font-size: 23px;margin-top: 8px;"><input id="Text1" type="text" /></p>
-                                    <p style="font-size: 23px;margin-top: 8px;"><input id="Text1" type="text" /></p>
-                                    <p style="font-size: 23px;margin-top: 8px;">头像</p>
-                                    <p style="font-size: 23px;margin-top: 8px;">手机号</p>
-                                    <p style="font-size: 23px;margin-top: 8px;">支付密码</p>
-                                    <p style="font-size: 23px;margin-top: 8px;">身份证</p>
-                                    <p style="font-size: 23px;margin-top: 8px;">银行卡</p>-->
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="m2-regist-btn" style="margin-left: 260px;margin-top: 415px;">
-                        <input type="checkbox" checked="checked" id="service">我同意<b>《爱钱帮注册协议》</b> <a href="javascript:void(0)">提交注册</a>
-                    </div>
+
 
                 </div>
+                <input id="desas" type="submit" value="提交" />
             </div>
+
         </div>
 
     </div>
 
-    <script>
-        function TestGetCode() {
-            var s = $("#Test111").val();
-            alert(s)
-            alert(document.getElementById("Test111").value)
 
-            $.ajax({
-                url: "https://localhost:44353/api/EncryPetd/GetTestGetCode?JiShou=" + $("#Test111").val(),
-                type: "get",
-                success: function (d) {
-                    alert(d)
-                    var aa = d;
-                    alert(aa);
-                }
-            })
-        }
-    </script>
 </body>
+
+<!--//function TestGetCode() {
+//    var s = $("#Test111").val();
+//    alert(s)
+//    alert(document.getElementById("Test111").value)
+
+//    $.ajax({
+//        url: "https://localhost:44353/api/EncryPetd/GetTestGetCode?JiShou=" + $("#Test111").val(),
+//        type: "get",
+//        success: function (d) {
+//            alert(d)
+//            var aa = d;
+//            alert(aa);
+//        }
+//    })
+//}-->
 </html>
+<script>
+    $("#desas").click(function () {
+        var obj =
+        {
+            UserEmail1:$("#textName").val(),
+            UserPwd1 : $("#Text2").val(),
+            UserSex1 : 1,
+            FirstEncryPetdId1: $("#Select1").val(),
+            FirstEncryPetdPwd1 : $("#T1").val(),
+            SecondEncryPetdId1 : $("#Select2").val(),
+            SecondEncryPetdPwd1: $("#T2").val(),
+            ThreedEncryPetdId1 : $("#Select3").val(),
+            ThreedEncryPetdPwd1: $("#T3").val(),
+            HeadFile1: "Imgs/User/null-5618c09503b10b72.jpg",
+            PhoneNumber1 :$("#phone").val(),
+            DealPwd1:$("#phonepwd").val(),
+            IdentityId1 : $("#Userz").val(),
+            BankCard1 : $("#Usery").val()
+        }
+        console.log(obj);
+        //var ds = { UserEmail: UserEmail1, UserPwd:UserPwd1,  UserSex: UserSex1, FirstEncryPetdId: FirstEncryPetdId1, FirstEncryPetdPwd: FirstEncryPetdPwd1, SecondEncryPetdId: SecondEncryPetdId1, SecondEncryPetdPwd: SecondEncryPetdPwd1, ThreedEncryPetdId: ThreedEncryPetdId1, ThreedEncryPetdPwd: ThreedEncryPetdPwd1, HeadFile: HeadFile1, PhoneNumber: PhoneNumber1, DealPwd: DealPwd1, IdentityId: IdentityId1, BankCard: BankCard1 };
+        $.ajax({
+            url: "https://localhost:44353/api/UserInfo/Post",
+            data: { UserEmail1:$("#textName").val(),
+            UserPwd1 : $("#Text2").val(),
+            UserSex1 : 1,
+            FirstEncryPetdId1: $("#Select1").val(),
+            FirstEncryPetdPwd1 : $("#T1").val(),
+            SecondEncryPetdId1 : $("#Select2").val(),
+            SecondEncryPetdPwd1: $("#T2").val(),
+            ThreedEncryPetdId1 : $("#Select3").val(),
+            ThreedEncryPetdPwd1: $("#T3").val(),
+            HeadFile1: "Imgs/User/null-5618c09503b10b72.jpg",
+            PhoneNumber1 :$("#phone").val(),
+            DealPwd1:$("#phonepwd").val(),
+            IdentityId1 : $("#Userz").val(),
+            BankCard1 : $("#Usery").val() },
+            type: "get",
+            success: function (d) {
+                alert(d)
+                var aa = d;
+                alert(aa);
+                if (d > 0) {
+                    alert("添加成功!");
+                    location.href = "Login.html";
+                    var UserName = UserEmail1;
+                    var UserPwd = UserPwd1;
+                }
+            }
+        })
+    })
+
+</script>
