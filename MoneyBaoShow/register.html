@@ -181,7 +181,7 @@
                                 <div style="margin: 50px;margin-left: -1px;height: 205px;margin-top: 37px;">
                                     <p style="font-size: 23px;margin-top: -8px;">
                                         <input id="textName" type="text" style="width: 210px;height: 42px;float: left;">
-                                        <input id="Submit1" type="submit" value="发送邮箱验证码" style="float: left; margin-top: -34px;border-radius: 35px; margin-left: 227px;">
+                                        <input id="Submit1" type="submit"   value="发送邮箱验证码" onclick="TestGetCode()"  style="float: left; margin-top: -34px;border-radius: 35px; margin-left: 227px">
                                     </p>
                                     <p style="font-size: 23px;margin-top: 8px;">
                                         <input id="Text2" type="password" style="width: 210px;height: 40px;margin-top: 8px;">
@@ -226,7 +226,6 @@
 //}-->
 </html>
 <script>
-
     $.ajax({
         url: "https://localhost:44353/api/EncryPetd/Get",
         //dataType: "json"
@@ -240,56 +239,59 @@
             })
         }
     })
+     function TestGetCode() {
+        var s = $("#textName").val();
+         alert(s);
 
-    $("#desas").click(function () {
-        var obj =
-        {
-            UserEmail1:$("#textName").val(),
-            UserPwd1 : $("#Text2").val(),
-            UserSex1 : 1,
-            FirstEncryPetdId1: $("#Select1").val(),
-            FirstEncryPetdPwd1 : $("#T1").val(),
-            SecondEncryPetdId1 : $("#Select2").val(),
-            SecondEncryPetdPwd1: $("#T2").val(),
-            ThreedEncryPetdId1 : $("#Select3").val(),
-            ThreedEncryPetdPwd1: $("#T3").val(),
-            HeadFile1: "Imgs/User/null-5618c09503b10b72.jpg",
-            PhoneNumber1 :$("#phone").val(),
-            DealPwd1:$("#phonepwd").val(),
-            IdentityId1 : $("#Userz").val(),
-            BankCard1 : $("#Usery").val()
-        }
-        console.log(obj);
-        //var ds = { UserEmail: UserEmail1, UserPwd:UserPwd1,  UserSex: UserSex1, FirstEncryPetdId: FirstEncryPetdId1, FirstEncryPetdPwd: FirstEncryPetdPwd1, SecondEncryPetdId: SecondEncryPetdId1, SecondEncryPetdPwd: SecondEncryPetdPwd1, ThreedEncryPetdId: ThreedEncryPetdId1, ThreedEncryPetdPwd: ThreedEncryPetdPwd1, HeadFile: HeadFile1, PhoneNumber: PhoneNumber1, DealPwd: DealPwd1, IdentityId: IdentityId1, BankCard: BankCard1 };
+         
         $.ajax({
-            url: "https://localhost:44353/api/UserInfo/Post",
-            data: { UserEmail1:$("#textName").val(),
-            UserPwd1 : $("#Text2").val(),
-            UserSex1 : 1,
-            FirstEncryPetdId1: $("#Select1").val(),
-            FirstEncryPetdPwd1 : $("#T1").val(),
-            SecondEncryPetdId1 : $("#Select2").val(),
-            SecondEncryPetdPwd1: $("#T2").val(),
-            ThreedEncryPetdId1 : $("#Select3").val(),
-            ThreedEncryPetdPwd1: $("#T3").val(),
-            HeadFile1: "Imgs/User/null-5618c09503b10b72.jpg",
-            PhoneNumber1 :$("#phone").val(),
-            DealPwd1:$("#phonepwd").val(),
-            IdentityId1 : $("#Userz").val(),
-            BankCard1 : $("#Usery").val() },
-            type: "Post",
+            url: "https://localhost:44353/api/EncryPetd/GetTestGetCode?JiShou=" + $("#textName").val(),
+            type: "get",
             success: function (d) {
                 alert(d)
                 var aa = d;
-                alert(aa);
-                if (d > 0) {
-                    alert("添加成功!");
-                    location.href = "Login.html";
-                    var UserName = UserEmail1;
-                    var UserPwd = UserPwd1;
-                }
+                sq = aa;
             }
         })
+    }
+
+
+$("#desas").click(function () {
+    var obj =
+    {
+        UserEmail1: $("#textName").val(),
+        UserPwd1: $("#Text2").val(),
+        UserSex1: 1,
+        FirstEncryPetdId1: $("#Select1").val(),
+        FirstEncryPetdPwd1: $("#T1").val(),
+        SecondEncryPetdId1: $("#Select2").val(),
+        SecondEncryPetdPwd1: $("#T2").val(),
+        ThreedEncryPetdId1: $("#Select3").val(),
+        ThreedEncryPetdPwd1: $("#T3").val(),
+        HeadFile1: "Imgs/User/null-5618c09503b10b72.jpg",
+        PhoneNumber1: $("#phone").val(),
+        DealPwd1: $("#phonepwd").val(),
+        IdentityId1: $("#Userz").val(),
+        BankCard1: $("#Usery").val()
+    }
+    console.log(obj);
+    //var ds = { UserEmail: UserEmail1, UserPwd:UserPwd1,  UserSex: UserSex1, FirstEncryPetdId: FirstEncryPetdId1, FirstEncryPetdPwd: FirstEncryPetdPwd1, SecondEncryPetdId: SecondEncryPetdId1, SecondEncryPetdPwd: SecondEncryPetdPwd1, ThreedEncryPetdId: ThreedEncryPetdId1, ThreedEncryPetdPwd: ThreedEncryPetdPwd1, HeadFile: HeadFile1, PhoneNumber: PhoneNumber1, DealPwd: DealPwd1, IdentityId: IdentityId1, BankCard: BankCard1 };
+    $.ajax({
+        url: "https://localhost:44353/api/UserInfo/Post",
+        data: { model: JSON.stringify(obj) },
+        type: "Post",
+        success: function (d) {
+            alert(d)
+            var aa = d;
+            alert(aa);
+            if (d > 0) {
+                alert("添加成功!");
+                location.href = "Login.html";
+                var UserName = UserEmail1;
+                var UserPwd = UserPwd1;
+            }
+        }
     })
+})
 
 </script>
