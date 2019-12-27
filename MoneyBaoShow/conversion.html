@@ -107,31 +107,67 @@ background-attachment: fixed;">
         </tr>
     </table>
     <form id="form1" style="margin-left:887px">
-        <input name="key" type="text" value="" class="text" placeholder="最早日期"style="width:200px;height:36px" />&nbsp;
+        <input name="key" type="text" value="" class="text" placeholder="最早日期" style="width:200px;height:36px" />&nbsp;
         <label style="color:white">---</label>
-        <input name="key" type="text" value="" class="text" placeholder="最晚日期"style="width:200px;height:36px" />&nbsp;
-        <input name="indexSearch" type="submit" value="搜 索" class="sousuo" style="width:80px;height:36px"/>
+        <input name="key" type="text" value="" class="text" placeholder="最晚日期" style="width:200px;height:36px" />&nbsp;
+        <input name="indexSearch" type="submit" value="搜 索" class="sousuo" style="width:80px;height:36px" />
     </form>
+    <table width="80%" border="0" height="120px" style="background-color:white;margin-left:180px;margin-top:50px">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
     <div id="sel" style="">
-        <div>
-            <table class="layui-hide" id="test" style="width:80%"></table>
+        <!--<div>
+            <table width="80%" border="0" height="120px" style="background-color:white;margin-left:180px;margin-top:50px">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
 
 
-        </div>
+        </div>-->
 
     </div>
 
 </body>
 </html>
 <script>
-  
+    //window.onload = (function myfunction() {
+    //    $.ajax({
+    //        url: "https://localhost:44353/api/ConventRecord",
+    //        data: "get",
+    //        success: function (a) {
+    //            var str = '<table width="80%" border="0" height="120px" style="background-color:white;margin-left:180px;margin-top:50px">';
+    //            $(a).each(function () {
+    //                str+=' <tr>'
+    //                '<td>'+this.ShopName+'</td>'
+    //                '<td>'+this.ConventCount+'</td>'
+    //               '<td>'+this.ConsumeIntegral+'</td>'
+    //                '<td>'+this.ConventTime+'</td>'
+    //                '<td>'+this.ShopName+'</td>'
+    //            '</tr>'
+    //            })
+    //        }
+    //    })
+    //}
     
 layui.use('table', function () {
             var table = layui.table;
             //第一个实例
     table.render({
         elem: '#test'
-        , url: 'https://10.1.159.16:334/api/ConventRecord' //数据接口
+        , url: "http://192.168.0.172:334/api/ConventRecord" //数据接口
         , page: true //开启分页
         , limit: 2
         , limits: [5, 8, 10]
