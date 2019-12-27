@@ -97,11 +97,11 @@
                 <div class="m2-wel-con" style="background-color:white;width:800px;height:350px;margin-left:700px;margin-top:-313px;float:left">
                     <p class="m2-wel-hello" id="greeting" style="background-color:white;margin:0 10px;width: 730px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" title="上午好，iqb13737301354，投资，是为了更好的自己！"><i class="m2-hello-aft"></i>上午好，xxx，投资，是为了更好的自己！</p>
                     <div>
-                        <div class="m2-wel-lef" style="width:500px;height:250px;background-color:white">
+                        <div class="m2-wel-lef" style="width:500px;height:250px;background-color:white">7
                             <div class="left" style="width:250px;">
 
                                 <img src="Imgs/ad/vip.png" alt="金钱豹" style="margin:20px" />
-                                <button style="width:100px;height:40px;margin:14px" onclick="QianDao">签到</button>
+                                <input id="Button1" type="button" value="签到"  onclick="Sign()" style="width:100px;height:40px;margin:14px"/>
                                 <p>您已连续签到<span id="day">1</span>天，</p>
                                 <p><span id="today">明天</span>再签到可获得<span id="growth">2</span>个成长值</p>
                             </div>
@@ -163,3 +163,42 @@
     </div>
 </body>
 </html>
+<script>
+    $.ajax({
+        url: "https://192.168.0.172:334/api/userinfo?UserEmail=666@qq.com",
+        type: "get",
+        dataType:"json",
+        success: function (d)
+        {
+            $(d).each(function ()
+            {
+                alert(this.GrowthValue) 
+            })
+        }
+    })
+
+    function Sign()
+    {
+        var obj =
+        {
+            UserEmail="666@qq.com",
+            ChangeTime=getData(),
+            AfterIntegra=$("#mydetail_num").text()+1,
+            GrowthValueNow=$("#mydetail_num").text(),
+            Cause="签到",
+            DisthingId=1,
+            ChangeValue=1,
+        }
+        $.ajax({
+        url: "https://192.168.0.172:334/api/growthinfo?json=" + JSON.stringify(obj),
+        type: "Post",
+        success: function (d)
+        {
+            if (d > 0)
+            {
+                alert('签到成功');
+            }
+        }
+    })
+    }
+</script>

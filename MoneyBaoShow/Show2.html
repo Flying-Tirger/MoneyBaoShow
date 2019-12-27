@@ -151,7 +151,7 @@
                         <input id="m2-manseadate-start" type="text" style=" margin-left:100px;display:inline-block;width:125px;height:20px;line-height:24px;margin:5px;font-size:12px;color:#ff0000;cursor:pointer" onclick="WdatePicker()" />
                         "到"
                         <input id="m2-manseadate-end" type="text" style="margin-left:120px;display:inline-block;width:125px;height:20px;line-height:24px;margin:5px;font-size:12px;color:#ff0000;cursor:pointer" onclick="WdatePicker()" />
-                    
+
                     </li>
                 </ul>
                 <ul class="m2-managesearchsel-type" style="background-color:#ff6a00;font-size:10px">
@@ -161,34 +161,37 @@
                         <span class="m2-managesearchsel-link" style="margin-left:20px;font-size:10px" data-days="1"><a href="">未激活</a></span>
                         <span class="m2-managesearchsel-link" style="margin-left:30px;font-size:10px" data-days="2"><a href="">已激活</a></span>
                     </li>
-                    
-                </ul>
-                <table class="m2-manageresult" cellpadding="0" cellspacing="0" style="width:770px;padding:15px;margin-top:12px;text-align:center;background-color:aqua">
-                    <tbody>
-                        <tr class="m2-manageresult-head">
-                            <th style="width:120px;">时间</th>
-                            <th style="width:155px;">资金类型</th>
-                            <th style="width:135px;">描述</th>
-                            <th style="width:120px;">金额（元）</th>
-                            <th style="width:100px;">激活金额（元）</th>
-                            <th style="width:110px;">呆激活金额（元）</th>
-                        </tr>
-                        <tr class="m2-manageresult-sum">
-                            <td colspan="3"></td>
-                            <td>
-                                "总计:"
-                                <span class="m2-manageresult-total" id="sum_reward">0.00</span>
-                            </td>
-                            <td></td>
-                            <td>
-                                <span class="m2-manageresult-more" style="background-color:#ff0000"><button>加载更多</button></span>
-                            </td>
-                        </tr>
-                    </tbody>
 
-                </table>
+                </ul>
+                <table class="layui-hide" id="test"></table>
             </div>
 
         </div>
 </body>
 </html>
+<script>
+
+    layui.use('table', function () {
+        var table = layui.table;
+        //第一个实例
+        table.render({
+            elem: '#test'
+            , url: 'https://192.168.0.172:334/api/DealRecord' //数据接口
+            , page: true //开启分页
+            , limit: 5
+            , limits: [5, 8, 10]
+            , cols: [[
+                { field: 'UserEmail', width: 100, title: '用户邮箱', sort: true },
+                { field: 'StartBalance', title: '交易前余额', sort: true },
+                { field: 'EndBalance', title: '交易后余额', sort: true },
+                { field: 'BalanceTime', title: '交易时间', sort: true },
+                { field: 'Cause', width: 150, title: '原因', sort: true },
+                { field: 'DealState', width: 150, title: '状态',sort: true },
+            ]],
+            request: {
+                pageName: 'page' // 页码的参数名称，默认：page
+                , limitName: 'size' //每页数据量的参数名，默认：limit
+            },
+        });
+    });
+</script>

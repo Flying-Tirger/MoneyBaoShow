@@ -702,7 +702,10 @@ background: url(../images/huodongjiaxi.png) no-repeat;
 .m2-news-pages a.m2-pages-num:hover{color:#fff; background-color: #0996cc; cursor: pointer;}
 .m2-news-pages a.m2-pages-num:active{color:#fff;background-color: #0996cc; cursor: pointer;}
 
-
+.m2-news-pages a.m2-page-unsel,.m2-news-pages a.m2-page-prev,.m2-news-pages a.m2-page-next{
+	color: 717171;
+	background-color: #d9d9d9;
+}
 .m2-news-pages a.m2-page-sel{
 	color:#fff;
 	background-color: #0996cc;
@@ -1593,8 +1596,13 @@ i.m2-detItemlef-line{
 	width: 45px;
 	height: 46px;
 }
-
-
+.m2-detRigjust-linkBtn i.m2-detRigjust-linkBtning{
+	background:url(../images/m2-mainIcon.png) no-repeat -213px 0px;);
+	cursor: pointer;
+}
+.m2-detRigjust-linkBtn i.m2-detRigjust-linkBtned{
+	background:url(../images/m2-mainIcon.png) no-repeat -288px -265px;);
+}
 .m2-detRigjust-ben span,.m2-detRigjust-coin span{
 	color: #f5944f;
 }
@@ -2079,7 +2087,10 @@ i.m2-detItemlef-line{
 	height: 43px;
 	background: url(../images/m2-mainIcon.png) no-repeat -493px 0px;
 }
-
+.m2-detAsklist-rigBtn{
+	margin: ;
+	text-align: right;
+}
 .m2-detAsklist-rigBtn a{
 	display: inline-block;
 	padding: 0 13px;
@@ -2374,7 +2385,11 @@ i.m2-detItemlef-line{
 	font-size: 14px;
 	line-height: 28px;
 }
-
+.m2-detConfirm-warn{
+	]color: #fa533d;
+	font-size: 14px;
+	line-height: 28px;
+}
 .m2-detConfirm-btn{
 	width: 220px;
 	margin: 0 auto 21px auto;
@@ -2508,7 +2523,7 @@ i.m2-detItemlef-line{
 .m2-banner-btn a.m2-next{right:-60px;background: url(../images/m2-mainIcon.png) no-repeat -521px -149px;}
 
 .m2-banner-box .m2-hd {position:absolute;top:199px;left:370px;padding: 1px 0 0 10px;}
-
+.m2-banner-box .m2-hdBg{z-index:1;position: absolute;top:-3px;left:-5px;background-color: #fff;padding: 4px 0 3px 0px; border-radius: 9px; width: 100%;height: 14px;filter:alpha(opacity=20);-moz-opacity:0.2;-khtml-opacity:0.2;opacity:0.2;}
 .m2-banner-box .m2-hd ul{position: relative;z-index: 5; zoom: 1;}
 .m2-banner-box .m2-hd ul:after{display:block;clear:both;visibility:hidden;height:0;content:'-';}
 .m2-banner-box .m2-hd ul li{z-index:5;width:13px;height:13px;border-radius :50%;text-indent:-9999px;margin-right:20px;background: url(../images/m2-mainIcon.png) no-repeat -66px -126px;float:left;cursor:pointer;}
@@ -4394,10 +4409,23 @@ i.m2-indexOntopIcon-ing{
 .mo2-indexStep ul{
 	zoom: 1;
 }
-.mo2-indSteite1:hover .mo2-indSteicon1{background: url(../Imgs/ad/indSteicon1.gif) no-repeat left top;}
-.mo2-indSteite2:hover .mo2-indSteicon2{background: url(../Imgs/ad/indSteicon2.gif) no-repeat left top;}
-.mo2-indSteite3:hover .mo2-indSteicon3{background: url(../Imgs/ad/indSteicon3.gif) no-repeat left top;}
-.mo2-indSteite4:hover .mo2-indSteicon4{background: url(../Imgs/ad/indSteicon4.gif) no-repeat left top;}
+/*界面的图片地址*/
+.mo2-indSteite1:hover .mo2-indSteicon1 {
+    background-image: url('../Imgs/ad/indSteicon1.gif');
+    no-repeat： left top;
+}
+.mo2-indSteite2:hover .mo2-indSteicon2 {
+    background-image: url('../Imgs/ad/indSteicon2.gif');
+    no-repeat: left top;
+}
+.mo2-indSteite3:hover .mo2-indSteicon3 {
+    background-image: url('../Imgs/ad/indSteicon3.gif');
+    no-repeat： left top;
+}
+.mo2-indSteite4:hover .mo2-indSteicon4 {
+    background-image: url('../Imgs/ad/indSteicon4.gif');
+    no-repeat： left top;
+}
 .mo2-indexStep ul:after{display:block;clear:both;visibility:hidden;height:0;content:'-';}
 .mo2-indSteite{
 	width: 274px;
@@ -4421,10 +4449,10 @@ i.m2-indexOntopIcon-ing{
 	width: 60px;
 	height: 60px;
 }
-.mo2-indSteicon1{background: url(../Imgs/ad/m2-indexIcon.png) no-repeat 0px 0px;}
-.mo2-indSteicon2{background: url(../Imgs/ad/m2-indexIcon.png) no-repeat -60px 0px;}
-.mo2-indSteicon3{background: url(../Imgs/ad/m2-indexIcon.png) no-repeat -120px 0px;}
-.mo2-indSteicon4{background: url(../Imgs/ad/m2-indexIcon.png) no-repeat -180px 0px;}
+.mo2-indSteicon1{background: url(../images/m2-indexIcon.png) no-repeat 0px 0px;}
+.mo2-indSteicon2{background: url(../images/m2-indexIcon.png) no-repeat -60px 0px;}
+.mo2-indSteicon3{background: url(../images/m2-indexIcon.png) no-repeat -120px 0px;}
+.mo2-indSteicon4{background: url(../images/m2-indexIcon.png) no-repeat -180px 0px;}
 .mo2-indSterig{
 	padding: 2px 0 0 0;
 	text-align: center;
@@ -7005,6 +7033,11 @@ b.mo2-newProwarn{
 
 
 
+.tetesttest{
+	background: url(../images/m2-indexIcon.png) no-repeat 0px 0px;
+	background: url(../images/m2-mainIcon.png) no-repeat px px;
+	:after{display:block;clear:both;visibility:hidden;height:0;content:'-';}
+}
 
 .comregist{
 	width:100%;
