@@ -67,7 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Account.html" />
+    <Content Include="UserInfo.html" />
     <Content Include="BingCard.html" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
@@ -478,11 +478,9 @@
     <Content Include="obj\Debug\MoneyBaoShow.pdb" />
     <Content Include="recharge.html" />
     <Content Include="register.html" />
-    <Content Include="RetrievePassWrod.html" />
     <Content Include="ShopInfo.html" />
     <Content Include="Show2.html" />
     <Content Include="Show3.html" />
-    <Content Include="ShowYSY.html" />
     <Content Include="statics\common\js\common.js" />
     <Content Include="statics\common\js\jquery.js" />
     <Content Include="statics\common\tipBox\colorbox-master\css\colorbox.css" />
@@ -972,7 +970,6 @@
     <Content Include="statics\home\images\home.png.tmp!" />
     <Content Include="statics\newcommon\images\m2-commonCharge.png.tmp!" />
     <Content Include="statics\newcommon\images\m2-commonChargebtn.png.tmp!" />
-    <Content Include="ShowYSY.html~HEAD" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
