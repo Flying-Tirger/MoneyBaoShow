@@ -116,7 +116,8 @@ function UserLogin() {
                         setCookie("Pwd", UserPwd);
                     }
                     alert('登录成功');
-       
+                    sessionStorage.setItem('UserName', UserName);
+                    location.href = 'ShopInfo';
                 }
                 else {
                    
