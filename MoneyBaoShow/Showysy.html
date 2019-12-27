@@ -4,16 +4,14 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
-    <link href="layui/css/layui.css" rel="stylesheet" />
-    <script src="layui/layui.js"></script>
     <link href="CSS/m2-main.css" rel="stylesheet" />
     <link href="CSS/m2-commonNew.css" rel="stylesheet" />
     <link href="CSS/newPage.css" rel="stylesheet" />
     <script src="JS/jquery-3.3.1.js"></script>
-    <script src="JS/jquery.unobtrusive-ajax.js"></script>
     <link rel="shortcut icon" href="#" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no" />
     <meta name="format-detection" content="telephone=no,email=no" />
+    <meta http-equiv="content-security-policy" content="upgrade-insecure-requests" />
 </head>
 <body>
     <div id="IndexBody">
@@ -72,8 +70,8 @@
                         <li class="m2-commonNav-fir"><a id="twopage" href="index.html">首页</a></li>
                         <li class="m2-commonNav-fir" style="border-bottom-color: rgb(255, 102, 102); border-bottom-width: 2px; border-bottom-style: solid;"><a id="onepage" href="index.html">我要投资</a></li>
                         <li class="m2-commonNav-fir"><a id="sevenpage" href="FinancingShow.html">我要融资</a></li>
-                        <li class="m2-commonNav-fir"><a id="threepage" href="usercenter.html">会员商城</a></li>
-                        <li class="m2-commonNav-fir"><a id="fourpage" href="anquanlicai_baozhang.html">我的账户</a></li>
+                        <li class="m2-commonNav-fir"><a id="threepage" href="ShopInfo.html">会员商城</a></li>
+                        <li class="m2-commonNav-fir"><a id="fourpage" href="Show2.html">我的账户</a></li>
                     </ul>
                 </div>
             </div>
@@ -81,28 +79,31 @@
         <div class="m-investBanner" style=" width: 100%;
         height: 110px;
         margin-top: 1px;
-        background: url('Imgs/ad/20151130140806276.png') ;"></div>
-        <div style="height:500px; width:100%;">
+        background: url('Imgs/ad/内网通截图20191218165719.png') ;"></div>
+        <div style="width:100%;">
             <div class="m2-investBread">
                 <div class="m2-investBreadbox">
                     <i class="m2-investBreadicon"></i>
                     <span class="m2-invBre-fat"><a href="index.html">首页&nbsp;&gt;</a></span>
-                    <span class="m2-invBre-fat"><a href="touzi_licai_chanpin.html">我要投资&nbsp;&gt;</a></span>
-                    <a class="m2-invBre-cur" href="touzi_licai_chanpin.html">项目直投</a>
+                    <a class="m2-invBre-cur" href="Showysy.html">项目直投</a>
                 </div>
             </div>
+
             <div class="m2-invTable-con">
                 <ul class="m2-invTablelist">
-                    <li class="m2-invTab-sel"><span onclick="window.location.href='/touzi_licai_chanpin.html'">项目直投</span><i></i></li>
-                    <li class="m2-invTab-unsel"><span onclick="window.location.href='/duanqi_licai_chanpin.html'">爱车贷</span><i></i></li>
+                    <li class="m2-invTab-sel"><span onclick="window.location.href='/Showysy.html'">项目直投</span><i></i></li>
+
                 </ul>
             </div>
+
             <div class="m2-invResult-con">
                 <div class="m2-invResult-head">
                     <h3><i></i>项目筛选列表</h3>
                 </div>
-                <div class="m2-invResuleitem-box">
-                    <ul>
+
+                <div class="m2-invResuleitem-box" id="sss">
+
+                    <!--<ul id="sname">
                         <li class="m2-invResuleitem" id="news_list">
                             <div class="m2-invItem-lef">
                                 <div class="m2-invItemleft-lef">
@@ -111,40 +112,42 @@
                                 </div>
                                 <div class="m2-invItemleft-rig">
                                     <h4>
-                                        <i class="m2-invItemIcon-inv"></i> <a href="chanpin.html#-moxOeTwTZaOw8TY79g.html" target="_blank" title="爱车贷-雪佛兰迈锐宝-XAA067">爱车贷-雪佛兰迈锐宝-XAA067</a>
+                                        <i class="m2-invItemIcon-inv"></i>
+                                        <a href="chanpin.html#-moxOeTwTZaOw8TY79g.html" target="_blank" title="爱车贷-雪佛兰迈锐宝-XAA067" id="commodity">爱车贷-雪佛兰迈锐宝-XAA067</a>
                                     </h4>
                                     <ul class="m2-invItemleft-list">
                                         <li>
-                                            <span class="m2-invItemdet-big huodongjiaxi">
+                                            <span class="m2-invItemdet-big huodongjiaxi" id="Lilu">
                                                 8%
                                             </span>
                                             <span class="m2-invItemdet-nor">预期年化收益率</span>
                                             <i class="m2-invItemdet-line"></i>
                                         </li>
                                         <li>
-                                            <span class="m2-invItemdet-big">
+                                            <span class="m2-invItemdet-big" id="deadline">
                                                 []
                                             </span>
                                             <span class="m2-invItemdet-nor">期限</span>
                                             <i class="m2-invItemdet-line"></i>
                                         </li>
                                         <li>
-                                            <span class="m2-invItemdet-big">[]</span>
+                                            <span class="m2-invItemdet-big" id="Rongz">[]</span>
                                             <span class="m2-invItemdet-nor">融资金额</span>
                                         </li>
                                     </ul>
                                     <div class="m2-invItemprogress">
-                                        <span class="m2-invItemprogress-tit">
+                                        <span class="m2-invItemprogress-tit" id="raise">
                                             正在募集[]
                                         </span>
                                         <b>
-                                            <i style="width:50% "></i>
-                                            <u style="left:50%">可投：[]</u>
+                                            <i style="width:50% " id="percentage"></i>
+                                            <u style="left:50%" id="investment">可投：[]</u>
                                         </b>
-                                        <span class="m2-invItemprogress-per">42.11%</span>
+                                        <span class="m2-invItemprogress-per" id="BaiFenBi">42.11%</span>
                                     </div>
                                 </div>
                             </div>
+
                             <div class="m2-invItem-rig">
                                 <div class="m2-invItemrig-main">
                                     <p class="m2-invItemrig-gua">
@@ -155,16 +158,20 @@
                                         <a href="Investment.html" class="m2-invItemlink-inv" target="_blank" title="点击立即投资 爱车贷-雪佛兰迈锐宝-XAA067">立即投资</a>
                                     </div>
                                 </div>
-                                <p class="m2-invItem-det" style="text-indent:20px;">投资万元预期收益：<span>[]元</span></p>
+                                <p class="m2-invItem-det" style="text-indent:20px;">投资万元预期收益：<span id="Yuan">[]元</span></p>
                                 <p class="m2-invItem-det">投资起点金额：<span style="color:#ff6666;">100元</span></p>
                             </div>
                         </li>
-                    </ul>
+                    </ul>-->
                 </div>
 
+                <table class="layui-hide" id="test"></table>
             </div>
+
             <div class="pager"></div>
+
         </div>
+
         <div class="mo2-indexStep" style="padding-left:290px;">
             <ul>
                 <li class="mo2-indSteite  mo2-indSteite1">
@@ -205,6 +212,7 @@
                 </li>
             </ul>
         </div>
+
         <div class="mo2-notice" style="margin-bottom:50px; margin-top:50px;">
             <div class="upRoll" id="upRoll1">
                 <div id="holder1">
@@ -257,6 +265,7 @@
                 <a href="/aiqianbang_licaiwang_gonggao">更多公告</a>
             </div>
         </div>
+
         <div class="m2-indCooorg" style="padding-left:290px;">
             <h2>
                 实力合作机构
@@ -325,6 +334,7 @@
                 </li>
             </ul>
         </div>
+
         <div id="mainNewfoot" style="margin-top:50px; height:150px;">
             <div class="mainNewfocus" style="width:740px;">
                 <div class="mainNewblog">
@@ -367,84 +377,141 @@
 </body>
 </html>
 <script>
-    //生成Pager，当前页码, 总页数, 回调function
-$.fn.pager = function(page, total, callback) {
-    var html = '';
-    html += '<a class="first" href="javascript:;">首页</a>';
-    html += '<a class="first" href="javascript:;">上一页</a>';
-    var start = page - 5 < 0 ? 0 : page - 5;
-    var end = page + 5 < total ? page + 5 : total;
-    for (var i = start; i < end; i++) {
-        html += i == page - 1 ? '<span>' + (i + 1) + '</span>' : '<a href="javascript:;">' + (i + 1) + '</a>';
-    }
-    html += '<a class="first" href="javascript:;">下一页</a>';
-    html += '<a class="last" href="javascript:;">末页</a>';
-    $(this).html(html).find('a').click(function() {
-        var p = $(this).text();
-        if (p == '上一页') p = page == 1 ? 1 : page - 1;
-        if (p == '下一页') p = page == total ? total : page + 1;
-        if (p == '首页') p = 1;
-        if (p == '末页') p = total;
+    $.ajax({
+        url: "http://10.1.159.16:334/api/AmountInfo",
+        type: "get",
+        dataType:"json",
+        success: function (d) {   
+            $(d).each(function () {
+                var set = '<ul id="sname">'
+                set += '<li class="m2-invResuleitem" id="news_list">' +
+                    '<div class="m2-invItem-lef">' +
+                    '<div class="m2-invItemleft-lef">' +
+                    '<i class="m2-invItem-new"></i>' +
+                    '<img src="Imgs/ad/内网通截图20191218165719.png" alt="'+this.AmountName+'">' +
+                    '</div>' +
+                    '<div class="m2-invItemleft-rig">' +
+                    '<h4>' +
+                    '<i class="m2-invItemIcon-inv"></i>' +
+                    '<a href="chanpin.html#-moxOeTwTZaOw8TY79g.html" target="_blank" title="' + this.AmountName + '" id="commodity">' + this.AmountName + '</a>' +
+                    '</h4>' +
+                    '<ul class="m2-invItemleft-list">' +
+                    '<li>' +
+                    '<span class="m2-invItemdet-big huodongjiaxi" id="Lilu">' +
+                    this.InterestRate
+                    + '</span>' +
+                    '<span class="m2-invItemdet-nor">预期年化收益率:</span>' +
+                    '<i class="m2-invItemdet-line"></i>' +
+                    '</li>' +
+                    '<li>' +
+                    '<span class="m2-invItemdet-big" id="deadline">' +
+                    this.FinanceTime
+                    + '</span>' +
+                    '<span class="m2-invItemdet-nor">期限</span>' +
+                    '<i class="m2-invItemdet-line"></i>' +
+                    '</li>' +
+                    '<li>' +
+                    '<span class="m2-invItemdet-big" id="Rongz">' + this.ApplyMoney + '</span>' +
+                    '<span class="m2-invItemdet-nor">融资金额</span>' +
+                    '</li>' +
+                    '</ul>' +
+                    '<div class="m2-invItemprogress">' +
+                    '<span class="m2-invItemprogress-tit" id="raise">' +
+                    '正在筹集'
+                    + '</span>' +
+                    '<b>' + 
+                    '<i style="width:'+((this.AmountMoney / this.ApplyMoney) * 100 )+'%'+' " id="percentage"></i>' +
+                    '<u style="left:50%" id="investment">可投：' + (this.ApplyMoney - this.AmountMoney) + '</u>' +
+                    '</b>' +
+                    '<span class="m2-invItemprogress-per" id="BaiFenBi">' + ((this.AmountMoney / this.ApplyMoney) * 100) + '%'
+            +'</span>'+
+                                    '</div>'+
+                                '</div>'+
+                            '</div>'+
 
-        if (p != page) callback(parseInt(p));
-    });
-}
+                            '<div class="m2-invItem-rig">'+
+                                '<div class="m2-invItemrig-main">'+
+                                    '<p class="m2-invItemrig-gua">'+
+                                        '<span class="m2-invItemrig-guaTit" style="color:#333;">担保措施:</span>'+
+                                        '<span class="m2-invItemrig-guaDet" style="color:#ff9900;">车辆质押</span>'+
+                                    '</p>'+
+                    '<div class="m2-invItemrig-link">' +
+                    '<a href="Investment.html" class="m2-invItemlink-inv" target="_blank" title="点击立即投资 ' + this.AmountName + '">'+this.AmountName+'</a>' +
+                                   '</div>'+
+                                '</div>'+
+                                '<p class="m2-invItem-det" style="text-indent:20px;">投资万元预期收益：<span id="Yuan">'+(this.InterestRate*10000)+'元</span></p>'+
+                               ' <p class="m2-invItem-det">投资起点金额：<span style="color:#ff6666;">100元</span></p>'+
+                            '</div>'+
+                    '</li>'  
+                 set +='</ul>';
+          $("#sss").append(set);
+            })
 
-onload = function() {
-    //用用回调
-    function go(p) {
-        $('.pager').pager(p, 82, go);
-    }
-
-    $('.pager').pager(1, 82, go);
-}
-        layui.use('element', function () {
-            var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
-
-            //监听导航点击
-            element.on('nav(demo)', function (elem) {
-                //console.log(elem)
-                layer.msg(elem.text());
-            });
-        });
-
-        /*   function jz()
-           {
-               $.ajax({
-                   url: "https://localhost:44344/api/default/get?PageIndex=1&PageSize=5",
-                   success: function (d)
-                   {
-                      console.log(d)
-                   }
-               })
-           }*/
-
-        function marquee(height, speed, delay) {
-            var scrollT;
-            var pause = false;
-            var ScrollBox = document.getElementById("upRoll1");
-            if (document.getElementById("holder1").offsetHeight <= height) return;
-            var _tmp = ScrollBox.innerHTML.replace('holder1', 'holder')
-            ScrollBox.innerHTML += _tmp;
-            ScrollBox.onmouseover = function () { pause = true }
-            ScrollBox.onmouseout = function () { pause = false }
-            ScrollBox.scrollTop = 0;
-            function start() {
-                scrollT = setInterval(scrolling, speed);
-                if (!pause) ScrollBox.scrollTop += 2;
-            }
-            function scrolling() {
-                if (ScrollBox.scrollTop % height != 0) {
-                    ScrollBox.scrollTop += 2;
-                    if (ScrollBox.scrollTop >= ScrollBox.scrollHeight / 2) ScrollBox.scrollTop = 0;
-                }
-                else {
-                    clearInterval(scrollT);
-                    setTimeout(start, delay);
-                }
-            }
-            setTimeout(start, delay);
         }
-        marquee(42, 30, 3000);
+    });
+  
+ /*   layui.use('table', function () {
+            var table = layui.table;
+            //第一个实例
+            table.render({
+                elem: '#test'
+                , url: 'https://192.168.0.172:334/api/growthinfo' //数据接口
+                , page: true //开启分页
+                , limit: 5
+                , limits: [5, 8, 10]
+                , cols: [[
+                    { field: 'GrowthId', width: 100, title: '编号', sort: true },
+                    { field: 'GrowthId', width: 100, title: '编号', sort: true },
+                    { field: 'UserEmail', title: '用户邮箱', sort: true },
+                       { field: 'ChangeTime', title: '变动时间', sort: true },
+                    { field: 'BeforeIntegral', title: '变动前积分', sort: true },
+                       { field: 'AfterIntegra', width: 80, title: '变动后积分', sort: true },
+                    { field: 'Cause', title: '原因', sort: true },
+                       { field: 'DisthingId', width: 80, title: '区别', sort: true },
+                    { field: 'ChangeValue', title: '变动值', sort: true },
+                ]],
+                request: {
+                    pageName: 'page' // 页码的参数名称，默认：page
+                    , limitName: 'size' //每页数据量的参数名，默认：limit
+                },
+            });
+        });*/
+    /*   function jz()
+       {
+           $.ajax({
+               url: "https://localhost:44344/api/default/get?PageIndex=1&PageSize=5",
+               success: function (d)
+               {
+                  console.log(d)
+               }
+           })
+       }*/
 
+    function marquee(height, speed, delay) {
+        var scrollT;
+        var pause = false;
+        var ScrollBox = document.getElementById("upRoll1");
+        if (document.getElementById("holder1").offsetHeight <= height) return;
+        var _tmp = ScrollBox.innerHTML.replace('holder1', 'holder')
+        ScrollBox.innerHTML += _tmp;
+        ScrollBox.onmouseover = function () { pause = true }
+        ScrollBox.onmouseout = function () { pause = false }
+        ScrollBox.scrollTop = 0;
+        function start() {
+            scrollT = setInterval(scrolling, speed);
+            if (!pause) ScrollBox.scrollTop += 2;
+        }
+        function scrolling() {
+            if (ScrollBox.scrollTop % height != 0) {
+                ScrollBox.scrollTop += 2;
+                if (ScrollBox.scrollTop >= ScrollBox.scrollHeight / 2) ScrollBox.scrollTop = 0;
+            }
+            else {
+                clearInterval(scrollT);
+                setTimeout(start, delay);
+            }
+        }
+        setTimeout(start, delay);
+    }
+    marquee(42, 30, 3000);
 </script>
