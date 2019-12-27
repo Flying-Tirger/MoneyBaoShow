@@ -289,7 +289,7 @@
         //var ds = { UserEmail: UserEmail1, UserPwd:UserPwd1,  UserSex: UserSex1, FirstEncryPetdId: FirstEncryPetdId1, FirstEncryPetdPwd: FirstEncryPetdPwd1, SecondEncryPetdId: SecondEncryPetdId1, SecondEncryPetdPwd: SecondEncryPetdPwd1, ThreedEncryPetdId: ThreedEncryPetdId1, ThreedEncryPetdPwd: ThreedEncryPetdPwd1, HeadFile: HeadFile1, PhoneNumber: PhoneNumber1, DealPwd: DealPwd1, IdentityId: IdentityId1, BankCard: BankCard1 };
         $.ajax({
             url: "https://localhost:44353/api/UserInfo/Post",
-            data: { model: JSON.stringify(obj) },
+            data: { json: obj },
             type: "Post",
             success: function (d) {
                 alert(d)
