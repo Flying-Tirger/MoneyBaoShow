@@ -92,29 +92,30 @@
                         <td>
                             <div class="citySelect">
                                 <dl id="js_city">
-                                    <dt><input type="text" id="realAddr" name="realName" class="input_all input_1" maxlength="15" placeholder="请输入项目名称" /></dt>
+                                    <dt><input type="text" id="realName" name="realName" class="input_all input_1" maxlength="15" placeholder="请输入项目名称" /></dt>
                                     <dd style="display:none;"></dd>
                                 </dl>
                             </div>
-                            <div class="tishi"><span id="cityError" class="prompt_2 hidden"></span></div>
+                            <div class="tishi"><span id="cityError"></span></div>
                         </td>
                     </tr>
                     <tr>
                         <th>申请金额</th>
                         <td>
                             <label class="touzi01">
-                                <input type="text" id="realName" name="realMoney" class="input_all input_1" maxlength="15" placeholder="请输入申请金额" />
+                                <input type="text" id="realMoney" name="realMoney" class="input_all input_1" maxlength="15" placeholder="请输入申请金额" />
                             </label>
-                            <div class="tishi"><span id="realNameError" class="prompt_2 hidden"></span></div>
+                            <div class="tishi"><span id="realNameError"></span></div>
                         </td>
                     </tr>
                     <tr>
                         <th>利率</th>
                         <td>
                             <label class="touzi01">
-                                <input type="text" id="mobile" name="InterestRate" class="input_all input_1" maxlength="11"placeholder="请输入利率" />
+                                <span></span>
+                                <span id="InterestRate">8%</span>
                             </label>
-                            <div class="tishi"><span id="mobileError" class="prompt_2 hidden"></span></div>
+                            <div class="tishi"><span id="realNameError" class="prompt_2 hidden"></span></div>
                         </td>
                     </tr>
                     <tr>
@@ -137,7 +138,7 @@
                     </tr>
                     <tr>
                         <th></th>
-                        <td><input type="button" id="save" value="立即申请" class="btn btnSize_6 btn_orange" /></td>
+                        <td><input id="save" type="submit" value="立即申请" class="btn btnSize_6 btn_orange" /></td>
                     </tr>
                 </table>
             </div>
@@ -170,57 +171,6 @@
             </div>
         </div>
     </div>
-
-    <script src="js/jquery.js"></script>
-    <script src="js/Action.js"></script>
-    <script src="js/waste.js"></script>
-    <script src="js/banner.js"></script>
-    <script src="js/jQuery-jcMarquee.js"></script>
-
-
-
-    <script type="text/javascript" src="js/VisitorAPI-1.2.1-min.js"></script>
-    <script type="text/javascript" src="js/AppMeasurement-1.2.1-min.js"></script>
-
-    <!--时间  s-->
-    <script type="text/javascript" src="js/jquery.ui.datepicker.js"></script>
-    <link href="css/jquery-ui.css" rel="stylesheet">
-    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-    <!--时间  e
-    <script language="javascript">
-            var staticCss = 'http://static.niwodai.com/Public/Static/201404';
-            var cssVersion = '2015010618';
-            var staticUrl = 'http://static.niwodai.com/';
-    </script> -->
-    <script src="js/loanApplyValidate.js?v=2015010618.js" type="text/javascript"></script>
-    <script src="js/detail.js?v=2015010618.js" type="text/javascript"></script>
-    <script src="js/netCredit.js?v=2015010618.js" type="text/javascript"></script>
-    <script src="js/loanApplyCitys.js?v=2015010618.js" type="text/javascript"></script>
-
-    <script>
-        $(function () {
-            //--输入框内提示-------------
-            $(".touzi01 .input_1").each(function () {
-                var thisVal = $(this).val();
-                if (thisVal != "") {
-                    $(this).siblings("span").hide();
-                } else {
-                    $(this).siblings("span").show();
-                }
-                $(this).focus(function () {
-                    $(this).siblings("span").hide();
-                }).blur(function () {
-                    var val = $(this).val();
-                    if (val != "") {
-                        $(this).siblings("span").hide();
-                    } else {
-                        $(this).siblings("span").show();
-                    }
-                });
-            });
-        })
-    </script>
-
 
     <!--Partner-->
     <div class="Partner mt10">
@@ -273,45 +223,55 @@
         </div>
     </div>-->
 
-
-    <script>
-        $(function () {
-            $('#Marquee_x').jcMarquee({ 'marquee': 'x', 'margin_right': '10px', 'speed': 20 });
-            $(".loginbtn").click(function () {
-                $(".Pop-up").show();
-                $(".pop-bd").slideDown(500);
-                $("#form2").hide().siblings("#form1").show();
-            });
-            $(".regbtn").click(function () {
-                $(".Pop-up").show();
-                $(".pop-bd").slideDown(500);
-                $("#form1").hide().siblings("#form2").show();
-            });
-            $("#btnreg").click(function () { $(this).parents("#form1").hide().siblings("#form2").show(); })
-            $("#btnlogin").click(function () { $(this).parents("#form2").hide().siblings("#form1").show(); })
-            $(".close").click(function () { $(this).parents(".Pop-up").hide().find(".pop-bd").hide() });
-
-            $(".form .form-control").each(function () {
-                var thisVal = $(this).val();
-                if (thisVal != "") {
-                    $(this).siblings("span").hide();
-                }
-                else {
-                    $(this).siblings("span").show();
-                }
-                $(this).focus(function () {
-                    $(this).siblings("span").hide().parents("label").css("z-index", "10009").siblings("label").css("z-index", "10008");
-                }).blur(function () {
-                    var val = $(this).val();
-                    if (val != "") {
-                        $(this).siblings("span").hide().siblings("label").css("z-index", "10008");
-                    }
-                    else {
-                        $(this).siblings("span").show().siblings("label").css("z-index", "10008");
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 </html>
+<script>
+    $("#save").click(function () {
+        var time = new Date;
+        var year = time.getFullYear();
+        var mon = time.getMonth()+1;
+        var date = time.getDate();
+        var hour = time.getHours();
+        var min = time.getMinutes();
+        var sec = time.getSeconds();
+        var Time = "";
+        Time += year;
+        Time += mon;
+        Time += date;
+        Time += hour;
+        Time += min;
+        Time += sec;
+
+         var str="";
+         str+=time.getFullYear()+'-';  //获得年的数据
+         str+=(time.getMonth()+1)+'-'; //获得月的数据,必须进行+1,因为月的下标从0开始。即6月显示为5.
+        str += time.getDate();  //获得日的信息。
+        str += " "+hour+':';
+        str += min+':';
+        str += sec;
+        var data = {
+            "AmountName": $("[name=realName]").val(),
+            "AmountSerial": "Jqb" + Time,
+            "ApplyMoney": $("[name=realMoney]").val(),
+            "AmountMoney": 0,
+            "InterestRate": 0.08,
+            "FinanceTime": $("[name=FinanceTime]").val(),
+            "RapayMentTime": $("[name=RapayMentTime]").val(),
+            "FinanceUser": $("[name=FinanceUser]").val(),
+            "AmountState": 0,
+            "CreateTime": str
+        };
+        console.log(data);
+        $.ajax({
+            url: "https://192.168.0.172:334/api/AmountInfo/?json=" + JSON.stringify(data),
+            type: "Post",
+            success: function (d)
+            {
+                if (d > 0) {
+                    alert("申请上了!");
+                }
+            }
+        })
+    })
+
+</script>
