@@ -454,6 +454,7 @@
     <Content Include="obj\Debug\MoneyBaoShow.dll" />
     <Content Include="obj\Debug\MoneyBaoShow.pdb" />
     <Content Include="recharge.html" />
+    <Content Include="register.html" />
     <Content Include="RetrievePassWrod.html" />
     <Content Include="ShopInfo.html" />
     <Content Include="Show2.html" />
