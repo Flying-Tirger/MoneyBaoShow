@@ -105,7 +105,7 @@
     margin-left: 52px;">
                                         密保问题1<span>
                                             <select id="Select1" style="width: 200px;height: 28px;">
-                                                <option value="1">你的猫咪叫做</option>
+                                                <option value="0">你的猫咪叫做</option>
                                             </select>
                                         </span>
 
@@ -120,7 +120,7 @@
     margin-left: 52px;">
                                         密保问题2<span>
                                             <select id="Select2" style="width: 200px;height: 28px; ">
-                                                <option value="1">你的猫咪叫做</option>
+                                                <option value="0">你的猫咪叫做</option>
                                             </select>
                                         </span>
 
@@ -135,7 +135,7 @@
     margin-left: 52px;">
                                         密保问题3<span>
                                             <select id="Select3" style="width: 200px;height: 28px;">
-                                                <option value="1">你的猫咪叫做</option>
+                                                <option value="0">你的猫咪叫做</option>
                                             </select>
                                         </span>
 
@@ -226,6 +226,21 @@
 //}-->
 </html>
 <script>
+
+    $.ajax({
+        url: "https://localhost:44353/api/EncryPetd/Get",
+        //dataType: "json"
+        type: "get",
+        success: function (d) {
+            $(d).each(function () {
+                var arr = '<option value="' + this.EncryPetdId + '">' + this.EncryPetdQuestion + '</option>';
+                $("#Select1").append(arr);
+                $("#Select2").append(arr);
+                $("#Select3").append(arr);
+            })
+        }
+    })
+
     $("#desas").click(function () {
         var obj =
         {
@@ -262,7 +277,7 @@
             DealPwd1:$("#phonepwd").val(),
             IdentityId1 : $("#Userz").val(),
             BankCard1 : $("#Usery").val() },
-            type: "get",
+            type: "Post",
             success: function (d) {
                 alert(d)
                 var aa = d;

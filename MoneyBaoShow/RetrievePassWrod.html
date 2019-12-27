@@ -36,7 +36,7 @@
                     <h1></h1>
                     <div style="WIDTH: 29%;float:left;  HEIGHT: 500px;">
 
-                        <div style="float:left; background-color:blueviolet; width : 142%;height: 577px;margin-top: -1080px;margin-left: 525px;    border-radius: 15px;">
+                        <div style="float:left; background-color:#808080; width : 142%;height: 577px;margin-top: -1080px;margin-left: 525px;    border-radius: 15px;">
                             <div style="float:right;width: 805px;height: 500px;">
                                 <p><label style="font-size: 21px;float: right;margin: 66px;">*验证成功后，密码为初始密码111111</label></p>
 
@@ -56,7 +56,7 @@
                                     </p>
                                 </div>
 
-                                <div class="m2-pwdFrom-item" margin-left:="" -278px;="">
+                                <div class="m2-pwdFrom-item" margin-left:" -278px;="">
 
                                     <p style="font-size: 35px;margin: 61px;margin-left: -559px;margin-top: 37px;float: left;">
                                         验证码
@@ -85,25 +85,25 @@
 </body>
 </html>
 <script>
-
+    var sq = "";
     function TestGetCode() {
         var s = $("#Test111").val();
         alert(s)
         alert(document.getElementById("Test111").value)
-
+         
         $.ajax({
             url: "https://localhost:44353/api/EncryPetd/GetTestGetCode?JiShou=" + $("#Test111").val(),
             type: "get",
             success: function (d) {
                 alert(d)
                 var aa = d;
-                alert(aa);
+                sq = aa;
             }
         })
     }
     function RetrievePassword() {
         var pwd = 111111;
-        if ($("#CAPTCHA").val() != null || $("#CAPTCHA").val() != "" || $("#CAPTCHA").val() == aa) {
+        if ($("#CAPTCHA").val() != null || $("#CAPTCHA").val() != "" || $("#CAPTCHA").val() == sq) {
             alert("正确!");
             $.ajax({
                 url: "https://localhost:44353/api/UserInfo/GetEmilaVerify",
