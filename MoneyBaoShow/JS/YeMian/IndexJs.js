@@ -107,7 +107,7 @@ function UserLogin() {
 
         $.ajax({
 
-            url: "https://localhost:44353/Api/UserInfo/GetLogin?UserEmail=" + $("#UserName").val() + "&UserPwd=" + $("#UserPwd").val(),
+            url: "https://10.1.159.16:334/Api/UserInfo/GetLogin?UserEmail=" + $("#UserName").val() + "&UserPwd=" + $("#UserPwd").val(),
             success: function (d) {
                 if (d > 0) {
 
@@ -116,8 +116,11 @@ function UserLogin() {
                         setCookie("Pwd", UserPwd);
                     }
                     alert('登录成功');
+                    sessionStorage.setItem('UserName', UserName);
+                    location.href = 'ShopInfo';
                 }
                 else {
+                   
                     alert('账号密码错误')
                 }
             }
