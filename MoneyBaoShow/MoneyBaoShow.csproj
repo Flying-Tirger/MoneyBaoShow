@@ -158,6 +158,7 @@
     <Content Include="CSS\public.css" />
     <Content Include="CSS\StyleSheet1.css" />
     <Content Include="FinancingShow.html" />
+    <Content Include="GrowthInfo.html" />
     <Content Include="Imgs\ad\1.png" />
     <Content Include="Imgs\ad\2.png" />
     <Content Include="Imgs\ad\2015113014080319.png" />
@@ -326,6 +327,7 @@
     <Content Include="Imgs\User\null-5618c09503b10b72.jpg" />
     <Content Include="Imgs\Yemian\e7d4cac126941b5a-396dcc73e3007ef8-3e1b25ec34e514d214510c4a674ed0b0.jpg" />
     <Content Include="Index.html" />
+    <Content Include="Invest.html" />
     <Content Include="Investment.html" />
     <Content Include="JS\jquery.form.js" />
     <Content Include="JS\YeMian\IndexJs.js" />
@@ -438,7 +440,6 @@
     <Content Include="layui\lay\modules\tree.js" />
     <Content Include="layui\lay\modules\upload.js" />
     <Content Include="layui\lay\modules\util.js" />
-    <Content Include="Login.html" />
     <Content Include="materials.html" />
     <Content Include="My97DatePicker\calendar.js" />
     <Content Include="My97DatePicker\config.js" />
@@ -476,11 +477,12 @@
     <Content Include="obj\Debug\MoneyBaoShow.dll" />
     <Content Include="obj\Debug\MoneyBaoShow.pdb" />
     <Content Include="recharge.html" />
+    <Content Include="register.html" />
     <Content Include="RetrievePassWrod.html" />
     <Content Include="ShopInfo.html" />
-    <Content Include="Show.html" />
     <Content Include="Show2.html" />
     <Content Include="Show3.html" />
+    <Content Include="ShowYSY.html" />
     <Content Include="statics\common\js\common.js" />
     <Content Include="statics\common\js\jquery.js" />
     <Content Include="statics\common\tipBox\colorbox-master\css\colorbox.css" />
@@ -960,7 +962,6 @@
     <Content Include="obj\Debug\MoneyBaoShow.csproj.CopyComplete" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="obj\Debug\build.force" />
-    <None Include="packages.config" />
     <Content Include="statics\common\images\iconB.png.tmp!" />
     <Content Include="statics\common\images\iconGa.png.tmp!" />
     <Content Include="statics\company_finance\images\company_finance\company_finance7.jpg.tmp!" />
@@ -971,6 +972,7 @@
     <Content Include="statics\home\images\home.png.tmp!" />
     <Content Include="statics\newcommon\images\m2-commonCharge.png.tmp!" />
     <Content Include="statics\newcommon\images\m2-commonChargebtn.png.tmp!" />
+    <Content Include="ShowYSY.html~HEAD" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
