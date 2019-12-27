@@ -90,16 +90,20 @@
                         <th>身份证正面</th>
                         <td>
                             <div class="citySelect">
-                                        <input type="file" name="IdentityFornt" />
+                             <input type="file" name="IdentityFornt" id="IdentityFornt"  />
                             </div>
-                            <div class="tishi"><span id="cityError" class="prompt_2 hidden"></span></div>
+                            <div class="tishi">
+                                <input id="Button1" type="button" value="上传" />
+                            <span id="cityError" class="prompt_2 hidden"></span></div>
                         </td>
                     </tr>
                     <tr>
                         <th>身份证反面</th>
                         <td>
-                                <input type="file" name="IdentityReal" />
-                            <div class="tishi"><span id="realNameError" class="prompt_2 hidden"></span></div>
+                                <input type="file" name="IdentityReal"  id="IdentityReal"/>
+                            <div class="tishi">
+                            <input id="Button2" type="button" value="上传" />
+                            <span id="realNameError" class="prompt_2 hidden"></span></div>
                         </td>
                     </tr>
                     <tr>
@@ -114,8 +118,10 @@
                     <tr>
                         <th>抵押物证明</th>
                         <td class="hight">
-                            <input type="file" name="GuaranteeInfo" />
+                            <input type="file" name="GuaranteeInfo" id="GuaranteeInfo" />
+                            <input id="Button3" type="button" value="上传" />
                         </td>
+
                     </tr>
                     <tr>
                         <th>联系手机号</th>
@@ -127,7 +133,7 @@
                     
                     <tr>
                         <th></th>
-                        <td><input type="button" id="save" value="立即申请" class="btn btnSize_6 btn_orange" /></td>
+                        <td><input type="submit" id="save" value="立即申请" class="btn btnSize_6 btn_orange" onclick="shengqing()" /></td>
                     </tr>
                 </table>
             </div>
@@ -163,26 +169,63 @@
 </body>
 </html>
 <script>
-    function DiGuara() {
-        var Guarantee = $("#Guarantee").val();
-        if (Guarantee == "") {
-            $("#mobileError").val("请输入抵押物!");
-            return;
-        }
-    }
-    //手机号
-    $("#mobile").blur(function () {
-        var mobile = $(this).val();
-        if (validateFunction.isEmpty(mobile)) {
-            $("#mobileError").removeClass("hidden").addClass("error_2").html("<i></i>手机号不能为空");
-            errorCount++;
-        } else {
-            if (!validateFunction.isMobile(mobile)) {
-                $("#mobileError").removeClass("hidden").addClass("error_2").html("<i></i>请输入11位手机号码");
-                errorCount++;
-            } else {
-                $("#mobileError").addClass("hidden").removeClass("error_2").html("");
+    $("#Button1").click(function () {
+        var fd = new FormData();
+        fd.append("file", $("#IdentityFornt")[0].files[0])
+        $.ajax({
+            url: "https://localhost:44353/api/AmountInfo/",
+            type: "Post",
+            data: fd,
+            processData: false,
+            contentType: false,
+            success: function (d) {
+                alert(d);
             }
-        }
-    });
+        })
+    })
+    $("#Button2").click(function () {
+        var fd = new FormData();
+        fd.append("file1", $("#IdentityReal")[0].files[0])
+        $.ajax({
+            url: "https://localhost:44353/api/AmountInfo/",
+            type: "Post",
+            data: fd,
+            processData: false,
+            contentType: false,
+            success: function (d) {
+                alert(d);
+            }
+        })
+    })
+    var guarantee = $("#Guarantee").val();
+    var mobilePhone = $("#mobile").val();
+    $("#Button3").click(function () {
+        var fd = new FormData();
+        fd.append("file2", $("#GuaranteeInfo")[0].files[0])
+        $.ajax({
+            url: "https://localhost:44353/api/AmountInfo/",
+            type: "Post",
+            data: fd,
+            processData: false,
+            contentType: false,
+            success: function (d) {
+                alert(d);
+            }
+        })
+    })
+    function shengqing() {
+        $.ajax({
+            url: "https://localhost:44353/api/AmountInfo",
+            type: "Put",
+            data: {
+                Guarantee: guarantee,
+                LinkManNumber:mobilePhone
+            },
+            processData: false,
+            contentType: false,
+            success: function (d) {
+                alert(d);
+            }
+        })
+    }
 </script>

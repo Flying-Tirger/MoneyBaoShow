@@ -327,6 +327,7 @@
     <Content Include="Imgs\Yemian\e7d4cac126941b5a-396dcc73e3007ef8-3e1b25ec34e514d214510c4a674ed0b0.jpg" />
     <Content Include="Index.html" />
     <Content Include="Investment.html" />
+    <Content Include="JS\jquery.form.js" />
     <Content Include="JS\YeMian\IndexJs.js" />
     <Content Include="JS\jquery-3.3.1.js" />
     <Content Include="JS\jquery.cookie.js" />
@@ -978,6 +979,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Imgs\IdentityPhone\" />
     <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="obj\Release\" />
   </ItemGroup>
