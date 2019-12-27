@@ -231,7 +231,7 @@
                                     <input type="number" id="time" style="margin-top:-45px;margin-left:354px;background-color:#b6ff00" placeholder="请输入投资金额(天)" />
                                 </div>
                                 <div class="grow-details-ron">
-                                    <button style="background-color:aqua;margin-left:400px;" ;outline:none>确定</button>
+                                    <button style="background-color:aqua;margin-left:400px;" ; class="cal"outline:none>确定</button>
                                 </div>
                             </div>
                         </div>
@@ -242,3 +242,48 @@
     </div>
 </body>
 </html>
+<script type="text/javascript">
+    //计算器
+    $(".cal").click(function(){
+        var money=$("#money").val();
+        var time=$("#time").val();
+        $("#result").val(Math.round(money/100*(time/30)*1));
+    })
+
+    var myprogross=Number($('.myprogress-son').html());
+    var s= Number(127);//进度条的1/4
+    var level="0";
+    if(level == 5){
+        $('.range-son').animate({width:'507px'})
+        $('.myprogress').animate({left:'620px'})
+    }else{
+        if(myprogross<=4000){
+            var val= Number(myprogross/4000);
+            $('.range-son').animate({width:val*s+'px'})
+            $('.myprogress').animate({left:val*s-10+'px'})
+        }else if(4000<myprogross && myprogross<=20000){
+            var val=Number((myprogross-4000)/16000);
+            $('.range-son').animate({width:s+val*s+'px'})
+            $('.myprogress').animate({left:s+val*s-10+'px'})
+            $('.range-son').css('width',s+val*s+'px');
+             $('.myprogress').css('left',s+val*s-5+'px');
+        }else if(20000<myprogross && myprogross<=60000){
+            var val=Number((myprogross-20000)/40000);
+            $('.range-son').animate({width:s*2+val*s+'px'})
+            $('.myprogress').animate({left:s*2+val*s-10+'px'})
+            $('.range-son').css('width',s*2+val*s+'px');
+             $('.myprogress').css('left',s*2+val*s-5+'px');
+        }else if(60000<myprogross && myprogross<240000){
+            var val=Number((myprogross-60000)/180000);
+            $('.range-son').animate({width:s*3+val*s+'px'})
+            $('.myprogress').animate({left:s*3+val*s-10+'px'})
+            $('.range-son').css('width',s*3+val*s+'px');
+             $('.myprogress').css('left',s*3+val*s-5+'px');
+        }else if(myprogross>=240000){
+            $('.range-son').animate({width:'507px'})
+            $('.myprogress').animate({left:'493px'})
+            $('.range-son').css('width',507+'px');
+             $('.myprogress').css('left',502+'px');
+        }
+    }
+</script>

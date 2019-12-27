@@ -119,7 +119,7 @@
                                         </li>
                                     </ul>
                                     <ul>
-
+                                       
                                         <span><input id="Text1" type="text" placeholder="请输入密码" style="margin-left: -86%;    margin-top: 11px; width: 237px; height: 36px;"></span>
                                     </ul>
                                 </div>
@@ -131,7 +131,7 @@
                                 </div>
                                 <div style="margin-top:29px;margin-left:7%">
                                     <ul>
-
+                                       
                                         <span><input id="Submit1" type="submit" value="登录" class="btn-default btn" style="margin-left: -140%;width: 243px;height: 33px;border-radius: 35px;font-size: 19px;color:#ffffff; background-color: #f59451;"></span>
                                     </ul>
                                 </div>
@@ -162,16 +162,14 @@
 </body>
 </html>
 
-
-
 <script>
     function Loginshow() {
         var aone = $("#txt1").val();
         var etwo = $("#txt2").val();
         $.ajax({
-            url: "https://localhost:44353/api/UserInfo/GetLogin?UserEmail=" + aone + "&UserPwd=" + etwo,
+            url: "https://localhost:44353/api/UserInfo/GetLogin?UserEmail="+aone+"&UserPwd="+etwo,
             dataType: "json",
-            type: "get",
+            type:"get",
             success: function (d) {
                 if (d > 0) {
                     alert('登录成功!');
