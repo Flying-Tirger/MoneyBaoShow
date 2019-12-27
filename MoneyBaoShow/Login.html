@@ -16,7 +16,7 @@
     <meta name="format-detection" content="telephone=no,email=no">
     <link href="CSS/m2-login.css" rel="stylesheet">
     <link href="layui/m2-login.css" rel="stylesheet">
-    
+
 
 </head>
 <body>
@@ -43,7 +43,7 @@
                             </div>
                         </div>
                         <div class="m2-commonEwmwb">
-                            <i class="m2-commonEwmicon")"></i>
+                            <i class="m2-commonEwmicon" )"></i>
                         </div>
                     </div>
                 </div>
@@ -54,7 +54,7 @@
                             <li class="m2-commonTop-btn"><a style="border-right:none;" href="login.html#login_callback=/index" target="_blank">登录</a></li>
                         </ul>
                     </div>
-                    <div class="m2-commonTop-app" style="cursor:pointer;" >
+                    <div class="m2-commonTop-app" style="cursor:pointer;">
                         <a class="m2-commonTop-and" href=""></a>
                         <a class="m2-commonTop-ios" href=""></a>
                         <span>app下载入口</span>
@@ -119,19 +119,19 @@
                                         </li>
                                     </ul>
                                     <ul>
-                                       
+
                                         <span><input id="Text1" type="text" placeholder="请输入密码" style="margin-left: -86%;    margin-top: 11px; width: 237px; height: 36px;"></span>
                                     </ul>
                                 </div>
                                 <div style="margin-top:29px;margin-left:44%">
                                     <ul>
-                                        
+
                                         <span style="margin-left: -51px;font-size: 19px"><a href="forget.html">忘记密码?</a></span>
                                     </ul>
                                 </div>
                                 <div style="margin-top:29px;margin-left:7%">
                                     <ul>
-                                       
+
                                         <span><input id="Submit1" type="submit" value="登录" class="btn-default btn" style="margin-left: -140%;width: 243px;height: 33px;border-radius: 35px;font-size: 19px;color:#ffffff; background-color: #f59451;"></span>
                                     </ul>
                                 </div>
@@ -163,3 +163,21 @@
 </html>
 
 
+
+<script>
+    function Loginshow() {
+        var aone = $("#txt1").val();
+        var etwo = $("#txt2").val();
+        $.ajax({
+            url: "https://localhost:44353/api/UserInfo/GetLogin?UserEmail=" + aone + "&UserPwd=" + etwo,
+            dataType: "json",
+            type: "get",
+            success: function (d) {
+                if (d > 0) {
+                    alert('登录成功!');
+                    var UserName = anoe;
+                }
+            }
+        })
+    }
+</script>
