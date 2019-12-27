@@ -1,36 +1,38 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>兑换记录</title>
-    <link href="CSS/member_mall.css" rel="stylesheet" />
-    <link href="layui/css/layui.css" rel="stylesheet" />
-    <script src="layui/layui.js"></script>
-    <link href="CSS/m2-main.css" rel="stylesheet" />
-    <link href="CSS/m2-commonNew.css" rel="stylesheet" />
-    <link href="CSS/newPage.css" rel="stylesheet" />
-    <script src="JS/jquery-3.3.1.js"></script>
-    <script src="JS/jquery.unobtrusive-ajax.js"></script>
-    <link rel="shortcut icon" href="#" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no" />
-    <meta name="format-detection" content="telephone=no,email=no" />
-    <style>
-        .biaoti {
-            font-family: "Microsoft Himalaya";
-            font-size: 26px;
-            border-bottom: 1px dashed #CCCCCC;
-            color: #255e95;
-        }
+<div>
+    <head>
+        <meta charset="UTF-8">
+        <title>兑换记录</title>
+        <link href="CSS/member_mall.css" rel="stylesheet" />
+        <link href="layui/css/layui.css" rel="stylesheet" />
+        <script src="layui/layui.js"></script>
+        <link href="CSS/m2-main.css" rel="stylesheet" />
+        <link href="CSS/m2-commonNew.css" rel="stylesheet" />
+        <link href="CSS/newPage.css" rel="stylesheet" />
+        <script src="JS/jquery-3.3.1.js"></script>
+        <script src="JS/jquery.unobtrusive-ajax.js"></script>
+        <link rel="shortcut icon" href="#" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no" />
+        <meta name="format-detection" content="telephone=no,email=no" />
+        <style>
+            .biaoti {
+                font-family: "Microsoft Himalaya";
+                font-size: 26px;
+                border-bottom: 1px dashed #CCCCCC;
+                color: #255e95;
+            }
 
-        .btgn {
-            font-family: "Microsoft YaHei UI";
-            font-size: 16px;
-            color: #255e95;
-            background-color: #e9faff;
-            text-align: center;
-        }
-    </style>
-</head>
+            .btgn {
+                font-family: "Microsoft YaHei UI";
+                font-size: 16px;
+                color: #255e95;
+                background-color: #e9faff;
+                text-align: center;
+            }
+        </style>
+    </head>
+</div>
 <body background="Imgs/member_mall/296912.jpg"
       style=" background-repeat:no-repeat ;
 background-size:100% 100%;
@@ -112,23 +114,9 @@ background-attachment: fixed;">
     </form>
     <div id="sel" style="">
         <div>
-            <table width="80%" height="35px" border="1" cellspacing="1" cellpadding="4" style="background-color:white;margin-left:180px">
-                <tr style="width:240px;height:80px">
-                    <th>兑换编号</th>
-                    <th>兑换物品</th>
-                    <th>兑换个数</th>
-                    <th>消费积分</th>
-                    <th>兑换日期</th>
-                </tr>
-                <tr style="width:240px;height:55px;text-align:center">
-                    <td>lala</td>
-                    <td>lala</td>
-                    <td>lala</td>
-                    <td>lala</td>
-                    <td>lala</td>
-                </tr>
+            <table class="layui-hide" id="test" style="width:80%"></table>
 
-            </table>
+
         </div>
 
     </div>
@@ -136,24 +124,31 @@ background-attachment: fixed;">
 </body>
 </html>
 <script>
-    window.onload = (function () {
-        $.ajax({
-            url: "https://localhost:44353/api/shopinfo",
-            type: "get",
-            success: function (d) {
-                var sel = '<table width="60%" border="1" cellspacing="1" cellpadding="4" style="background-color:white;margin-left:320px">'
-                $(d).each(function () {
-                    sel += '<tr>' +
-                        '<td>' + this.ConventRecordId + '</td>' +
-                        '<td>' + this.ShopInfoId + '</td>' +
-                        '<td>' + this.UserEmail + '</td>' +
-                        '<td>' + this.ConventCount + '</td>' +
-                        '<td>' + this.ConsumeIntegral + '</td>' +
-                        '</tr>'
-                })
-                sel += '</table>';
-                $("#sel").append(sel);
-            }
-        })
-    })
+  
+    
+layui.use('table', function () {
+            var table = layui.table;
+            //第一个实例
+    table.render({
+        elem: '#test'
+        , url: 'https://10.1.159.16:334/api/ConventRecord' //数据接口
+        , page: true //开启分页
+        , limit: 2
+        , limits: [5, 8, 10]
+        , cols: [[
+            { field: 'ConventRecordId',title: '兑换编号', sort: true },
+            { field: 'ShopName', title: '兑换物品', sort: true },
+            { field: 'ConventCount', title: '兑换个数', sort: true },
+            { field: 'ConsumeIntegral', title: '消费积分', sort: true },
+            { field: 'ConventTime',  title: '兑换日期', sort: true },
+            {  title: '删除' }
+                ]],
+                request: {
+                    pageName: 'page' // 页码的参数名称，默认：page
+                    , limitName: 'size' //每页数据量的参数名，默认：limit
+                },
+            });
+        });
+ 
 </script>
+

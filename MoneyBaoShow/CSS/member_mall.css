@@ -253,12 +253,13 @@ button {
 #member_mall_top {
     padding-top: 30px;
     height: 320px;
-    background: url(Imgs/member_mall/member_mall1.jpg) top center no-repeat;
+    background: url('../Imgs/member_mall/member_mall1.jpg') top center no-repeat;
 }
 
 .member_top_layout {
     width: 994px;
     margin: 0 auto;
+
 }
 
 .member_top_layout_content {
