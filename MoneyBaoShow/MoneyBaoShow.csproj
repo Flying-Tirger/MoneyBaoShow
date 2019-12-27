@@ -108,6 +108,7 @@
     <Content Include="bin\roslyn\System.Xml.XPath.XDocument.dll" />
     <Content Include="bin\roslyn\vbc.exe" />
     <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="conversion.html" />
     <Content Include="CSS\BindCardCss.css" />
     <Content Include="CSS\chosen.css" />
     <Content Include="CSS\css.css" />
@@ -266,6 +267,7 @@
     <Content Include="Imgs\User\null-5618c09503b10b72.jpg" />
     <Content Include="Imgs\Yemian\e7d4cac126941b5a-396dcc73e3007ef8-3e1b25ec34e514d214510c4a674ed0b0.jpg" />
     <Content Include="Index.html" />
+    <Content Include="Invest.html" />
     <Content Include="Investment.html" />
     <Content Include="JS\jquery-3.3.1.js" />
     <Content Include="JS\jquery.cookie.js" />
@@ -419,7 +421,10 @@
     <Content Include="obj\Debug\MoneyBaoShow.pdb" />
     <Content Include="recharge.html" />
     <Content Include="RetrievePassWrod.html" />
+    <Content Include="ShopInfo.html" />
     <Content Include="Show.html" />
+    <Content Include="Show2.html" />
+    <Content Include="Show3.html" />
     <Content Include="Showysy.html" />
     <Content Include="statics\common\js\common.js" />
     <Content Include="statics\common\js\jquery.js" />
