@@ -122,6 +122,7 @@
     <Content Include="CSS\public.css" />
     <Content Include="CSS\StyleSheet1.css" />
     <Content Include="FinancingShow.html" />
+    <Content Include="GrowthInfo.html" />
     <Content Include="Imgs\1b4c510fd9f9d72a0cd7f0f3da2a2834359bbba9.gif" />
     <Content Include="Imgs\ad\2015113014080319.png" />
     <Content Include="Imgs\ad\20151130140805550.png" />
@@ -269,9 +270,6 @@
     <Content Include="Investment.html" />
     <Content Include="JS\jquery-3.3.1.js" />
     <Content Include="JS\jquery.cookie.js" />
-    <Content Include="JS\jquery.knob.js" />
-    <Content Include="JS\jquery.min.js" />
-    <Content Include="JS\jquery.SuperSlide.js" />
     <Content Include="JS\jquery.unobtrusive-ajax.js" />
     <Content Include="JS\MD5.js" />
     <Content Include="JS\YeMian\IndexJs.js" />

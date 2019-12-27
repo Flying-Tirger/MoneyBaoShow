@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="statics/newcommon/css/m2-commonNew.css">
+    <link rel="stylesheet" href="statics/home2/css/m2-main.css">
+    <link href="statics/home/css/newPage.css" rel="stylesheet" />
+    <script src="JS/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="sta tics/home/js/jquery.min.js"></script>
+    <script type="text/javascript" src="statics/home2/js/jquery.knob.js"></script>
+    <script type="text/javascript" src="statics/home2/js/jquery.SuperSlide.js"></script>
+    <link href="layui/css/layui.css" rel="stylesheet" />
+    <script src="layui/layui.js"></script>
+    <script src="JS/jquery.cookie.js"></script>
+</head>
+<body>
+    <div class="m2-commonTop-con">
+        <div class="m2-commonTop">
+            <div class="m2-commonTop-left">
+                <div class="m2-commonTop-tel"><i></i>4006&nbsp;-&nbsp;777&nbsp;-&nbsp;518</div>
+                <div class="m2-commonTop-service" style="padding-left:0;">
+                    <span style="float:left;">客服：</span>
+                    <div style="float:left;display:inline-block;width:92px;height:22px;padding:6px 0 13px 0;"></div>
+                </div>
+                <div class="m2-commonEwm">
+                    <span class="m2-commonEwm-tit">关注我们：</span>
+                    <div class="m2-commonEwmwx">
+                        <i class="m2-commonEwmicon"></i>
+                        <div class="m2-commonEwmhid">
+                            <em class="m2-commonEwmhid-arr"></em>
+                            <em class="m2-commonEwmhid-arrBg"></em>
+                            <b></b>
+                            <span>扫一扫<br>关注爱钱豹订阅号</span>
+                        </div>
+                    </div>
+                    <div class="m2-commonEwmwb">
+                        <i class="m2-commonEwmicon" onclick='window.open("http://weibo.com/iqianbang")'></i>
+                    </div>
+                </div>
+            </div>
+            <div class="m2-commonTop-right">
+                <div class="m2-commonTop-link">
+
+                </div>
+                <div class="m2-commonTop-app" style="cursor:pointer;" onclick='window.open("appdownload.html")'>
+                    <a class="m2-commonTop-and" href=""></a>
+                    <a class="m2-commonTop-ios" href=""></a>
+                    <span>app下载入口</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="m2-commonNav-con">
+        <div class="m2-commonNav-box">
+            <div class="m2-commonLogo">
+                <a class="m2-comImg-logo" href="index.html">
+                    <img title="爱钱帮投资理财平台logo" alt="金钱豹" src="Imgs/ad/QQ图片20191212104941.png" style="padding-bottom:10px;">
+
+                </a>
+                <a class="m2-conImg-slogan" href="">
+                    <img title="徽商银行投资理财托管" alt="" src="/Imgs/ad/m2-sloganHS.png">
+                </a>
+            </div>
+            <div class="m2-commonNav">
+                <ul class="m2-commonNavul-fir" data_page="onepage">
+                    <li class="m2-commonNav-fir"><a id="onepage" href="index.html">首页</a></li>
+                    <li class="m2-commonNav-fir"><a id="twopage" href="touzi_licai_chanpin.html">我要投资</a></li>
+                    <li class="m2-commonNav-fir"><a id="sevenpage" href="membermall.html">我要融资</a></li>
+                    <li class="m2-commonNav-fir"><a id="threepage" href="usercenter.html">会员商城</a></li>
+                    <li class="m2-commonNav-fir" style="border-bottom-color: rgb(255, 102, 102); border-bottom-width: 2px; border-bottom-style: solid;"><a id="fourpage" href="Account.html">我的账户</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <ul class="layui-nav layui-nav-tree" lay-filter="test" style="left:450px;">
+        <!-- 侧边导航: <ul class="layui-nav layui-nav-tree layui-nav-side"> -->
+        <li class="layui-nav-item layui-nav-itemed">
+            <a href="Account;">我的账户</a>
+        </li>
+        <li class="layui-nav-item">
+            <a href="Show.html">成长值中心</a>
+        </li>
+        <li class="layui-nav-item"><a href="">立即投资</a></li>
+        <li class="layui-nav-item"><a href="">投资管理</a></li>
+        <li class="layui-nav-item"><a href="Shopinfo.html">奖励管理</a></li>
+        <li class="layui-nav-item"><a href="">银行卡管理</a></li>
+        <li class="layui-nav-item"><a href="">我的钱包</a></li>
+    </ul>
+    <div style="background-color:antiquewhite;width:1000px;height:337px;float:right;margin-right:228px;margin-top:-308px">
+        <table class="layui-hide" id="test" style="float:right"></table>
+    </div>
+
+</body>
+</html>
+<script>
+        
+layui.use('table', function () {
+            var table = layui.table;
+            //第一个实例
+            table.render({
+                elem: '#test'
+                , url: 'https://192.168.0.172:334/api/growthinfo' //数据接口
+                , page: true //开启分页
+                , limit: 5
+                , limits: [5, 8, 10]
+                , cols: [[
+                    { field: 'GrowthId', width: 100, title: '编号', sort: true },
+                    { field: 'UserEmail', title: '用户邮箱', sort: true },
+                       { field: 'ChangeTime', title: '变动时间', sort: true },
+                    { field: 'BeforeIntegral', title: '变动前积分', sort: true },
+                    { field: 'AfterIntegra', width: 150, title: '变动后积分', sort: true },
+                       { field: 'GrowthValueNow', width: 150, title: '现有成长值', sort: true },
+                    { field: 'Cause', title: '原因', sort: true },
+                       { field: 'DisthingId', width: 80, title: '区别', sort: true },
+                    { field: 'ChangeValue', title: '变动值', sort: true },
+                ]],
+                request: {
+                    pageName: 'page' // 页码的参数名称，默认：page
+                    , limitName: 'size' //每页数据量的参数名，默认：limit
+                },
+            });
+        });
+</script>
