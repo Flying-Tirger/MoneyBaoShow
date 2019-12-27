@@ -88,7 +88,7 @@
     var sq = "";
     function TestGetCode() {
         var s = $("#Test111").val();
-        alert(s)
+        alert(s);
         alert(document.getElementById("Test111").value)
          
         $.ajax({
@@ -104,11 +104,14 @@
     function RetrievePassword() {
       
         var pwd = 111111;
+        alert($("#CAPTCHA").val());
+        console.log($("#CAPTCHA").val());
+
         if ($("#CAPTCHA").val() != null || $("#CAPTCHA").val() != "" || $("#CAPTCHA").val() == sq) {
             alert("正确!");
             $.ajax({
                 url: "https://localhost:44353/api/UserInfo/GetEmilaVerify",
-                data: { UserEmail: $("Test111").val(), distinguish: 0, variable: pwd },
+                data: { UserEmail: s, distinguish: , variable: pwd },
                 type: "get",
                 success: function (d) {
                     if (d > 0) {
