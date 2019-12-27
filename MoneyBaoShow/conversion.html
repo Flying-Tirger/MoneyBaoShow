@@ -162,29 +162,29 @@ background-attachment: fixed;">
     //    })
     //}
     
-layui.use('table', function () {
-            var table = layui.table;
-            //第一个实例
-    table.render({
-        elem: '#test'
-        , url: "http://192.168.0.172:334/api/ConventRecord" //数据接口
-        , page: true //开启分页
-        , limit: 2
-        , limits: [5, 8, 10]
-        , cols: [[
-            { field: 'ConventRecordId',title: '兑换编号', sort: true },
-            { field: 'ShopName', title: '兑换物品', sort: true },
-            { field: 'ConventCount', title: '兑换个数', sort: true },
-            { field: 'ConsumeIntegral', title: '消费积分', sort: true },
-            { field: 'ConventTime',  title: '兑换日期', sort: true },
-            {  title: '删除' }
-                ]],
-                request: {
-                    pageName: 'page' // 页码的参数名称，默认：page
-                    , limitName: 'size' //每页数据量的参数名，默认：limit
-                },
-            });
+    layui.use('table', function () {
+        var table = layui.table;
+        //第一个实例
+        table.render({
+            elem: '#test'
+            , url: "http://192.168.0.172:334/api/ConventRecord" //数据接口
+            , page: true //开启分页
+            , limit: 2
+            , limits: [5, 8, 10]
+            , cols: [[
+                { field: 'ConventRecordId', title: '兑换编号', sort: true },
+                { field: 'ShopName', title: '兑换物品', sort: true },
+                { field: 'ConventCount', title: '兑换个数', sort: true },
+                { field: 'ConsumeIntegral', title: '消费积分', sort: true },
+                { field: 'ConventTime', title: '兑换日期', sort: true },
+                { title: '删除' }
+            ]],
+            request: {
+                pageName: 'page' // 页码的参数名称，默认：page
+                , limitName: 'size' //每页数据量的参数名，默认：limit
+            },
         });
+    });
  
 </script>
 
