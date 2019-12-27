@@ -34,7 +34,7 @@
                                 <em class="m2-commonEwmhid-arrBg"></em>
                                 <b></b>
                                 <span>扫一扫<br>关注爱钱豹订阅号</span>
-                            </div>
+                            </div> 
                         </div>
                         <div class="m2-commonEwmwb">
                             <i class="m2-commonEwmicon" onclick='window.open("http://weibo.com/iqianbang")'></i>
@@ -78,9 +78,10 @@
                 </div>
             </div>
         </div>
-        <div style="height:350px; width:100%;">
+
+        <div style="height:350px; width:100%;" id="AmountInfo">
             <div style="height:40px;width:1202px;background-color:darkgrey;margin:auto">
-                <h1 style="margin:auto;margin:50px">[新手标]爱车贷-雪佛兰迈锐宝-XAA067&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;项目编号：XACD201609067</h1>
+                <h1 style="margin:auto;margin:50px" id="AmountName"></h1>
             </div>
             <div style="height:300px; width:1200px;margin:auto;border-color:#dbd0d0;border:1px solid">
                 <div style=" float:left;height:300px; width:800px; border-right:1px solid">
@@ -95,15 +96,15 @@
                         <div style="width:100%;height:150px">
                             <div style="width:100%;height:150px;border-bottom:1px dashed">
                                 <div style="height:100%;width:40%;float:left;border-right:1px solid;border-right-color:gray">
-                                    <h1 style="color:#ff6a00;margin-left:50px">8%+1%</h1>
+                                    <h1 id="AmountInterestRate" style="color:#ff6a00;margin-left:50px "></h1>
                                     <p style="margin-left:50px;margin-top:15px">预期年化收益率</p>
-                                    <h1 style="color:#ff6a00;margin-left:50px;margin-top:15px">8.62万</h1>
-                                    <p style="margin-left:50px;margin-top:15px">产品金额</p>
+                                    <h1  id="AmountMoney" style="color:#ff6a00;margin-left:50px;margin-top:15px"></h1>
+                                    <p  style="margin-left:50px;margin-top:15px">申请金额</p>
                                 </div>
                                 <div style="height:100%;width:49%;float:right">
-                                    <h1 style="color:#ff6a00;margin-left:20px">26天（1个月）</h1>
+                                    <h1 id="AmountDate" style="color:#ff6a00;margin-left:20px"></h1>
                                     <p style="margin-left:20px;margin-top:30px">期限</p>
-                                    <p style="margin-left:20px;margin-top:30px">还款日期：2019-12-18</p>
+                                    <p  id="AmountHuan"style="margin-left:20px;margin-top:30px"></p>
                                 </div>
                             </div>
                         </div>
@@ -111,8 +112,8 @@
                             <h2 style="margin-left:20px;margin-top:15px">
                                 正在募资：
                             </h2>
-                            <div class="layui-progress layui-progress-big" lay-showPercent="yes">
-                                <div class="layui-progress-bar layui-bg-green" lay-percent="50%" style="width:80px"></div>
+                            <div class="layui-progress" style="width:400px;height:20px">
+                                <div class="layui-progress-bar" lay-percent="30%" style="width:400px;height:20px"></div>
                             </div>
                             <h2 style="margin-left:20px;margin-top:15px">
                                 投资万元预期收益：64.11元   项目合同范本
@@ -128,10 +129,8 @@
                     </div>
                 </div>
                 <div style="height:300px;width:380px;float:right">
-                    <p><input id="Text1" type="text" style="width:200px;height:50px;margin-top:50px;margin-left:30px;font-size:25px" />  全投</p>
-                    <input id="Button1" type="button" value="立即投资" style="width:150px;height:70px;background-color:#f59451;color:white;font-size:25px;margin-top:50px" />
-                    <button style="width:150px;height:70px;background-color:#f59451;color:white;font-size:25px;margin-top:50px;margin-left:20px">计数器</button>
-
+                    <p><input type="text" style="margin-top:120px;margin-left:80px;width:200px;height:30px" /></p>
+                    <input id="Button1" type="button" value="立即投资" style="width:150px;height:70px;background-color:#f59451;color:white;font-size:25px;margin-top:50px;margin-left:100px" class="Tou()"/>
                 </div>
             </div>
             <div style="width:1200px;height:150px;margin:auto;border-color:#dbd0d0;border:1px solid;margin-top:10px">
@@ -190,10 +189,20 @@
                     <img src="Imgs/Invest/QQ图片20191219110651.png" style="width:97%;height:100px" />
                 </div>
             </div>
-            <div style="width:1200px;height:250px;margin:auto;border-color:#dbd0d0;border:1px solid;margin-top:10px">
+            <div style="width:1200px;height:500px;margin:auto;border-color:#dbd0d0;border:1px solid;margin-top:10px">
                 <div style="width:25%;height:40px;background-color:#0896cc;color:white"><h1 style="margin-left:80px">投资理财记录</h1></div>
                 <div style="width:100%;height:100px">
-                    <div style="width:1000px;height:40px;background-color:lightgray;margin:auto;font-size:25px;color:gray">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;用户名&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;手机号&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;投资金额&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;投资时间</div>
+                    <div style="width:1000px;height:40px;background-color:lightgray;margin:auto;font-size:25px;color:gray">
+                        <table>
+                            <tr>
+                                <td style="width:200px">用户名</td>
+                                <td style="width:200px">手机号</td>
+                                <td style="width:400px">注册时间</td>
+                                <td style="width:200px">状态</td>
+                                <td style="width:200px">用户邮箱</td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -239,3 +248,47 @@
     </div>
 </body>
 </html>
+<script>
+    $(".Tou").click(function () {
+
+    })
+ 
+      layui.use('element', function () {
+        var element = layui.element;
+    });
+    $.ajax({
+        url: "https://10.1.159.16:334/api/amountinfo?amountid=8",
+        success: function (d)
+        {
+            console.log(d)
+            $(d).each(function () {
+                $("#AmountName").html(this.AmountName + "&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;项目编号：" + this.AmountSerial)
+                $("#AmountInterestRate").text((this.InterestRate*100)+'%')
+                $("#AmountMoney").text(this.ApplyMoney + '元')
+                $("#AmountDate").text(this.RapayMentTime + '天')
+                
+               
+            })
+        }
+    })
+
+        $.ajax({
+            url: "https://10.1.159.16:334/api/amountrecord?page=1&size=10&AmountState=",
+            data: { actionName: "show" },
+            dataType: "json",
+            success: function (d) {
+                console.log(d);
+                $(d.data).each(function () {
+                    var tr = ' <tr class="tr">'
+                        + '<td>' + this.UserEmail + '</td>'
+                        + '<td>' + this.InvestorMoney + '</td>'
+                        + '<td>' + this.CreateTime + '</td>'
+                        + '<td>投资</td>'
+                        + '<td>' + this.UserEmail + '</td>'
+                        + '</tr>'
+                    $("table tbody").append(tr);
+                })
+            }
+        })
+    
+</script>
