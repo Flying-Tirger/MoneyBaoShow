@@ -2,6 +2,7 @@
 if (getCookie("Name") != null && getCookie("Pwd") != null) {
     $("#UserName").val(getCookie("Name"))
     $("#UserPwd").val(getCookie("Pwd"))
+    $("#JZPwd")[0].checked = true;
 }
 
 var show_num = [];
@@ -117,10 +118,10 @@ function UserLogin() {
                     }
                     alert('登录成功');
                     sessionStorage.setItem('UserName', UserName);
-                    location.href = 'ShopInfo';
+                    location.href = 'UserInfo.html';
                 }
-                else {
-                   
+                else
+                { 
                     alert('账号密码错误')
                 }
             }

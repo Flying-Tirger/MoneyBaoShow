@@ -43,10 +43,10 @@
                     </div>
                 </div>
                 <div class="m2-commonTop-right">
-                    <div class="m2-commonTop-link">
+                    <div class="m2-commonTop-link" id="SessionOne">
                         <ul>
                             <li class="m2-commonTop-btn"><a href="register.html" target="_blank">注册</a></li>
-                            <li class="m2-commonTop-btn"><a style="border-right:none;" href="login.html#login_callback=/index" target="_blank">登录</a></li>
+                            <li class="m2-commonTop-btn"><a style="border-right:none;" href="Login.html" target="_blank">登录</a></li>
                         </ul>
                     </div>
                     <div class="m2-commonTop-app" style="cursor:pointer;" onclick='window.open("appdownload.html")'>
@@ -70,34 +70,35 @@
                 </div>
                 <div class="m2-commonNav">
                     <ul class="m2-commonNavul-fir" data_page="onepage">
-                        <li class="m2-commonNav-fir" style="border-bottom-color: rgb(255, 102, 102); border-bottom-width: 2px; border-bottom-style: solid;"><a id="onepage" href="index.html">首页</a></li>
-                        <li class="m2-commonNav-fir"><a id="twopage" href="touzi_licai_chanpin.html">我要投资</a></li>
-                        <li class="m2-commonNav-fir"><a id="sevenpage" href="membermall.html">我要融资</a></li>
-                        <li class="m2-commonNav-fir"><a id="threepage" href="usercenter.html">会员商城</a></li>
-                        <li class="m2-commonNav-fir"><a id="fourpage" href="Show.html  ">我的账户</a></li>
+                        <li class="m2-commonNav-fir"><a id="onepage" href="index.html">首页</a></li>
+                        <li class="m2-commonNav-fir"><a id="twopage" href="Showysy.html">我要投资</a></li>
+                        <li class="m2-commonNav-fir"><a id="sevenpage" href="FinancingShow.html">我要融资</a></li>
+                        <li class="m2-commonNav-fir"><a id="" href="ShopInfo.html">会员商城</a></li>
+                        <li class="m2-commonNav-fir" style="border-bottom-color: rgb(255, 102, 102); border-bottom-width: 2px; border-bottom-style: solid;"><a id="" href="UserInfo.html">我的账户</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="m2-userCentermain">
-            <div class="m2-userCentermain-aside" style="background-color:aqua;width:2000px;height:1000px">
-                <ul class="layui-nav layui-nav-tree" lay-filter="test" style="left:450px">
+            <div class="m2-userCentermain-aside" style="background-color:aqua;width:100%;height:100%">
+                <ul class="layui-nav layui-nav-tree" lay-filter="test" style="left:250px;height:500px;">
                     <!-- 侧边导航: <ul class="layui-nav layui-nav-tree layui-nav-side"> -->
-                    <li class="layui-nav-item layui-nav-itemed">
+                    <li class="layui-nav-item ">
                         <a href="javascript:;">我的账户</a>
                     </li>
                     <li class="layui-nav-item">
-                        <a href="javascript:;">成长值中心</a>
+                        <a href="Show.html">成长值中心</a>
                     </li>
                     <li class="layui-nav-item"><a href="">立即投资</a></li>
                     <li class="layui-nav-item"><a href="">投资管理</a></li>
-                    <li class="layui-nav-item"><a href="Show2.html">奖励管理</a></li>
-                    <li class="layui-nav-item"><a href="Show3.html">银行卡管理</a></li>
+                    <li class="layui-nav-item layui-nav-itemed"><a href="Shopinfo.html">奖励管理</a></li>
+                    <li class="layui-nav-item"><a href="">银行卡管理</a></li>
                     <li class="layui-nav-item"><a href="">我的钱包</a></li>
+                    <li class="layui-nav-item "><a href="">我要提现</a></li>
                 </ul>
             </div>
         </div>
-        <div class="m2-wel-con" style="background-color:white;width:800px;height:600px;margin-left:700px;margin-top:-1000px;float:left">
+        <div class="m2-wel-con" style="background-color:white;width:800px;height:600px;margin-left:460px;margin-top:-530px;float:left">
             <div class="mygrow" style="margin-top:20px;padding-top:14px;"></div>
             <div class="grow"></div>
             <span class="title" style="background-color:#ff0000;font-size:25px">我的奖励金记录</span>
@@ -167,7 +168,8 @@
             </div>
 
         </div>
-</body>
+    </div>
+        </body>
 </html>
 <script>
 
@@ -176,7 +178,7 @@
         //第一个实例
         table.render({
             elem: '#test'
-            , url: 'https://192.168.0.172:334/api/DealRecord' //数据接口
+            , url: 'https://10.1.159.16:334/api/DealRecord' //数据接口
             , page: true //开启分页
             , limit: 5
             , limits: [5, 8, 10]
@@ -195,3 +197,4 @@
         });
     });
 </script>
+<script src="JS/YeMian/SessionOne.js"></script>

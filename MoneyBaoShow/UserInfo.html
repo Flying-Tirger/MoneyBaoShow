@@ -42,10 +42,10 @@
                     </div>
                 </div>
                 <div class="m2-commonTop-right">
-                    <div class="m2-commonTop-link">
+                    <div class="m2-commonTop-link" id="SessionOne">
                         <ul>
                             <li class="m2-commonTop-btn"><a href="register.html" target="_blank">注册</a></li>
-                            <li class="m2-commonTop-btn"><a style="border-right:none;" href="login.html#login_callback=/index" target="_blank">登录</a></li>
+                            <li class="m2-commonTop-btn"><a style="border-right:none;" href="Login.html" target="_blank">登录</a></li>
                         </ul>
                     </div>
                     <div class="m2-commonTop-app" style="cursor:pointer;" onclick='window.open("appdownload.html")'>
@@ -70,20 +70,20 @@
                 <div class="m2-commonNav">
                     <ul class="m2-commonNavul-fir" data_page="onepage">
                         <li class="m2-commonNav-fir"><a id="onepage" href="index.html">首页</a></li>
-                        <li class="m2-commonNav-fir"><a id="twopage" href="touzi_licai_chanpin.html">我要投资</a></li>
-                        <li class="m2-commonNav-fir"><a id="sevenpage" href="membermall.html">我要融资</a></li>
-                        <li class="m2-commonNav-fir"><a id="threepage" href="usercenter.html">会员商城</a></li>
-                        <li class="m2-commonNav-fir" style="border-bottom-color: rgb(255, 102, 102); border-bottom-width: 2px; border-bottom-style: solid;"><a id="fourpage" href="anquanlicai_baozhang.html">我的账户</a></li>
+                        <li class="m2-commonNav-fir"><a id="twopage" href="Showysy.html">我要投资</a></li>
+                        <li class="m2-commonNav-fir"><a id="sevenpage" href="FinancingShow.html">我要融资</a></li>
+                        <li class="m2-commonNav-fir"><a id="" href="ShopInfo.html">会员商城</a></li>
+                        <li class="m2-commonNav-fir" style="border-bottom-color: rgb(255, 102, 102); border-bottom-width: 2px; border-bottom-style: solid;"><a id="" href="UserInfo.html">我的账户</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="m2-userCentermain">
-            <div class="m2-userCentermain-aside" style="width:2000px;height:1000px">
-                <ul class="layui-nav layui-nav-tree" lay-filter="test" style="left:450px">
+            <div class="m2-userCentermain-aside" style="width:100%;height:1000px">
+                <ul class="layui-nav layui-nav-tree" lay-filter="test" style="left:250px;height:500px;">
                     <!-- 侧边导航: <ul class="layui-nav layui-nav-tree layui-nav-side"> -->
                     <li class="layui-nav-item layui-nav-itemed">
-                        <a href="Account;">我的账户</a>
+                        <a href="javascript:;">我的账户</a>
                     </li>
                     <li class="layui-nav-item">
                         <a href="Show.html">成长值中心</a>
@@ -93,15 +93,17 @@
                     <li class="layui-nav-item"><a href="Shopinfo.html">奖励管理</a></li>
                     <li class="layui-nav-item"><a href="">银行卡管理</a></li>
                     <li class="layui-nav-item"><a href="">我的钱包</a></li>
+                    <li class="layui-nav-item "><a href="">我要提现</a></li>
                 </ul>
-                <div class="m2-wel-con" style="background-color:white;width:800px;height:350px;margin-left:700px;margin-top:-313px;float:left">
+                <div class="m2-wel-con" style="background-color:white;width:800px;height:350px;margin-left:600px;margin-top:-450px;float:left">
                     <p class="m2-wel-hello" id="greeting" style="background-color:white;margin:0 10px;width: 730px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" title="上午好，iqb13737301354，投资，是为了更好的自己！"><i class="m2-hello-aft"></i>上午好，xxx，投资，是为了更好的自己！</p>
                     <div>
-                        <div class="m2-wel-lef" style="width:500px;height:250px;background-color:white">7
+                        <div class="m2-wel-lef" style="width:500px;height:250px;background-color:white">
+                            7
                             <div class="left" style="width:250px;">
 
                                 <img src="Imgs/ad/vip.png" alt="金钱豹" style="margin:20px" />
-                                <input id="Button1" type="button" value="签到"  onclick="Sign()" style="width:100px;height:40px;margin:14px"/>
+                                <input id="Button1" type="button" value="签到" onclick="Sign()" style="width:100px;height:40px;margin:14px" />
                                 <p>您已连续签到<span id="day">1</span>天，</p>
                                 <p><span id="today">明天</span>再签到可获得<span id="growth">2</span>个成长值</p>
                             </div>
@@ -111,7 +113,7 @@
                                 </div>
 
                                 <div>成长值：<span id="mydetail_num" data="4000">1</span><a href="/usercenter-growth-index#mao" style="color:#69b1d7;float:right;">如何加速？</a></div>
-                                <div id="desc" style="margin:10px 0;font-size:12px;">距离 <span id="vipname">铁帮主</span> 还需要 <span id="integral">3999</span> 成长值</div>	  
+                                <div id="desc" style="margin:10px 0;font-size:12px;">距离 <span id="vipname">铁帮主</span> 还需要 <span id="integral">3999</span> 成长值</div>
                                 <div class="layui-progress layui-progress-big" lay-showPercent="yes">
                                     <div class="layui-progress-bar layui-bg-green" lay-percent="50%" style="width:50px"></div>
                                 </div>
@@ -145,15 +147,16 @@
                             <a class="m2-profit-cha" href="" style="margin-left:54px;margin-right:57px;float:right;margin-top:26px;background-color:aqua">徽商充值</a>
                             <a class="m2-profit-cha" href="home-register-openbankid.html" style="margin-left:54px;margin-right:29px;float:right;margin-top:26px;background-color:aqua">徽商提现</a>
                         </div>
+                        <div class="border" style="margin-top:67px">
+
+                            温馨提示：因数据处理存在延迟，项目还款时数值会存在异常波动，还款后2小时银行完成对账后显示为正常值。
+
+                        </div>
 
                     </div>
                 </div>
                 <div class="m2-userInd-num" style="background-color:white;width:800px;height:84px;float:right;margin-right:500px;margin-top:-84px">
-                    <div class="border" style="margin-top:67px">
 
-                        温馨提示：因数据处理存在延迟，项目还款时数值会存在异常波动，还款后2小时银行完成对账后显示为正常值。
-
-                    </div>
 
                 </div>
             </div>
@@ -202,3 +205,4 @@
     })
     }
 </script>
+<script src="JS/YeMian/SessionOne.js"></script>

@@ -37,8 +37,11 @@
                 </div>
             </div>
             <div class="m2-commonTop-right">
-                <div class="m2-commonTop-link">
-
+                <div class="m2-commonTop-link" id="SessionOne">
+                    <ul>
+                        <li class="m2-commonTop-btn"><a href="register.html" target="_blank">注册</a></li>
+                        <li class="m2-commonTop-btn"><a style="border-right:none;" href="Login.html" target="_blank">登录</a></li>
+                    </ul>
                 </div>
                 <div class="m2-commonTop-app" style="cursor:pointer;" onclick='window.open("appdownload.html")'>
                     <a class="m2-commonTop-and" href=""></a>
@@ -62,10 +65,10 @@
             <div class="m2-commonNav">
                 <ul class="m2-commonNavul-fir" data_page="onepage">
                     <li class="m2-commonNav-fir"><a id="onepage" href="index.html">首页</a></li>
-                    <li class="m2-commonNav-fir"><a id="twopage" href="touzi_licai_chanpin.html">我要投资</a></li>
-                    <li class="m2-commonNav-fir" style="border-bottom-color: rgb(255, 102, 102); border-bottom-width: 2px; border-bottom-style: solid;"><a id="sevenpage" href="membermall.html">我要融资</a></li>
-                    <li class="m2-commonNav-fir"><a id="threepage" href="usercenter.html">会员商城</a></li>
-                    <li class="m2-commonNav-fir"><a id="fourpage" href="anquanlicai_baozhang.html">我的账户</a></li>
+                    <li class="m2-commonNav-fir"><a id="twopage" href="Showysy.html">我要投资</a></li>
+                    <li class="m2-commonNav-fir" style="border-bottom-color: rgb(255, 102, 102); border-bottom-width: 2px; border-bottom-style: solid;"><a id="sevenpage" href="FinancingShow.html">我要融资</a></li>
+                    <li class="m2-commonNav-fir"><a id="" href="ShopInfo.html">会员商城</a></li>
+                    <li class="m2-commonNav-fir" ><a id="" href="UserInfo.html">我的账户</a></li>
                 </ul>
             </div>
         </div>
@@ -90,27 +93,29 @@
                         <th>身份证正面</th>
                         <td>
                             <div class="citySelect">
-                             <input type="file" name="IdentityFornt" id="IdentityFornt"  />
+                                <input type="file" name="IdentityFornt" id="IdentityFornt" />
                             </div>
                             <div class="tishi">
                                 <input id="Button1" type="button" value="上传" />
-                            <span id="cityError" class="prompt_2 hidden"></span></div>
+                                <span id="cityError" class="prompt_2 hidden"></span>
+                            </div>
                         </td>
                     </tr>
                     <tr>
                         <th>身份证反面</th>
                         <td>
-                                <input type="file" name="IdentityReal"  id="IdentityReal"/>
+                            <input type="file" name="IdentityReal" id="IdentityReal" />
                             <div class="tishi">
-                            <input id="Button2" type="button" value="上传" />
-                            <span id="realNameError" class="prompt_2 hidden"></span></div>
+                                <input id="Button2" type="button" value="上传" />
+                                <span id="realNameError" class="prompt_2 hidden"></span>
+                            </div>
                         </td>
                     </tr>
                     <tr>
                         <th>抵押物</th>
                         <td>
                             <label class="touzi01">
-                                <input type="text" id="Guarantee" name="Guarantee" class="input_all input_1" maxlength="11"  onkeydown="DiGuara()" />
+                                <input type="text" id="Guarantee" name="Guarantee" class="input_all input_1" maxlength="11" onkeydown="DiGuara()" />
                             </label>
                             <div class="tishi"><span id="mobileError" class="prompt_2 hidden"></span></div>
                         </td>
@@ -130,7 +135,7 @@
                             <span id="mobileError"></span>
                         </td>
                     </tr>
-                    
+
                     <tr>
                         <th></th>
                         <td><input type="submit" id="save" value="立即申请" class="btn btnSize_6 btn_orange" onclick="shengqing()" /></td>
@@ -229,3 +234,4 @@
         })
     }
 </script>
+<script src="JS/YeMian/SessionOne.js"></script>

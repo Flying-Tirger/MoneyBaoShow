@@ -15,7 +15,7 @@
 </head>
 <body>
     <div id="IndexBody">
-        <div class="m2-commonTop-con">，
+        <div class="m2-commonTop-con">
             <div class="m2-commonTop">
                 <div class="m2-commonTop-left">
                     <div class="m2-commonTop-tel"><i></i>4006&nbsp;-&nbsp;777&nbsp;-&nbsp;518</div>
@@ -40,10 +40,10 @@
                     </div>
                 </div>
                 <div class="m2-commonTop-right">
-                    <div class="m2-commonTop-link">
+                    <div class="m2-commonTop-link" id="SessionOne">
                         <ul>
                             <li class="m2-commonTop-btn"><a href="register.html" target="_blank">注册</a></li>
-                            <li class="m2-commonTop-btn"><a style="border-right:none;" href="login.html#login_callback=/index" target="_blank">登录</a></li>
+                            <li class="m2-commonTop-btn"><a style="border-right:none;" href="Login.html" target="_blank">登录</a></li>
                         </ul>
                     </div>
                     <div class="m2-commonTop-app" style="cursor:pointer;" onclick='window.open("appdownload.html")'>
@@ -58,7 +58,7 @@
             <div class="m2-commonNav-box">
                 <div class="m2-commonLogo">
                     <a class="m2-comImg-logo" href="index.html">
-                        <img title="金钱豹投资理财平台logo" alt="金钱豹" src="Imgs/ad/QQ图片20191212104941.png" style="padding-bottom:10px;">
+                        <img title="爱钱帮投资理财平台logo" alt="金钱豹" src="Imgs/ad/QQ图片20191212104941.png" style="padding-bottom:10px;">
 
                     </a>
                     <a class="m2-conImg-slogan" href="">
@@ -68,10 +68,10 @@
                 <div class="m2-commonNav">
                     <ul class="m2-commonNavul-fir" data_page="onepage">
                         <li class="m2-commonNav-fir" style="border-bottom-color: rgb(255, 102, 102); border-bottom-width: 2px; border-bottom-style: solid;"><a id="onepage" href="index.html">首页</a></li>
-                        <li class="m2-commonNav-fir"><a id="twopage" href="touzi_licai_chanpin.html">我要投资</a></li>
+                        <li class="m2-commonNav-fir" ><a id="twopage" href="Showysy.html">我要投资</a></li>
                         <li class="m2-commonNav-fir"><a id="sevenpage" href="FinancingShow.html">我要融资</a></li>
-                        <li class="m2-commonNav-fir"><a id="threepage" href="usercenter.html">会员商城</a></li>
-                        <li class="m2-commonNav-fir"><a id="fourpage" href="anquanlicai_baozhang.html">我的账户</a></li>
+                        <li class="m2-commonNav-fir"><a id="" href="ShopInfo.html">会员商城</a></li>
+                        <li class="m2-commonNav-fir"><a id="" href="UserInfo.html">我的账户</a></li>
                     </ul>
                 </div>
             </div>
@@ -83,7 +83,7 @@
                 <div style="position: absolute;z-index: 5;background-color: #fff;width: 288px;height:330px;top: 12px;right: 180px;border-radius: 8px;box-shadow:  0px 0px 8px #ccc;">
 
                     <div>
-                        <p style="padding-top:20px;"> <span style="padding-left:150px;"> <a style="border-bottom:1px solid"> 没有账号 立即注册</a></span> </p>
+                        <p style="padding-top:20px;"> <span style="padding-left:150px;"> <a style="border-bottom:1px solid" href="register.html"> 没有账号 立即注册</a></span> </p>
                     </div>
 
                     <div style="width:290px;height:50px;margin-top:10px;margin-bottom:10px;">
@@ -96,8 +96,9 @@
                         <input type="password" name="password" style="width:270px;margin-right:10px;margin-left:10px;" id="UserPwd" lay-verify="required" placeholder="密码" class="layui-input" onblur="UserPwdAndUserName()">
 
 
-                        <b  id="w_passwordMain" style="display: inline; float:right ;position: absolute;display: none;width: 150px;height: 30px;line-height: 30px;text-align: center;border-radius: 4px;left: 260px;top: 110px;font-weight: normal;font-size: 14px;color: #fff;background-color: #F34B43;">
-                        <em style="display: block;position: absolute;width: 0px;height: 0px;border-style: solid;border-width: 6px;left: -11px;top: 9px;border-color: transparent #F34B43 transparent transparent;" ></em><u id="r_passwordMain"></u></b>
+                        <b id="w_passwordMain" style="display: inline; float:right ;position: absolute;display: none;width: 150px;height: 30px;line-height: 30px;text-align: center;border-radius: 4px;left: 260px;top: 110px;font-weight: normal;font-size: 14px;color: #fff;background-color: #F34B43;">
+                            <em style="display: block;position: absolute;width: 0px;height: 0px;border-style: solid;border-width: 6px;left: -11px;top: 9px;border-color: transparent #F34B43 transparent transparent;"></em><u id="r_passwordMain"></u>
+                        </b>
 
                     </div>
                     <div style="width:290px;height:50px; margin-top:10px;margin-bottom:10px;">
@@ -381,3 +382,4 @@
 </body>
 </html>
 <script src="JS/YeMian/IndexJs.js"></script>
+<script src="JS/YeMian/SessionOne.js"></script>

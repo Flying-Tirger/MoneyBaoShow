@@ -1,20 +1,20 @@
-﻿<!DOCTYPE html>
-<html>
+﻿<html>
 <head>
 
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title></title>
-    <link href="layui/css/layui.css" rel="stylesheet" />
+    <link href="layui/css/layui.css" rel="stylesheet">
     <script src="layui/layui.js"></script>
-    <link href="CSS/m2-main.css" rel="stylesheet" />
-    <link href="CSS/m2-commonNew.css" rel="stylesheet" />
-    <link href="CSS/newPage.css" rel="stylesheet" />
+    <link href="CSS/m2-main.css" rel="stylesheet">
+    <link href="CSS/m2-commonNew.css" rel="stylesheet">
+    <link href="CSS/newPage.css" rel="stylesheet">
     <script src="JS/jquery-3.3.1.js"></script>
     <script src="JS/jquery.unobtrusive-ajax.js"></script>
-    <link rel="shortcut icon" href="#" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no" />
-    <meta name="format-detection" content="telephone=no,email=no" />
+    <link rel="shortcut icon" href="#">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no,email=no">
     <script src="My97DatePicker/WdatePicker.js"></script>
+    <link href="https://localhost:44373/My97DatePicker/skin/WdatePicker.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div id="IndexBody">
@@ -43,10 +43,10 @@
                     </div>
                 </div>
                 <div class="m2-commonTop-right">
-                    <div class="m2-commonTop-link">
+                    <div class="m2-commonTop-link" id="SessionOne">
                         <ul>
                             <li class="m2-commonTop-btn"><a href="register.html" target="_blank">注册</a></li>
-                            <li class="m2-commonTop-btn"><a style="border-right:none;" href="login.html#login_callback=/index" target="_blank">登录</a></li>
+                            <li class="m2-commonTop-btn"><a style="border-right:none;" href="Login.html" target="_blank">登录</a></li>
                         </ul>
                     </div>
                     <div class="m2-commonTop-app" style="cursor:pointer;" onclick='window.open("appdownload.html")'>
@@ -71,19 +71,19 @@
                 <div class="m2-commonNav">
                     <ul class="m2-commonNavul-fir" data_page="onepage">
                         <li class="m2-commonNav-fir"><a id="onepage" href="index.html">首页</a></li>
-                        <li class="m2-commonNav-fir"><a id="twopage" href="touzi_licai_chanpin.html">我要投资</a></li>
-                        <li class="m2-commonNav-fir"><a id="sevenpage" href="membermall.html">我要融资</a></li>
-                        <li class="m2-commonNav-fir"><a id="threepage" href="usercenter.html">会员商城</a></li>
-                        <li class="m2-commonNav-fir" style="border-bottom-color: rgb(255, 102, 102); border-bottom-width: 2px; border-bottom-style: solid;"><a id="fourpage" href="anquanlicai_baozhang.html">我的账户</a></li>
+                        <li class="m2-commonNav-fir" style="border-bottom-color: rgb(255, 102, 102); border-bottom-width: 2px; border-bottom-style: solid;"><a id="twopage" href="Showysy.html">我要投资</a></li>
+                        <li class="m2-commonNav-fir"><a id="sevenpage" href="FinancingShow.html">我要融资</a></li>
+                        <li class="m2-commonNav-fir"><a id="" href="ShopInfo.html">会员商城</a></li>
+                        <li class="m2-commonNav-fir" ><a id="" href="UserInfo.html">我的账户</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="m2-userCentermain">
-            <div class="m2-userCentermain-aside" style="width:2000px;height:1000px">
-                <ul class="layui-nav layui-nav-tree" lay-filter="test" style="left:450px">
+            <div class="m2-userCentermain-aside" style="width:100%;height:630px">
+                <ul class="layui-nav layui-nav-tree" lay-filter="test" style="left:250px;height:500px;">
                     <!-- 侧边导航: <ul class="layui-nav layui-nav-tree layui-nav-side"> -->
-                    <li class="layui-nav-item layui-nav-itemed">
+                    <li class="layui-nav-item ">
                         <a href="javascript:;">我的账户</a>
                     </li>
                     <li class="layui-nav-item">
@@ -94,12 +94,13 @@
                     <li class="layui-nav-item"><a href="Shopinfo.html">奖励管理</a></li>
                     <li class="layui-nav-item"><a href="">银行卡管理</a></li>
                     <li class="layui-nav-item"><a href="">我的钱包</a></li>
+                    <li class="layui-nav-item layui-nav-itemed"><a href="">我要提现</a></li>
                 </ul>
-                <div class="m2-userCentermanage-con" style="background-color:antiquewhite;width:800px;height:350px;margin-left:700px;margin-top:-313px;float:left">
+                <div class="m2-userCentermanage-con" style="background-color:antiquewhite;width:800px;height:350px;margin-left: 450px;margin-top: -500px;float:left;">
                     <div class="m2-manage-search-head" style="background-color:burlywood">
                         <h2>
                             <i>
-                                <img src="Imgs/ad/ZM{JYXMLRQQ2H4XXT9{G[QU.png" />
+                                <img src="Imgs/ad/ZM{JYXMLRQQ2H4XXT9{G[QU.png">
                             </i>
                             投资记录
                         </h2>
@@ -111,8 +112,8 @@
                             <li><span class="m2-manSealink-sel" style="font-size:15px;float:left;margin-left:140px;margin-top:-21px">最近7天</span></li>
                             <li><span class="m2-manSealink-sel" style="font-size:15px;float:left;margin-left:215px;margin-top:-21px">一个月</span></li>
                             <li><span class="m2-manSealink-sel" style="font-size:15px;float:left;margin-left:285px;margin-top:-21px">三个月</span></li>
-                            <li><span class="m2-manSealink-sel" style="font-size:15px;float:left;margin-left:360px;margin-top:-21px">从<input id="Text1" type="text" onclick="WdatePicker()" /></span></li>
-                            <li><span class="m2-manSealink-sel" style="font-size:15px;float:left;margin-left:553px;margin-top:-23px">到<input id="Text1" type="text" onclick="WdatePicker()" /></span></li>
+                            <li><span class="m2-manSealink-sel" style="font-size:15px;float:left;margin-left:360px;margin-top:-21px">从<input id="Text1" type="text" onclick="WdatePicker()"></span></li>
+                            <li><span class="m2-manSealink-sel" style="font-size:15px;float:left;margin-left:553px;margin-top:-23px">到<input id="Text1" type="text" onclick="WdatePicker()"></span></li>
                         </ul>
                         <ul class="m2-manageSearchsel-time m2-manageSearchsel-time2" style="width:800px;height:30px;background-color:cadetblue;float:left;margin-top:15px">
                             <li style="font-size:20px">回款状态：</li>
@@ -137,15 +138,18 @@
                                     <th style="width:120px;">还款日</th>
                                     <th style="width:168px;"></th>
                                 </tr>
-                                
+
                             </tbody>
                         </table>
                     </div>
-                </div>    
+                </div>
             </div>
 
         </div>
 
     </div>
+
+    <div style="position: absolute; z-index: 19700; top: 224.4px; left: 1018px; display: none;"><iframe style="width: 184px; height: 205px;" src="https://localhost:44373/My97DatePicker/My97DatePicker.htm" frameborder="0" border="0" scrolling="no"></iframe></div>
 </body>
 </html>
+<script src="JS/YeMian/SessionOne.js"></script>

@@ -1,20 +1,20 @@
-﻿<!DOCTYPE html>
-<html>
+﻿<html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="statics/newcommon/css/m2-commonNew.css">
     <link rel="stylesheet" href="statics/home2/css/m2-main.css">
-    <link href="statics/home/css/newPage.css" rel="stylesheet" />
+    <link href="statics/home/css/newPage.css" rel="stylesheet">
     <script src="JS/jquery-3.3.1.js"></script>
     <script type="text/javascript" src="sta tics/home/js/jquery.min.js"></script>
     <script type="text/javascript" src="statics/home2/js/jquery.knob.js"></script>
     <script type="text/javascript" src="statics/home2/js/jquery.SuperSlide.js"></script>
-    <link href="layui/css/layui.css" rel="stylesheet" />
+    <link href="layui/css/layui.css" rel="stylesheet">
     <script src="layui/layui.js"></script>
     <script src="JS/jquery.cookie.js"></script>
+    <link id="layuicss-layer" rel="stylesheet" href="https://localhost:44373/layui/css/modules/layer/default/layer.css?v=3.1.1" media="all">
 </head>
-<body>
+<body style="">
     <div class="m2-commonTop-con">
         <div class="m2-commonTop">
             <div class="m2-commonTop-left">
@@ -40,8 +40,11 @@
                 </div>
             </div>
             <div class="m2-commonTop-right">
-                <div class="m2-commonTop-link">
-
+                <div class="m2-commonTop-link" id="SessionOne">
+                    <ul>
+                        <li class="m2-commonTop-btn"><a href="register.html" target="_blank">注册</a></li>
+                        <li class="m2-commonTop-btn"><a style="border-right:none;" href="Login.html" target="_blank">登录</a></li>
+                    </ul>
                 </div>
                 <div class="m2-commonTop-app" style="cursor:pointer;" onclick='window.open("appdownload.html")'>
                     <a class="m2-commonTop-and" href=""></a>
@@ -65,21 +68,20 @@
             <div class="m2-commonNav">
                 <ul class="m2-commonNavul-fir" data_page="onepage">
                     <li class="m2-commonNav-fir"><a id="onepage" href="index.html">首页</a></li>
-                    <li class="m2-commonNav-fir"><a id="twopage" href="touzi_licai_chanpin.html">我要投资</a></li>
-                    <li class="m2-commonNav-fir"><a id="sevenpage" href="membermall.html">我要融资</a></li>
-                    <li class="m2-commonNav-fir"><a id="threepage" href="usercenter.html">会员商城</a></li>
-                    <li class="m2-commonNav-fir" style="border-bottom-color: rgb(255, 102, 102); border-bottom-width: 2px; border-bottom-style: solid;"><a id="fourpage" href="Account.html">我的账户</a></li>
+                    <li class="m2-commonNav-fir"><a id="twopage" href="Showysy.html">我要投资</a></li>
+                    <li class="m2-commonNav-fir" ><a id="sevenpage" href="FinancingShow.html">我要融资</a></li>
+                    <li class="m2-commonNav-fir"><a id="" href="ShopInfo.html">会员商城</a></li>
+                    <li class="m2-commonNav-fir" style="border-bottom-color: rgb(255, 102, 102); border-bottom-width: 2px; border-bottom-style: solid;"><a id="" href="UserInfo.html">我的账户</a></li>
                 </ul>
             </div>
-
         </div>
     </div>
-    <ul class="layui-nav layui-nav-tree" lay-filter="test" style="left:450px;">
+    <ul class="layui-nav layui-nav-tree" lay-filter="test" style="left:250px;height:500px;">
         <!-- 侧边导航: <ul class="layui-nav layui-nav-tree layui-nav-side"> -->
-        <li class="layui-nav-item layui-nav-itemed">
-            <a href="Account;">我的账户</a>
+        <li class="layui-nav-item ">
+            <a href="javascript:;">我的账户</a>
         </li>
-        <li class="layui-nav-item">
+        <li class="layui-nav-item layui-nav-itemed">
             <a href="Show.html">成长值中心</a>
         </li>
         <li class="layui-nav-item"><a href="">立即投资</a></li>
@@ -87,16 +89,17 @@
         <li class="layui-nav-item"><a href="Shopinfo.html">奖励管理</a></li>
         <li class="layui-nav-item"><a href="">银行卡管理</a></li>
         <li class="layui-nav-item"><a href="">我的钱包</a></li>
+        <li class="layui-nav-item "><a href="">我要提现</a></li>
     </ul>
-    <div style="background-color:antiquewhite;width:1000px;height:337px;float:right;margin-right:228px;margin-top:-308px">
-        <table class="layui-hide" id="test" style="float:right"></table>
+    <div style="background-color:antiquewhite;width:800px;height:337px;float:right;margin-right: 269px;margin-top: -499px;">
+
     </div>
 
-</body>
-</html>
-<script>
-         
-layui.use('table', function () {
+
+
+    <script>
+
+        layui.use('table', function () {
             var table = layui.table;
             //第一个实例
             table.render({
@@ -108,12 +111,12 @@ layui.use('table', function () {
                 , cols: [[
                     { field: 'GrowthId', width: 100, title: '编号', sort: true },
                     { field: 'UserEmail', title: '用户邮箱', sort: true },
-                       { field: 'ChangeTime', title: '变动时间', sort: true },
+                    { field: 'ChangeTime', title: '变动时间', sort: true },
                     { field: 'BeforeIntegral', title: '变动前积分', sort: true },
                     { field: 'AfterIntegra', width: 150, title: '变动后积分', sort: true },
-                       { field: 'GrowthValueNow', width: 150, title: '现有成长值', sort: true },
+                    { field: 'GrowthValueNow', width: 150, title: '现有成长值', sort: true },
                     { field: 'Cause', title: '原因', sort: true },
-                       { field: 'DisthingId', width: 80, title: '区别', sort: true },
+                    { field: 'DisthingId', width: 80, title: '区别', sort: true },
                     { field: 'ChangeValue', title: '变动值', sort: true },
                 ]],
                 request: {
@@ -122,4 +125,7 @@ layui.use('table', function () {
                 },
             });
         });
-</script>
+    </script>
+</body>
+</html>
+<script src="JS/YeMian/SessionOne.js"></script>
